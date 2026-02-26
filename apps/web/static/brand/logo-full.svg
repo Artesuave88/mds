@@ -1,9 +1,9 @@
 <svg width="1024" height="1024" viewBox="0 0 620 620" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="mds-gradient" x1="70" y1="340" x2="510" y2="82" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#020826" />
-      <stop offset="0.45" stop-color="#0A3E74" />
-      <stop offset="1" stop-color="#1B8CEB" />
+      <stop offset="0" stop-color="#1E3A8A" />
+      <stop offset="0.62" stop-color="#6D28D9" />
+      <stop offset="1" stop-color="#84CC16" />
     </linearGradient>
   </defs>
 
@@ -15,8 +15,8 @@
   <path d="M350 350L400 272L452 350" stroke="url(#mds-gradient)" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
 
   <g aria-label="MDS" font-family="Manrope, 'Avenir Next', Arial, sans-serif" font-size="94" font-weight="500" letter-spacing="0.34em">
-    <text x="117" y="540" fill="#010A2A">M</text>
-    <text x="280" y="540" fill="#1B8CEB">D</text>
-    <text x="452" y="540" fill="#010A2A">S</text>
+    <text x="117" y="540" fill="#0A0F1A">M</text>
+    <text x="280" y="540" fill="#6D28D9">D</text>
+    <text x="452" y="540" fill="#0A0F1A">S</text>
   </g>
 </svg>
