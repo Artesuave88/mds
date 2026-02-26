@@ -13,14 +13,16 @@ const envSchema = z.object({
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required.").max(120, "Name is too long."),
   email: z.string().trim().email("Please provide a valid email address."),
-  timeline: z.string().trim().max(120, "Timeline is too long.").optional().default("Not provided"),
-  message: z.string().trim().min(1, "Message is required.").max(5000, "Message is too long."),
+  timeline: z.string().trim().min(1, "Timeline is required.").max(120, "Timeline is too long."),
+  message: z.string().trim().min(20, "Message must be at least 20 characters.").max(5000, "Message is too long."),
   website: z
     .union([z.literal(""), z.string().trim().url("Website must be a valid URL.")])
     .optional()
     .default(""),
   honeypot: z.string().optional().default(""),
-  consent: z.boolean().optional().default(true)
+  consent: z.literal(true, {
+    errorMap: () => ({ message: "Consent is required." })
+  })
 });
 
 type RateLimitEntry = {
@@ -84,6 +86,15 @@ function isRateLimited(ip: string, now = Date.now()) {
   return false;
 }
 
+function escapeHtml(value: string) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
 export const POST: RequestHandler = async ({ request, getClientAddress }) => {
   const envResult = envSchema.safeParse({
     RESEND_API_KEY: env.RESEND_API_KEY,
@@ -144,33 +155,46 @@ export const POST: RequestHandler = async ({ request, getClientAddress }) => {
     return json({ ok: true });
   }
 
-  if (!payload.consent) {
-    return json(
-      {
-        ok: false,
-        error: "Consent is required."
-      },
-      { status: 400 }
-    );
-  }
-
   const resend = new Resend(envResult.data.RESEND_API_KEY);
+  const submittedAt = new Date().toISOString();
+  const source = request.headers.get("origin") || "Unknown";
+
+  const details = [
+    `Name: ${payload.name}`,
+    `Email: ${payload.email}`,
+    `Timeline: ${payload.timeline}`,
+    `Website: ${payload.website || "Not provided"}`,
+    `Consent: ${payload.consent ? "Yes" : "No"}`,
+    `Source: ${source}`,
+    `Submitted: ${submittedAt}`
+  ];
 
   try {
     const result = await resend.emails.send({
       to: [envResult.data.TO_EMAIL],
       from: envResult.data.FROM_EMAIL,
       replyTo: payload.email,
-      subject: `New website inquiry from ${payload.name}`,
-      text: [
-        `Name: ${payload.name}`,
-        `Email: ${payload.email}`,
-        `Timeline: ${payload.timeline}`,
-        `Website: ${payload.website || "Not provided"}`,
-        "",
-        "Message:",
-        payload.message
-      ].join("\n")
+      subject: `New website inquiry: ${payload.name}`,
+      text: [...details, "", "Message:", payload.message].join("\n"),
+      html: `
+        <div style="font-family:Arial,sans-serif;line-height:1.5;color:#0f172a;max-width:700px">
+          <h2 style="margin:0 0 12px">New Website Inquiry</h2>
+          <p style="margin:0 0 16px;color:#475569">You received a new contact submission.</p>
+          <table style="border-collapse:collapse;width:100%;margin-bottom:16px">
+            <tbody>
+              <tr><td style="padding:6px 0;font-weight:600">Name</td><td style="padding:6px 0">${escapeHtml(payload.name)}</td></tr>
+              <tr><td style="padding:6px 0;font-weight:600">Email</td><td style="padding:6px 0">${escapeHtml(payload.email)}</td></tr>
+              <tr><td style="padding:6px 0;font-weight:600">Timeline</td><td style="padding:6px 0">${escapeHtml(payload.timeline)}</td></tr>
+              <tr><td style="padding:6px 0;font-weight:600">Website</td><td style="padding:6px 0">${escapeHtml(payload.website || "Not provided")}</td></tr>
+              <tr><td style="padding:6px 0;font-weight:600">Consent</td><td style="padding:6px 0">Yes</td></tr>
+              <tr><td style="padding:6px 0;font-weight:600">Source</td><td style="padding:6px 0">${escapeHtml(source)}</td></tr>
+              <tr><td style="padding:6px 0;font-weight:600">Submitted</td><td style="padding:6px 0">${escapeHtml(submittedAt)}</td></tr>
+            </tbody>
+          </table>
+          <h3 style="margin:0 0 8px">Message</h3>
+          <pre style="margin:0;white-space:pre-wrap;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px">${escapeHtml(payload.message)}</pre>
+        </div>
+      `
     });
 
     if (result.error) {
