@@ -67,7 +67,7 @@
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
-          class="inline-flex items-center rounded-xl bg-brand-primary px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/40 focus-visible:ring-offset-2"
+          class="inline-flex items-center rounded-xl bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/40 focus-visible:ring-offset-2"
           href="/work"
         >
           Explore work
@@ -186,7 +186,7 @@
       </h2>
       <div class="mt-8 flex flex-wrap gap-3">
         <a
-          class="rounded-xl bg-brand-highlight px-6 py-3 text-sm font-semibold text-brand-bg transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-highlight/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight/50 focus-visible:ring-offset-2"
+          class="rounded-xl bg-brand-highlight px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-highlight/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight/50 focus-visible:ring-offset-2"
           href="/contact"
         >
           Book a discovery call
@@ -237,7 +237,7 @@
   <div slot="footer" class="flex flex-wrap justify-end gap-3">
     <Button variant="ghost" on:click={() => (showEngagementModal = false)}>Close</Button>
     <a
-      class="inline-flex h-11 items-center rounded-xl bg-brand-primary px-5 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent"
+      class="inline-flex h-11 items-center rounded-xl bg-brand-primary px-5 text-sm font-semibold text-white transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent"
       href="/contact"
     >
       Start a project

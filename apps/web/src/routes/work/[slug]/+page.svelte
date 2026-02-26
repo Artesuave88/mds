@@ -17,7 +17,7 @@
     <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Case Study</p>
     <h1 class="mt-3 text-3xl font-bold text-brand-text">Project not found</h1>
     <p class="mt-4 text-brand-text/75">The case study you are looking for does not exist or may have moved.</p>
-    <a class="mt-8 inline-flex rounded-full bg-brand-bg px-6 py-3 text-sm font-semibold text-white hover:bg-brand-accent" href="/work">
+    <a class="mt-8 inline-flex rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white hover:bg-brand-accent" href="/work">
       Back to work
     </a>
   </section>

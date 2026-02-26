@@ -11,7 +11,7 @@
       The page you requested does not exist. You can head back to the homepage or explore recent work.
     </p>
     <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-      <a class="rounded-full bg-brand-bg px-6 py-3 text-sm font-semibold text-white hover:bg-brand-accent" href="/">
+      <a class="rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white hover:bg-brand-accent" href="/">
         Go home
       </a>
       <a class="rounded-full border border-brand-border px-6 py-3 text-sm font-semibold text-brand-text hover:border-brand-accent/60" href="/work">
@@ -24,7 +24,7 @@
     <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Error {status}</p>
     <h1 class="mt-3 text-3xl font-bold text-brand-text">Something went wrong</h1>
     <p class="mt-4 text-brand-text/75">{error?.message ?? "Unexpected application error."}</p>
-    <a class="mt-8 inline-flex rounded-full bg-brand-bg px-6 py-3 text-sm font-semibold text-white hover:bg-brand-accent" href="/">
+    <a class="mt-8 inline-flex rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white hover:bg-brand-accent" href="/">
       Go home
     </a>
   </section>

@@ -87,7 +87,7 @@
       </label>
 
       <button
-        class="mt-6 inline-flex rounded-full bg-brand-bg px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-accent disabled:cursor-not-allowed disabled:opacity-70"
+        class="mt-6 inline-flex rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-accent disabled:cursor-not-allowed disabled:opacity-70"
         disabled={submitting}
         type="submit"
       >

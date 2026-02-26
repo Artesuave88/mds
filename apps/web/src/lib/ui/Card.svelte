@@ -4,7 +4,7 @@
   const variantClasses = {
     default: "border-brand-border bg-brand-surface",
     muted: "border-brand-border bg-brand-surface-alt",
-    contrast: "border-brand-primary bg-brand-bg text-brand-text"
+    contrast: "border-brand-accent/35 bg-brand-surface-alt text-brand-text"
   };
 
   const paddingClasses = {

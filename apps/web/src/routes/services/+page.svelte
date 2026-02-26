@@ -48,7 +48,7 @@
       Every engagement starts with a practical scope and clear success metrics. You get execution partners, not layers of account management.
     </p>
     <a
-      class="mt-8 inline-flex rounded-full bg-brand-highlight px-6 py-3 text-sm font-semibold text-brand-bg transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-highlight/90"
+      class="mt-8 inline-flex rounded-full bg-brand-highlight px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-highlight/90"
       href="/contact"
     >
       Discuss your project

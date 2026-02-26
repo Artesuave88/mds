@@ -135,7 +135,7 @@
 
 {#if open}
   <div class="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto px-4 py-8 sm:items-center sm:px-6">
-    <div class="absolute inset-0 bg-brand-bg/55 backdrop-blur-sm" aria-hidden="true" on:click={handleOverlayClick}></div>
+    <div class="absolute inset-0 bg-slate-900/45 backdrop-blur-sm" aria-hidden="true" on:click={handleOverlayClick}></div>
 
     <div
       bind:this={dialogEl}
