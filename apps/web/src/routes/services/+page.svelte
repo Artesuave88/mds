@@ -4,7 +4,7 @@
 
 <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
   <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-slate-500">Services</p>
-  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-slate-900 sm:text-5xl">Flexible engagement across strategy, design, and front-end delivery.</h1>
+  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-slate-900 sm:text-5xl">Flexible engagement across website planning, development, and optimization.</h1>
   <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate-700">
     We adapt to in-house teams, founder-led orgs, and product groups that need senior execution without agency overhead.
   </p>

@@ -18,12 +18,12 @@
 <section class="border-b border-slate-200 bg-gradient-to-br from-emerald-100/70 via-amber-50 to-cyan-100/60">
   <div class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-24">
     <div>
-      <Badge variant="subtle" class="border-white/80 bg-white/70 text-slate-600">Independent Studio</Badge>
+      <Badge variant="subtle" class="border-white/80 bg-white/70 text-slate-600">MDS</Badge>
       <h1 class="mt-5 max-w-xl text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl">
-        We build digital experiences that feel sharp, useful, and unmistakably yours.
+        We build websites that are fast, clear, and built to convert.
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-slate-700 sm:text-lg">
-        Michael Design Studio helps teams ship stronger brands, faster websites, and high-conviction product moments.
+        MDS helps teams launch and improve production websites with strong performance and business intent.
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
@@ -145,7 +145,7 @@
 <Modal
   bind:open={showEngagementModal}
   title="Engagement model"
-  description="A typical project combines strategy, design, and production in a focused 4-10 week sprint."
+  description="A typical project combines planning, development, and launch support in a focused 4-10 week sprint."
   on:close={() => (showEngagementModal = false)}
 >
   <div class="grid gap-4 sm:grid-cols-3">
@@ -157,8 +157,8 @@
 
     <Card variant="muted" padding="sm" class="h-full">
       <Badge size="sm" variant="warning">Weeks 2-4</Badge>
-      <p class="mt-3 text-sm font-semibold text-slate-900">Design and iteration</p>
-      <p class="mt-2 text-sm text-slate-600">Build design direction quickly with weekly review loops.</p>
+      <p class="mt-3 text-sm font-semibold text-slate-900">Build and iteration</p>
+      <p class="mt-2 text-sm text-slate-600">Implement pages and components with fast weekly review loops.</p>
     </Card>
 
     <Card variant="muted" padding="sm" class="h-full">

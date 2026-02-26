@@ -1,7 +1,7 @@
 {
-  "name": "Michael Design Studio",
+  "name": "MDS",
   "short_name": "MDS",
-  "description": "Design and engineering support for ambitious product and brand teams.",
+  "description": "MDS builds fast, reliable, and conversion-focused websites.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

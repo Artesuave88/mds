@@ -47,7 +47,7 @@
   <div class="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
     <a href="/" class="inline-flex items-center gap-2 rounded-full px-2 py-1 text-slate-900">
       <img src="/brand/logo-mark.svg" alt="" aria-hidden="true" class="h-8 w-8 rounded-full bg-white" />
-      <span class="text-sm font-bold tracking-wide">Michael Design Studio</span>
+      <span class="text-sm font-bold tracking-wide">MDS</span>
     </a>
 
     <nav class="hidden items-center gap-1 md:flex">

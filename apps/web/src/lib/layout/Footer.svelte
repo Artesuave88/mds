@@ -7,15 +7,15 @@
     <div>
       <img
         src="/brand/logo-full.svg"
-        alt="Michael Design Studio logo"
+        alt="MDS logo"
         class="h-auto w-36"
         loading="lazy"
       />
       <h2 class="mt-3 max-w-md text-xl font-bold text-slate-900">
-        Design and engineering support for ambitious product and brand teams.
+        Website engineering support for teams that need speed, clarity, and results.
       </h2>
       <p class="mt-4 max-w-lg text-sm leading-relaxed text-slate-600">
-        We build clear systems and polished interfaces that help teams launch faster and grow with confidence.
+        We build, launch, and improve production websites with clean code and measurable business intent.
       </p>
     </div>
 
@@ -42,7 +42,7 @@
 
   <div class="border-t border-slate-200">
     <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-      <p class="text-xs text-slate-500">© {year} Michael Design Studio</p>
+      <p class="text-xs text-slate-500">© {year} MDS</p>
       <p class="font-['Space_Mono'] text-[10px] uppercase tracking-[0.2em] text-slate-400">Built with Svelte + Tailwind</p>
     </div>
   </div>

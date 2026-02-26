@@ -1,16 +1,16 @@
 <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
   <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-slate-500">About</p>
-  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-slate-900 sm:text-5xl">A focused studio for teams that care about craft and outcomes.</h1>
+  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-slate-900 sm:text-5xl">A focused web engineering team for businesses that need results.</h1>
   <p class="mt-6 max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg">
-    Michael Design Studio combines design thinking and implementation discipline to help teams move from scattered ideas to shipped experiences.
+    MDS plans, builds, and ships production websites that are fast, maintainable, and easy to scale.
   </p>
 
   <div class="mt-10 grid gap-6 md:grid-cols-3">
     <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
       <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-slate-400">Principle 01</p>
-      <h2 class="mt-3 text-xl font-bold text-slate-900">Clarity First</h2>
+      <h2 class="mt-3 text-xl font-bold text-slate-900">User Clarity First</h2>
       <p class="mt-3 text-sm leading-relaxed text-slate-600">
-        We simplify communication, structure, and UI so users can take action quickly and confidently.
+        We structure pages and flows so visitors understand what to do in seconds.
       </p>
     </article>
 
@@ -36,7 +36,7 @@
     <ul class="mt-5 space-y-3 text-sm leading-relaxed text-slate-700">
       <li class="flex gap-3">
         <span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
-        <span>Collaborative discovery that aligns design decisions to business goals.</span>
+        <span>Collaborative discovery that aligns website decisions to business goals.</span>
       </li>
       <li class="flex gap-3">
         <span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>

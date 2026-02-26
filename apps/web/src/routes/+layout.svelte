@@ -4,24 +4,24 @@
 </script>
 
 <svelte:head>
-  <title>Michael Design Studio</title>
+  <title>MDS</title>
   <meta
     name="description"
-    content="Design and engineering support for ambitious product and brand teams."
+    content="MDS builds fast, reliable, and conversion-focused websites."
   />
   <meta name="theme-color" content="#0a3e74" />
-  <meta property="og:title" content="Michael Design Studio" />
+  <meta property="og:title" content="MDS" />
   <meta
     property="og:description"
-    content="Design and engineering support for ambitious product and brand teams."
+    content="MDS builds fast, reliable, and conversion-focused websites."
   />
   <meta property="og:image" content="/brand/logo-full.svg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Michael Design Studio" />
+  <meta name="twitter:title" content="MDS" />
   <meta
     name="twitter:description"
-    content="Design and engineering support for ambitious product and brand teams."
+    content="MDS builds fast, reliable, and conversion-focused websites."
   />
   <meta name="twitter:image" content="/brand/logo-full.svg" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

@@ -5,7 +5,7 @@
     "client": "Long Eaton BJJ",
     "year": 2026,
     "services": [
-      "Web Design",
+      "Website Development",
       "Content Architecture",
       "Responsive UI",
       "Deployment"
@@ -24,7 +24,7 @@
       "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-217.BZRM74vN.jpg",
       "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-237.BySfLhd9.jpg"
     ],
-    "summary": "Designed and launched the public website for Long Eaton BJJ with clear navigation for timetable, pricing, instructors, kids classes, gallery, and contact.",
+    "summary": "Built and launched the public website for Long Eaton BJJ with clear navigation for timetable, pricing, instructors, kids classes, gallery, and contact.",
     "problem": "The gym needed a clearer digital presence so new students and parents could quickly understand the offer and book a free trial.",
     "approach": "Built a mobile-first site structure with direct CTAs, concise page sections, and route-level navigation for each core info area.",
     "outcome": "The club now has a live production site with clear trial and contact pathways, social links, and a dedicated gallery experience.",
