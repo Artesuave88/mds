@@ -60,9 +60,15 @@ importers:
 
   apps/web:
     dependencies:
+      resend:
+        specifier: ^6.9.2
+        version: 6.9.2
       svelte:
         specifier: ^5.38.6
         version: 5.53.5
+      zod:
+        specifier: ^3.24.1
+        version: 3.25.76
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^7.0.1
