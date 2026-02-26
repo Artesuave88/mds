@@ -6,8 +6,8 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "concurrently -k -n WEB,VERCEL -c cyan,green \"pnpm --filter web dev\" \"vercel dev --listen 3000\"",
-    "build": "pnpm --filter web build && rm -rf dist && cp -R apps/web/dist dist"
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build"
   },
   "devDependencies": {
     "@vercel/node": "^5.3.25",
