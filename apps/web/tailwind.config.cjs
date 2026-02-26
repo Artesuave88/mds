@@ -6,16 +6,16 @@ module.exports = {
       colors: {
         brand: {
           primary: "#1E3A8A",
-          accent: "#6D28D9",
-          bg: "#F7FAFF",
+          accent: "#292cb0",
+          bg: "#f7fcff",
           text: "#0F172A",
           highlight: "#84CC16",
           surface: "#FFFFFF",
           "surface-alt": "#EEF2FF",
-          border: "#D6DEEF"
-        }
-      }
-    }
+          border: "#D6DEEF",
+        },
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };
