@@ -1,21 +1,56 @@
 <script>
   import { fade, fly, scale } from "svelte/transition";
-  import { reveal } from "../lib/actions/reveal";
-  import { getProjects } from "../lib/content";
-  import { services } from "../lib/data/services";
-  import Badge from "../lib/ui/Badge.svelte";
-  import Button from "../lib/ui/Button.svelte";
-  import Card from "../lib/ui/Card.svelte";
-  import Modal from "../lib/ui/Modal.svelte";
-  import Section from "../lib/ui/Section.svelte";
+  import { reveal } from "$lib/actions/reveal";
+  import { getProjects } from "$lib/content";
+  import { services } from "$lib/data/services";
+  import { setMeta } from "$lib/seo";
+  import Badge from "$lib/ui/Badge.svelte";
+  import Button from "$lib/ui/Button.svelte";
+  import Card from "$lib/ui/Card.svelte";
+  import Modal from "$lib/ui/Modal.svelte";
+  import Section from "$lib/ui/Section.svelte";
 
   const allProjects = getProjects({ sort: "newest" });
   const featuredWork = allProjects.slice(0, 3);
   const featuredServices = services.slice(0, 3);
   const latestProject = featuredWork[0];
 
+  const meta = setMeta({
+    title: "MDS",
+    description: "MDS builds fast, reliable, and conversion-focused websites.",
+    url: "/"
+  });
+
+  const structuredData = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "MDS",
+    url: meta.url,
+    image: meta.image,
+    description: meta.description,
+    areaServed: "Worldwide",
+    serviceType: ["Website Strategy", "Website Development", "Growth Optimization"]
+  });
+
   let showEngagementModal = false;
 </script>
+
+<svelte:head>
+  <title>{meta.title}</title>
+  <meta name="description" content={meta.description} />
+  <link rel="canonical" href={meta.url} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={meta.siteName} />
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  <meta property="og:url" content={meta.url} />
+  <meta property="og:image" content={meta.image} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={meta.title} />
+  <meta name="twitter:description" content={meta.description} />
+  <meta name="twitter:image" content={meta.image} />
+  <script type="application/ld+json">{structuredData}</script>
+</svelte:head>
 
 <section
   class="border-b border-slate-200 bg-gradient-to-br from-emerald-100/70 via-amber-50 to-cyan-100/60"
