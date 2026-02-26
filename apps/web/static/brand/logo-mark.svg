@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mds-gradient" x1="18" y1="226" x2="238" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#020826" />
+      <stop offset="0.45" stop-color="#0A3E74" />
+      <stop offset="1" stop-color="#1B8CEB" />
+    </linearGradient>
+  </defs>
+
+  <path d="M26 212L112 50L182 152" stroke="url(#mds-gradient)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 212L124 146L158 212" stroke="url(#mds-gradient)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M128 212L186 112L230 212" stroke="url(#mds-gradient)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M176 212L198 172L220 212" stroke="url(#mds-gradient)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

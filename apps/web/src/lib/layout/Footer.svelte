@@ -5,7 +5,12 @@
 <footer class="border-t border-slate-200 bg-white">
   <div class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
     <div>
-      <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.25em] text-slate-500">MDS</p>
+      <img
+        src="/brand/logo-full.svg"
+        alt="Michael Design Studio logo"
+        class="h-auto w-36"
+        loading="lazy"
+      />
       <h2 class="mt-3 max-w-md text-xl font-bold text-slate-900">
         Design and engineering support for ambitious product and brand teams.
       </h2>
