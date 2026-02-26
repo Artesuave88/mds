@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { link } from "svelte-spa-router";
-  import { getProjects, getServiceOptions, getToolOptions } from "../lib/content";
-  import type { ProjectSort } from "../lib/types";
+  import { getProjects, getServiceOptions, getToolOptions } from "../../lib/content";
+  import type { ProjectSort } from "../../lib/types";
 
   const serviceOptions = getServiceOptions();
   const toolOptions = getToolOptions();
@@ -95,7 +94,6 @@
         <a
           class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
           href={`/work/${project.slug}`}
-          use:link
         >
           <div class="aspect-[16/10] overflow-hidden bg-slate-100">
             <img

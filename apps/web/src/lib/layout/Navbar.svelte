@@ -1,5 +1,5 @@
 <script>
-  import { link, location } from "svelte-spa-router";
+  import { page } from "$app/stores";
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -11,7 +11,7 @@
 
   let mobileOpen = false;
 
-  $: currentPath = $location || "/";
+  $: currentPath = $page.url.pathname || "/";
   $: if (currentPath) {
     mobileOpen = false;
   }
@@ -45,14 +45,14 @@
 
 <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
   <div class="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-    <a href="/" use:link class="inline-flex items-center gap-2 rounded-full px-2 py-1 text-slate-900">
+    <a href="/" class="inline-flex items-center gap-2 rounded-full px-2 py-1 text-slate-900">
       <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 font-['Space_Mono'] text-xs text-white">MDS</span>
       <span class="text-sm font-bold tracking-wide">Michael Design Studio</span>
     </a>
 
     <nav class="hidden items-center gap-1 md:flex">
       {#each navItems as item}
-        <a class={desktopLinkClasses(item.href)} href={item.href} use:link>
+        <a class={desktopLinkClasses(item.href)} href={item.href}>
           {item.label}
         </a>
       {/each}
@@ -81,7 +81,7 @@
     <div class="border-t border-slate-200 bg-white md:hidden" id="mobile-nav">
       <nav class="mx-auto w-full max-w-6xl space-y-2 px-4 py-4 sm:px-6 lg:px-8">
         {#each navItems as item}
-          <a class={mobileLinkClasses(item.href)} href={item.href} use:link>
+          <a class={mobileLinkClasses(item.href)} href={item.href}>
             {item.label}
           </a>
         {/each}

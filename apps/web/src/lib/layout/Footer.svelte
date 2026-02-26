@@ -1,6 +1,4 @@
 <script>
-  import { link } from "svelte-spa-router";
-
   const year = new Date().getFullYear();
 </script>
 
@@ -20,17 +18,17 @@
       <div>
         <p class="font-semibold text-slate-900">Navigate</p>
         <div class="mt-3 space-y-2">
-          <a class="block text-slate-600 hover:text-slate-900" href="/" use:link>Home</a>
-          <a class="block text-slate-600 hover:text-slate-900" href="/work" use:link>Work</a>
-          <a class="block text-slate-600 hover:text-slate-900" href="/services" use:link>Services</a>
+          <a class="block text-slate-600 hover:text-slate-900" href="/">Home</a>
+          <a class="block text-slate-600 hover:text-slate-900" href="/work">Work</a>
+          <a class="block text-slate-600 hover:text-slate-900" href="/services">Services</a>
         </div>
       </div>
 
       <div>
         <p class="font-semibold text-slate-900">Company</p>
         <div class="mt-3 space-y-2">
-          <a class="block text-slate-600 hover:text-slate-900" href="/about" use:link>About</a>
-          <a class="block text-slate-600 hover:text-slate-900" href="/contact" use:link>Contact</a>
+          <a class="block text-slate-600 hover:text-slate-900" href="/about">About</a>
+          <a class="block text-slate-600 hover:text-slate-900" href="/contact">Contact</a>
           <a class="block text-slate-600 hover:text-slate-900" href="/api/health" target="_blank" rel="noreferrer">API Health</a>
         </div>
       </div>

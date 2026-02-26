@@ -1,6 +1,5 @@
 <script>
-  import { link } from "svelte-spa-router";
-  import { services } from "../lib/data/services";
+  import { services } from "../../lib/data/services";
 </script>
 
 <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
@@ -34,7 +33,7 @@
     <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-300">
       Every engagement starts with a practical scope and clear success metrics. You get execution partners, not layers of account management.
     </p>
-    <a class="mt-8 inline-flex rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-emerald-400" href="/contact" use:link>
+    <a class="mt-8 inline-flex rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-emerald-400" href="/contact">
       Discuss your project
     </a>
   </div>

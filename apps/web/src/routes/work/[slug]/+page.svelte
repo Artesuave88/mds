@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { link } from "svelte-spa-router";
-  import { getProjectBySlug, getProjects } from "../lib/content";
+  import { getProjectBySlug, getProjects } from "$lib/content";
+  import type { PageData } from "./$types";
 
-  export let params: { slug?: string } = {};
+  export let data: PageData;
 
   const orderedProjects = getProjects({ sort: "newest" });
 
-  $: slug = params.slug ?? "";
+  $: slug = data.slug ?? "";
   $: project = slug ? getProjectBySlug(slug) : undefined;
   $: currentIndex = orderedProjects.findIndex((entry) => entry.slug === slug);
   $: nextProject = currentIndex >= 0 ? orderedProjects[(currentIndex + 1) % orderedProjects.length] : undefined;
@@ -17,13 +17,13 @@
     <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-slate-500">Case Study</p>
     <h1 class="mt-3 text-3xl font-bold text-slate-900">Project not found</h1>
     <p class="mt-4 text-slate-600">The case study you are looking for does not exist or may have moved.</p>
-    <a class="mt-8 inline-flex rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white hover:bg-slate-700" href="/work" use:link>
+    <a class="mt-8 inline-flex rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white hover:bg-slate-700" href="/work">
       Back to work
     </a>
   </section>
 {:else}
   <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-    <a class="inline-flex items-center text-sm font-semibold text-slate-700 hover:text-slate-900" href="/work" use:link>
+    <a class="inline-flex items-center text-sm font-semibold text-slate-700 hover:text-slate-900" href="/work">
       ← Back to all work
     </a>
 
@@ -126,7 +126,7 @@
     {#if nextProject && nextProject.slug !== project.slug}
       <nav class="mt-12 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-slate-500">Next project</p>
-        <a class="mt-2 inline-flex text-xl font-bold text-slate-900 hover:text-slate-700" href={`/work/${nextProject.slug}`} use:link>
+        <a class="mt-2 inline-flex text-xl font-bold text-slate-900 hover:text-slate-700" href={`/work/${nextProject.slug}`}>
           {nextProject.title} →
         </a>
       </nav>
