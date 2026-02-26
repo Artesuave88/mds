@@ -1,10 +1,12 @@
 <script>
   import { link } from "svelte-spa-router";
+  import { getProjects } from "../lib/content";
   import { services } from "../lib/data/services";
-  import { workItems } from "../lib/data/work";
 
-  const featuredWork = workItems.slice(0, 3);
+  const allProjects = getProjects({ sort: "newest" });
+  const featuredWork = allProjects.slice(0, 3);
   const featuredServices = services.slice(0, 3);
+  const latestProject = featuredWork[0];
 </script>
 
 <section class="border-b border-slate-200 bg-gradient-to-br from-emerald-100/70 via-amber-50 to-cyan-100/60">
@@ -37,19 +39,19 @@
 
     <div class="grid gap-4 sm:grid-cols-2">
       <article class="rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm">
-        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-slate-400">Recent Impact</p>
-        <p class="mt-2 text-3xl font-extrabold text-slate-900">31%</p>
-        <p class="mt-2 text-sm text-slate-600">Lift in qualified demo requests after repositioning and funnel redesign.</p>
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-slate-400">Projects</p>
+        <p class="mt-2 text-3xl font-extrabold text-slate-900">{allProjects.length}</p>
+        <p class="mt-2 text-sm text-slate-600">Published case study currently in portfolio.</p>
       </article>
       <article class="rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm">
-        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-slate-400">Delivery Model</p>
-        <p class="mt-2 text-lg font-bold text-slate-900">Small Team, Senior Execution</p>
-        <p class="mt-2 text-sm text-slate-600">Direct collaboration, short feedback loops, no handoff theater.</p>
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-slate-400">Latest Client</p>
+        <p class="mt-2 text-lg font-bold text-slate-900">{latestProject?.client ?? "TBD"}</p>
+        <p class="mt-2 text-sm text-slate-600">Most recently documented web project.</p>
       </article>
       <article class="rounded-2xl border border-slate-200 bg-slate-900 p-5 text-slate-100 shadow-sm sm:col-span-2">
-        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-slate-400">Core Focus</p>
-        <p class="mt-2 text-xl font-bold">Brand systems, web experiences, and growth design.</p>
-        <p class="mt-2 text-sm text-slate-300">The practical blend needed to move from strategy to shipped outcomes.</p>
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-slate-400">Current Build</p>
+        <p class="mt-2 text-xl font-bold">{latestProject?.title ?? "No case study added yet"}</p>
+        <p class="mt-2 text-sm text-slate-300">{latestProject?.summary ?? "Add your first project in src/content/projects.json."}</p>
       </article>
     </div>
   </div>
@@ -73,7 +75,7 @@
         href={`/work/${item.slug}`}
         use:link
       >
-        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-slate-400">{item.year} - {item.category}</p>
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-slate-400">{item.year} - {item.client}</p>
         <h3 class="mt-3 text-lg font-bold text-slate-900 group-hover:text-slate-700">{item.title}</h3>
         <p class="mt-3 text-sm leading-relaxed text-slate-600">{item.summary}</p>
         <p class="mt-5 text-sm font-semibold text-slate-800">Read case study →</p>
@@ -109,10 +111,14 @@
 <section class="bg-slate-900 text-slate-100">
   <div class="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
     <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.25em] text-slate-400">Client Voice</p>
-    <p class="mt-4 max-w-4xl text-2xl font-bold leading-snug sm:text-3xl">
-      "MDS gave us clarity and momentum. The new site finally reflects the quality of our product and our team."
-    </p>
-    <p class="mt-4 text-sm text-slate-300">VP Marketing, Atlas Fintech</p>
+    {#if latestProject?.testimonial}
+      <p class="mt-4 max-w-4xl text-2xl font-bold leading-snug sm:text-3xl">
+        "{latestProject.testimonial.quote}"
+      </p>
+      <p class="mt-4 text-sm text-slate-300">{latestProject.testimonial.author} · {latestProject.testimonial.role}</p>
+    {:else}
+      <p class="mt-4 max-w-4xl text-2xl font-bold leading-snug sm:text-3xl">Add a project testimonial in your local JSON to feature it here.</p>
+    {/if}
   </div>
 </section>
 

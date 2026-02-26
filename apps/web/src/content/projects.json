@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "long-eaton-bjj-website",
+    "title": "Long Eaton BJJ Website",
+    "client": "Long Eaton BJJ",
+    "year": 2026,
+    "services": [
+      "Web Design",
+      "Content Architecture",
+      "Responsive UI",
+      "Deployment"
+    ],
+    "tools": [
+      "SvelteKit",
+      "Tailwind CSS",
+      "Vercel"
+    ],
+    "heroImage": "https://lebjj.vercel.app/_app/immutable/assets/LE-BJJ-24-JM-030.Dh4y1nCN.jpg",
+    "galleryImages": [
+      "https://lebjj.vercel.app/_app/immutable/assets/LE-BJJ-24-JM-030.Dh4y1nCN.jpg",
+      "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-011.BsIi5FoZ.jpg",
+      "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-012.Byq2n9jh.jpg",
+      "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-171.DFW1RCyP.jpg",
+      "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-217.BZRM74vN.jpg",
+      "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-237.BySfLhd9.jpg"
+    ],
+    "summary": "Designed and launched the public website for Long Eaton BJJ with clear navigation for timetable, pricing, instructors, kids classes, gallery, and contact.",
+    "problem": "The gym needed a clearer digital presence so new students and parents could quickly understand the offer and book a free trial.",
+    "approach": "Built a mobile-first site structure with direct CTAs, concise page sections, and route-level navigation for each core info area.",
+    "outcome": "The club now has a live production site with clear trial and contact pathways, social links, and a dedicated gallery experience.",
+    "metrics": [
+      "8 core routes published: /, /timetable, /pricing, /coaches, /kids, /gallery, /contact, /trial.",
+      "Sticky mobile action bar includes direct Book Trial and Call buttons.",
+      "Contact surfaces include click-to-call plus WhatsApp, Instagram, and Facebook links."
+    ],
+    "testimonial": {
+      "quote": "Started as a total beginner. The instruction is clear, structured, and genuinely welcoming.",
+      "author": "Tom R.",
+      "role": "Student"
+    },
+    "links": [
+      {
+        "label": "Live site",
+        "url": "https://lebjj.vercel.app/"
+      },
+      {
+        "label": "Gallery page",
+        "url": "https://lebjj.vercel.app/gallery"
+      },
+      {
+        "label": "Free trial page",
+        "url": "https://lebjj.vercel.app/trial"
+      }
+    ]
+  }
+]
