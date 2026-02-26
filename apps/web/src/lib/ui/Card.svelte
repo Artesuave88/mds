@@ -22,10 +22,10 @@
   export { className as class };
 
   $: cardClass = cn(
-    "rounded-2xl border shadow-sm focus-within:ring-2 focus-within:ring-slate-900/20",
+    "rounded-2xl border shadow-sm focus-within:ring-2 focus-within:ring-slate-900/20 motion-safe:transform-gpu motion-safe:transition-[transform,box-shadow] motion-safe:duration-200 motion-safe:ease-out motion-safe:will-change-transform",
     variantClasses[variant] ?? variantClasses.default,
     paddingClasses[padding] ?? paddingClasses.md,
-    interactive && "transition duration-150 hover:-translate-y-0.5 hover:shadow-md",
+    interactive && "motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-md",
     className
   );
 </script>

@@ -2,7 +2,7 @@
   import { cn } from "./cn";
 
   const baseClass =
-    "inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-60";
+    "inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition duration-200 ease-out motion-safe:transform-gpu motion-safe:will-change-transform motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-60";
 
   const variantClasses = {
     primary: "bg-slate-900 text-white hover:bg-slate-700",

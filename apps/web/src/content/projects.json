@@ -10,11 +10,7 @@
       "Responsive UI",
       "Deployment"
     ],
-    "tools": [
-      "SvelteKit",
-      "Tailwind CSS",
-      "Vercel"
-    ],
+    "tools": ["SvelteKit", "Tailwind CSS", "Vercel"],
     "heroImage": "https://lebjj.vercel.app/_app/immutable/assets/LE-BJJ-24-JM-030.Dh4y1nCN.jpg",
     "galleryImages": [
       "https://lebjj.vercel.app/_app/immutable/assets/LE-BJJ-24-JM-030.Dh4y1nCN.jpg",
@@ -34,9 +30,8 @@
       "Contact surfaces include click-to-call plus WhatsApp, Instagram, and Facebook links."
     ],
     "testimonial": {
-      "quote": "Started as a total beginner. The instruction is clear, structured, and genuinely welcoming.",
-      "author": "Tom R.",
-      "role": "Student"
+      "quote": "The new website has been fantastic for our club. It's easy to navigate, looks great on mobile, and has definitely helped us attract new students. The clear CTAs and dedicated gallery have made a big difference in how we present ourselves online.",
+      "author": "Mikey Dean, Head Coach at Long Eaton BJJ"
     },
     "links": [
       {
