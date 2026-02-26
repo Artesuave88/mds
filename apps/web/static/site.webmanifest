@@ -4,8 +4,8 @@
   "description": "MDS builds fast, reliable, and conversion-focused websites.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#0a3e74",
+  "background_color": "#0A0F1A",
+  "theme_color": "#1E3A8A",
   "icons": [
     {
       "src": "/favicon.svg",

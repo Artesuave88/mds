@@ -30,7 +30,7 @@
   $: descriptionId = description ? `${uid}-description` : undefined;
 
   $: panelClass = cn(
-    "relative z-10 w-full rounded-2xl border border-slate-200 bg-white p-6 shadow-xl sm:p-7",
+    "relative z-10 w-full rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-xl sm:p-7",
     sizeClasses[size] ?? sizeClasses.md,
     className
   );
@@ -135,7 +135,7 @@
 
 {#if open}
   <div class="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto px-4 py-8 sm:items-center sm:px-6">
-    <div class="absolute inset-0 bg-slate-950/55 backdrop-blur-sm" aria-hidden="true" on:click={handleOverlayClick}></div>
+    <div class="absolute inset-0 bg-brand-bg/55 backdrop-blur-sm" aria-hidden="true" on:click={handleOverlayClick}></div>
 
     <div
       bind:this={dialogEl}
@@ -151,7 +151,7 @@
       {#if showCloseButton}
         <button
           type="button"
-          class="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/30 focus-visible:ring-offset-2"
+          class="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full text-brand-text/65 transition hover:bg-brand-surface-alt hover:text-brand-text/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/35 focus-visible:ring-offset-2"
           on:click={() => requestClose("button")}
           aria-label="Close modal"
         >
@@ -160,11 +160,11 @@
       {/if}
 
       {#if title}
-        <h2 id={titleId} class="pr-10 text-2xl font-bold text-slate-900">{title}</h2>
+        <h2 id={titleId} class="pr-10 text-2xl font-bold text-brand-text">{title}</h2>
       {/if}
 
       {#if description}
-        <p id={descriptionId} class="mt-2 text-sm leading-relaxed text-slate-600">{description}</p>
+        <p id={descriptionId} class="mt-2 text-sm leading-relaxed text-brand-text/75">{description}</p>
       {/if}
 
       <div class={cn((title || description) && "mt-6")}>
@@ -172,7 +172,7 @@
       </div>
 
       {#if $$slots.footer}
-        <div class="mt-6 border-t border-slate-200 pt-5">
+        <div class="mt-6 border-t border-brand-border pt-5">
           <slot name="footer" />
         </div>
       {/if}

@@ -40,13 +40,13 @@
       <header class={computedHeaderClass}>
         <div class={centered ? "mx-auto max-w-3xl" : ""}>
           {#if eyebrow}
-            <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-slate-500">{eyebrow}</p>
+            <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">{eyebrow}</p>
           {/if}
           {#if title}
-            <h2 id={headingId} class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">{title}</h2>
+            <h2 id={headingId} class="mt-2 text-3xl font-bold text-brand-text sm:text-4xl">{title}</h2>
           {/if}
           {#if description}
-            <p id={descriptionId} class="mt-3 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">{description}</p>
+            <p id={descriptionId} class="mt-3 max-w-2xl text-base leading-relaxed text-brand-text/75 sm:text-lg">{description}</p>
           {/if}
         </div>
 

@@ -24,16 +24,16 @@
   $: describedBy = [hintId, errorId].filter(Boolean).join(" ") || undefined;
 
   $: inputClass = cn(
-    "w-full rounded-xl border px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-slate-900/25 focus-visible:ring-offset-1",
-    error ? "border-rose-400 focus:border-rose-500" : "border-slate-300 focus:border-slate-500",
-    disabled && "cursor-not-allowed bg-slate-100 text-slate-500",
+    "w-full rounded-xl border px-4 py-3 text-sm text-brand-text outline-none transition placeholder:text-brand-text/55 focus-visible:ring-2 focus-visible:ring-brand-accent/30 focus-visible:ring-offset-1",
+    error ? "border-brand-accent focus:border-brand-accent" : "border-brand-border focus:border-brand-accent",
+    disabled && "cursor-not-allowed bg-brand-surface-alt text-brand-text/65",
     className
   );
 </script>
 
 <div class={cn("w-full", wrapperClass)}>
   {#if label}
-    <label for={inputId} class={cn("mb-2 block text-sm font-semibold text-slate-700", labelClass)}>{label}</label>
+    <label for={inputId} class={cn("mb-2 block text-sm font-semibold text-brand-text/85", labelClass)}>{label}</label>
   {/if}
 
   <input
@@ -48,10 +48,10 @@
   />
 
   {#if hint}
-    <p id={hintId} class={cn("mt-2 text-xs text-slate-500", hintClass)}>{hint}</p>
+    <p id={hintId} class={cn("mt-2 text-xs text-brand-text/65", hintClass)}>{hint}</p>
   {/if}
 
   {#if error}
-    <p id={errorId} class={cn("mt-2 text-xs font-semibold text-rose-600", errorClass)}>{error}</p>
+    <p id={errorId} class={cn("mt-2 text-xs font-semibold text-brand-accent", errorClass)}>{error}</p>
   {/if}
 </div>

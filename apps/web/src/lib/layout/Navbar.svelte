@@ -29,24 +29,24 @@
   function desktopLinkClasses(href) {
     return `rounded-full px-3 py-2 text-sm font-semibold transition ${
       isActive(href)
-        ? "bg-emerald-100 text-emerald-900"
-        : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+        ? "bg-brand-highlight/20 text-brand-text"
+        : "text-brand-text/85 hover:bg-brand-surface-alt hover:text-brand-text"
     }`;
   }
 
   function mobileLinkClasses(href) {
     return `block rounded-xl px-4 py-3 text-sm font-semibold transition ${
       isActive(href)
-        ? "bg-emerald-100 text-emerald-900"
-        : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+        ? "bg-brand-highlight/20 text-brand-text"
+        : "text-brand-text/85 hover:bg-brand-surface-alt hover:text-brand-text"
     }`;
   }
 </script>
 
-<header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+<header class="sticky top-0 z-50 border-b border-brand-border/80 bg-brand-surface/90 backdrop-blur">
   <div class="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-    <a href="/" class="inline-flex items-center gap-2 rounded-full px-2 py-1 text-slate-900">
-      <img src="/brand/logo-mark.svg" alt="" aria-hidden="true" class="h-8 w-8 rounded-full bg-white" />
+    <a href="/" class="inline-flex items-center gap-2 rounded-full px-2 py-1 text-brand-text">
+      <img src="/brand/logo-mark.svg" alt="" aria-hidden="true" class="h-8 w-8 rounded-full bg-brand-surface" />
       <span class="text-sm font-bold tracking-wide">MDS</span>
     </a>
 
@@ -61,7 +61,7 @@
     <button
       aria-controls="mobile-nav"
       aria-expanded={mobileOpen}
-      class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 text-slate-700 md:hidden"
+      class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-brand-border text-brand-text/85 md:hidden"
       on:click={() => {
         mobileOpen = !mobileOpen;
       }}
@@ -78,7 +78,7 @@
   </div>
 
   {#if mobileOpen}
-    <div class="border-t border-slate-200 bg-white md:hidden" id="mobile-nav">
+    <div class="border-t border-brand-border bg-brand-surface md:hidden" id="mobile-nav">
       <nav class="mx-auto w-full max-w-6xl space-y-2 px-4 py-4 sm:px-6 lg:px-8">
         {#each navItems as item}
           <a class={mobileLinkClasses(item.href)} href={item.href}>

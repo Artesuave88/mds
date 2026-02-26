@@ -4,11 +4,11 @@
   const baseClass = "inline-flex items-center rounded-full border font-['Space_Mono'] uppercase tracking-[0.18em]";
 
   const variantClasses = {
-    neutral: "border-slate-200 bg-white text-slate-600",
-    subtle: "border-slate-200 bg-slate-50 text-slate-600",
-    success: "border-emerald-200 bg-emerald-100/80 text-emerald-800",
-    warning: "border-amber-200 bg-amber-100/80 text-amber-800",
-    danger: "border-rose-200 bg-rose-100/80 text-rose-800"
+    neutral: "border-brand-border bg-brand-surface text-brand-text/75",
+    subtle: "border-brand-border bg-brand-surface-alt text-brand-text/75",
+    success: "border-brand-highlight/40 bg-brand-highlight/20 text-brand-highlight",
+    warning: "border-brand-accent/35 bg-brand-accent/20 text-brand-text",
+    danger: "border-brand-accent/35 bg-brand-accent/20 text-brand-text"
   };
 
   const sizeClasses = {
