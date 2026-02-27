@@ -31,7 +31,8 @@
     ],
     "testimonial": {
       "quote": "The new website has been fantastic for our club. It's easy to navigate, looks great on mobile, and has definitely helped us attract new students. The clear CTAs and dedicated gallery have made a big difference in how we present ourselves online.",
-      "author": "Mikey Dean, Head Coach at Long Eaton BJJ"
+      "author": "Mikey Dean",
+      "role": "Head Coach, Long Eaton BJJ"
     },
     "links": [
       {
@@ -45,6 +46,44 @@
       {
         "label": "Free trial page",
         "url": "https://lebjj.vercel.app/trial"
+      }
+    ]
+  },
+  {
+    "slug": "nottingham-phantoms-ihc-website",
+    "title": "Nottingham Phantoms IHC Website",
+    "client": "Nottingham Phantoms IHC",
+    "year": 2026,
+    "services": [
+      "Website Development",
+      "Content Architecture",
+      "Responsive UI",
+      "Deployment"
+    ],
+    "tools": ["SvelteKit", "Tailwind CSS", "Vercel"],
+    "heroImage": "https://hockey-eight.vercel.app/_app/immutable/assets/logo.D_9K_QSU.png",
+    "galleryImages": [],
+    "summary": "Designed and launched a branded team website for Nottingham Phantoms IHC with clear sections for club background, roster, fixtures, and contact.",
+    "problem": "The club needed a clearer digital home so new and returning players could quickly understand the team and find contact channels.",
+    "approach": "Structured the site around core routes, added straightforward navigation, and prioritized mobile-first interactions with visible join/contact CTAs.",
+    "outcome": "The club now has a live production website with consistent branding, cleaner information architecture, and direct social/contact pathways.",
+    "metrics": [
+      "5 core routes published: /, /about, /roster, /fixtures, /contact.",
+      "Primary calls-to-action route users to the dedicated contact flow.",
+      "Footer contact section includes Instagram, X, and email touchpoints."
+    ],
+    "links": [
+      {
+        "label": "Live site",
+        "url": "https://hockey-eight.vercel.app/"
+      },
+      {
+        "label": "Roster page",
+        "url": "https://hockey-eight.vercel.app/roster"
+      },
+      {
+        "label": "Fixtures page",
+        "url": "https://hockey-eight.vercel.app/fixtures"
       }
     ]
   }
