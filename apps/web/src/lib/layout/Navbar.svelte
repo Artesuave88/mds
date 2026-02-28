@@ -44,10 +44,15 @@
 </script>
 
 <header class="sticky top-0 z-50 border-b border-brand-border/80 bg-brand-surface/90 backdrop-blur">
-  <div class="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-    <a href="/" class="inline-flex items-center gap-2 rounded-full px-2 py-1 text-brand-text">
-      <img src="/brand/logo-mark.png" alt="" aria-hidden="true" class="h-8 w-8 rounded-full bg-brand-surface" />
-      <span class="text-sm font-bold tracking-wide">Midas Web Development</span>
+  <div class="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <a href="/" class="inline-flex items-center gap-3 rounded-full px-2 py-1 text-brand-text">
+      <img
+        src="/brand/logo-mark.png"
+        alt=""
+        aria-hidden="true"
+        class="h-14 w-14 rounded-xl border border-brand-primary/45 object-contain shadow-[0_10px_24px_rgba(0,0,0,0.12)]"
+      />
+      <span class="hidden text-sm font-bold tracking-wide sm:block">Midas Web Development</span>
     </a>
 
     <nav class="hidden items-center gap-1 md:flex">

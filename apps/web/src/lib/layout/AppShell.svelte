@@ -3,7 +3,7 @@
   import Navbar from "./Navbar.svelte";
 </script>
 
-<div class="min-h-screen bg-gradient-to-b from-white via-[#F5F7FF] to-brand-bg font-['Manrope'] text-brand-text">
+<div class="min-h-screen bg-gradient-to-b from-white via-[#F8F8F8] to-brand-bg font-['Manrope'] text-brand-text">
   <Navbar />
   <main>
     <slot />

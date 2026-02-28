@@ -8,7 +8,7 @@
       <img
         src="/brand/logo-full.png"
         alt="Midas Web Development logo"
-        class="h-auto w-36"
+        class="h-auto w-36 rounded-2xl border border-brand-primary/40 shadow-[0_14px_34px_rgba(0,0,0,0.12)]"
         loading="lazy"
       />
       <h2 class="mt-3 max-w-md text-xl font-bold text-brand-text">

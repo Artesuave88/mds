@@ -5,14 +5,14 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          primary: "#1E3A8A",
-          accent: "#292cb0",
-          bg: "#f7fcff",
-          text: "#0F172A",
-          highlight: "#84CC16",
+          primary: "#D4A017",
+          accent: "#F2C94C",
+          bg: "#F5F5F5",
+          text: "#111111",
+          highlight: "#B8860B",
           surface: "#FFFFFF",
-          "surface-alt": "#EEF2FF",
-          border: "#D6DEEF",
+          "surface-alt": "#EEEEEE",
+          border: "#D0D0D0",
         },
       },
     },

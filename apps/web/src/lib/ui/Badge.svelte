@@ -6,7 +6,7 @@
   const variantClasses = {
     neutral: "border-brand-border bg-brand-surface text-brand-text/75",
     subtle: "border-brand-border bg-brand-surface-alt text-brand-text/75",
-    success: "border-brand-highlight/40 bg-brand-highlight/20 text-brand-highlight",
+    success: "border-brand-highlight/45 bg-brand-highlight/25 text-brand-text",
     warning: "border-brand-accent/35 bg-brand-accent/20 text-brand-text",
     danger: "border-brand-accent/35 bg-brand-accent/20 text-brand-text"
   };

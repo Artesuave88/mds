@@ -24,7 +24,7 @@
 </script>
 
 <svelte:head>
-  <meta name="theme-color" content="#1E3A8A" />
+  <meta name="theme-color" content="#111111" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/brand/logo-mark.png" />
   <link rel="manifest" href="/site.webmanifest" />

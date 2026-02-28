@@ -1,14 +1,20 @@
 <svg width="64" height="64" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="midas-gradient" x1="18" y1="226" x2="238" y2="30" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#1E3A8A" />
-      <stop offset="0.62" stop-color="#6D28D9" />
-      <stop offset="1" stop-color="#84CC16" />
+    <linearGradient id="gold" x1="40" y1="220" x2="216" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9A6D00" />
+      <stop offset="0.58" stop-color="#D4A017" />
+      <stop offset="1" stop-color="#F5D978" />
     </linearGradient>
   </defs>
 
-  <path d="M26 212L112 50L182 152" stroke="url(#midas-gradient)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M90 212L124 146L158 212" stroke="url(#midas-gradient)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M128 212L186 112L230 212" stroke="url(#midas-gradient)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M176 212L198 172L220 212" stroke="url(#midas-gradient)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="#050505" />
+  <rect x="8" y="8" width="240" height="240" rx="56" stroke="url(#gold)" stroke-opacity="0.5" stroke-width="6" />
+
+  <path
+    d="M56 186V66L92 134L128 74L164 134L200 66V186"
+    stroke="url(#gold)"
+    stroke-width="17"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
 </svg>

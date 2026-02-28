@@ -58,7 +58,7 @@
 >
   <div class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-24">
     <div in:fly={{ y: 18, duration: 500 }}>
-      <Badge variant="subtle" class="border-white/80 bg-brand-surface/70 text-brand-text/75">Midas Web Development</Badge>
+      <Badge variant="subtle" class="border-brand-border/80 bg-brand-surface/70 text-brand-text/75">Midas Web Development</Badge>
       <h1 class="mt-5 max-w-xl text-4xl font-extrabold leading-tight text-brand-text sm:text-5xl">
         We build websites that are fast, clear, and built to convert.
       </h1>
@@ -67,7 +67,7 @@
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
-          class="inline-flex items-center rounded-xl bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/40 focus-visible:ring-offset-2"
+          class="inline-flex items-center rounded-xl bg-brand-primary px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/40 focus-visible:ring-offset-2"
           href="/work"
         >
           Explore work
@@ -237,7 +237,7 @@
   <div slot="footer" class="flex flex-wrap justify-end gap-3">
     <Button variant="ghost" on:click={() => (showEngagementModal = false)}>Close</Button>
     <a
-      class="inline-flex h-11 items-center rounded-xl bg-brand-primary px-5 text-sm font-semibold text-white transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent"
+      class="inline-flex h-11 items-center rounded-xl bg-brand-primary px-5 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent"
       href="/contact"
     >
       Start a project

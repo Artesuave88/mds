@@ -4,8 +4,8 @@
   "description": "Midas Web Development builds fast, reliable, and conversion-focused websites.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0A0F1A",
-  "theme_color": "#1E3A8A",
+  "background_color": "#F5F5F5",
+  "theme_color": "#111111",
   "icons": [
     {
       "src": "/favicon.svg",
