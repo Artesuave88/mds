@@ -62,7 +62,7 @@
 >
   <div class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-24">
     <div in:fly={{ y: 18, duration: 500 }}>
-      <Badge variant="subtle" class="border-brand-primary/55 bg-brand-primary/15 text-white">UK-based custom web development</Badge>
+      <Badge variant="subtle" class="border-brand-primary/55 bg-brand-primary/15 text-black">UK-based custom web development</Badge>
       <h1 class="mt-5 max-w-xl text-4xl font-extrabold leading-tight text-white sm:text-5xl">
         High-performance custom websites built to convert.
       </h1>
