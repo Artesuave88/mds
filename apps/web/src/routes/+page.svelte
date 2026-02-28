@@ -34,7 +34,8 @@
       "Website Strategy and UX",
       "Performance Optimisation"
     ]
-  });
+  }).replace(/</g, "\\u003c");
+  const structuredDataScript = `<script type="application/ld+json">${structuredData}<\/script>`;
 
   let showEngagementModal = false;
 </script>
@@ -53,7 +54,7 @@
   <meta name="twitter:title" content={meta.title} />
   <meta name="twitter:description" content={meta.description} />
   <meta name="twitter:image" content={meta.image} />
-  <script type="application/ld+json">{structuredData}</script>
+  {@html structuredDataScript}
 </svelte:head>
 
 <section
