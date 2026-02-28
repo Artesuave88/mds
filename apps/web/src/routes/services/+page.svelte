@@ -11,9 +11,9 @@
 >
   <div in:fly={{ y: 16, duration: 480 }}>
     <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Services</p>
-    <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">Flexible engagement across website planning, development, and optimization.</h1>
+    <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">Custom website development for businesses that need speed, clarity, and growth.</h1>
     <p class="mt-5 max-w-2xl text-base leading-relaxed text-brand-text/85">
-      We adapt to in-house teams, founder-led orgs, and product groups that need senior execution without agency overhead.
+      UK-based delivery for companies that need high-performance websites with clear messaging, strong UX, and measurable conversion outcomes.
     </p>
   </div>
 

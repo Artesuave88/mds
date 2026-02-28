@@ -8,38 +8,55 @@
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" }
   ];
+  const ACTIVE_LINK_CLASS = "bg-brand-highlight/20 text-brand-text";
+  const INACTIVE_LINK_CLASS = "text-brand-text/85 hover:bg-brand-surface-alt hover:text-brand-text";
 
   let mobileOpen = false;
 
-  $: currentPath = $page.url.pathname || "/";
+  function normalizePath(pathname) {
+    if (!pathname || pathname === "/") {
+      return "/";
+    }
+
+    return pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+  }
+
+  function normalizeRouteId(routeId) {
+    if (!routeId || routeId === "/") {
+      return "/";
+    }
+
+    return routeId.endsWith("/") ? routeId.slice(0, -1) : routeId;
+  }
+
+  $: currentRouteId = normalizeRouteId($page.route?.id);
+  $: currentPath = normalizePath($page.url.pathname);
+  $: activeHref = resolveActiveHref(currentRouteId, currentPath);
   $: if (currentPath) {
     mobileOpen = false;
   }
 
-  function isActive(href) {
-    if (href === "/") {
-      return currentPath === "/";
-    }
-    if (href === "/work") {
-      return currentPath === "/work" || currentPath.startsWith("/work/");
-    }
-    return currentPath === href;
-  }
+  function resolveActiveHref(routeId, path) {
+    const nonRootHrefs = navItems.map((item) => item.href).filter((href) => href !== "/");
 
-  function desktopLinkClasses(href) {
-    return `rounded-full px-3 py-2 text-sm font-semibold transition ${
-      isActive(href)
-        ? "bg-brand-highlight/20 text-brand-text"
-        : "text-brand-text/85 hover:bg-brand-surface-alt hover:text-brand-text"
-    }`;
-  }
+    function matchRoute(candidate) {
+      if (!candidate) {
+        return null;
+      }
+      if (candidate === "/") {
+        return "/";
+      }
 
-  function mobileLinkClasses(href) {
-    return `block rounded-xl px-4 py-3 text-sm font-semibold transition ${
-      isActive(href)
-        ? "bg-brand-highlight/20 text-brand-text"
-        : "text-brand-text/85 hover:bg-brand-surface-alt hover:text-brand-text"
-    }`;
+      for (const href of nonRootHrefs) {
+        if (candidate === href || candidate.startsWith(`${href}/`)) {
+          return href;
+        }
+      }
+
+      return null;
+    }
+
+    return matchRoute(routeId) ?? matchRoute(path) ?? "/";
   }
 </script>
 
@@ -50,14 +67,18 @@
         src="/brand/logo-mark.png"
         alt=""
         aria-hidden="true"
-        class="h-14 w-14 rounded-xl border border-brand-primary/45 object-contain shadow-[0_10px_24px_rgba(0,0,0,0.12)]"
+        class="h-16 w-16 rounded-xl border border-brand-primary/55 object-contain brightness-110 contrast-125 saturate-150 shadow-[0_10px_24px_rgba(0,0,0,0.12)] bg-black"
       />
       <span class="hidden text-sm font-bold tracking-wide sm:block">Midas Web Development</span>
     </a>
 
     <nav class="hidden items-center gap-1 md:flex">
       {#each navItems as item}
-        <a class={desktopLinkClasses(item.href)} href={item.href}>
+        <a
+          class={`rounded-full px-3 py-2 text-sm font-semibold transition ${activeHref === item.href ? ACTIVE_LINK_CLASS : INACTIVE_LINK_CLASS}`}
+          href={item.href}
+          aria-current={activeHref === item.href ? "page" : undefined}
+        >
           {item.label}
         </a>
       {/each}
@@ -86,7 +107,11 @@
     <div class="border-t border-brand-border bg-brand-surface md:hidden" id="mobile-nav">
       <nav class="mx-auto w-full max-w-6xl space-y-2 px-4 py-4 sm:px-6 lg:px-8">
         {#each navItems as item}
-          <a class={mobileLinkClasses(item.href)} href={item.href}>
+          <a
+            class={`block rounded-xl px-4 py-3 text-sm font-semibold transition ${activeHref === item.href ? ACTIVE_LINK_CLASS : INACTIVE_LINK_CLASS}`}
+            href={item.href}
+            aria-current={activeHref === item.href ? "page" : undefined}
+          >
             {item.label}
           </a>
         {/each}

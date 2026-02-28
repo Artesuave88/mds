@@ -8,14 +8,14 @@
       <img
         src="/brand/logo-full.png"
         alt="Midas Web Development logo"
-        class="h-auto w-36 rounded-2xl border border-brand-primary/40 shadow-[0_14px_34px_rgba(0,0,0,0.12)]"
+        class="h-auto w-44 rounded-2xl border border-brand-primary/50 brightness-110 contrast-125 saturate-150 shadow-[0_14px_34px_rgba(0,0,0,0.12)] bg-black"
         loading="lazy"
       />
       <h2 class="mt-3 max-w-md text-xl font-bold text-brand-text">
-        Website engineering support for teams that need speed, clarity, and results.
+        UK-based custom web development for high-performance business websites.
       </h2>
       <p class="mt-4 max-w-lg text-sm leading-relaxed text-brand-text/75">
-        We build, launch, and improve production websites with clean code and measurable business intent.
+        We design and build fast, dependable websites that improve visibility, trust, and inbound leads.
       </p>
     </div>
 

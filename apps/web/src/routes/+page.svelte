@@ -17,7 +17,7 @@
 
   const meta = setMeta({
     title: "Midas Web Development",
-    description: "Midas Web Development builds fast, reliable, and conversion-focused websites.",
+    description: "UK-based custom web developer building high-performance websites for ambitious businesses.",
     url: "/"
   });
 
@@ -28,8 +28,12 @@
     url: meta.url,
     image: meta.image,
     description: meta.description,
-    areaServed: "Worldwide",
-    serviceType: ["Website Strategy", "Website Development", "Growth Optimization"]
+    areaServed: "United Kingdom",
+    serviceType: [
+      "Custom Website Development",
+      "Website Strategy and UX",
+      "Performance Optimisation"
+    ]
   });
 
   let showEngagementModal = false;
@@ -53,17 +57,17 @@
 </svelte:head>
 
 <section
-  class="border-b border-brand-border bg-gradient-to-br from-brand-primary/30 via-brand-accent/20 to-brand-bg"
+  class="border-b border-black bg-[#050505]"
   use:reveal={{ distance: 20, duration: 550, threshold: 0.1 }}
 >
   <div class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-24">
     <div in:fly={{ y: 18, duration: 500 }}>
-      <Badge variant="subtle" class="border-brand-border/80 bg-brand-surface/70 text-brand-text/75">Midas Web Development</Badge>
-      <h1 class="mt-5 max-w-xl text-4xl font-extrabold leading-tight text-brand-text sm:text-5xl">
-        We build websites that are fast, clear, and built to convert.
+      <Badge variant="subtle" class="border-brand-primary/55 bg-brand-primary/15 text-white">UK-based custom web development</Badge>
+      <h1 class="mt-5 max-w-xl text-4xl font-extrabold leading-tight text-white sm:text-5xl">
+        High-performance custom websites built to convert.
       </h1>
-      <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-text/85 sm:text-lg">
-        Midas Web Development helps teams launch and improve production websites with strong performance and business intent.
+      <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+        We help UK businesses design and build custom websites that load fast, communicate clearly, and drive enquiries.
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
@@ -73,13 +77,14 @@
           Explore work
         </a>
         <a
-          class="inline-flex items-center rounded-xl border border-brand-border bg-brand-surface px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:border-brand-accent/60 hover:text-brand-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/35 focus-visible:ring-offset-2"
+          class="inline-flex items-center rounded-xl border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:border-brand-accent hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/35 focus-visible:ring-offset-2"
           href="/contact"
         >
           Start a project
         </a>
         <Button
           variant="outline"
+          class="border-white/30 bg-white/5 text-white hover:border-brand-accent hover:bg-white/10 hover:text-white"
           on:click={() => (showEngagementModal = true)}
           aria-haspopup="dialog"
           aria-expanded={showEngagementModal}
@@ -182,7 +187,7 @@
     <Card padding="lg" class="rounded-3xl" interactive>
       <Badge variant="subtle">Ready to build</Badge>
       <h2 class="mt-4 max-w-2xl text-3xl font-bold text-brand-text">
-        If you need a high-quality web presence with clear business intent, we can start quickly.
+        Need a custom website that performs as well as it looks?
       </h2>
       <div class="mt-8 flex flex-wrap gap-3">
         <a

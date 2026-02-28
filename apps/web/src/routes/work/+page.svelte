@@ -24,10 +24,8 @@
 
 <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
   <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Portfolio</p>
-  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">Case studies built from local structured content.</h1>
-  <p class="mt-5 max-w-2xl text-base leading-relaxed text-brand-text/85">
-    Filter by service or tool, then sort to find relevant projects quickly. Every case study is rendered from `projects.json`.
-  </p>
+  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">Here are some of our recent projects.</h1>
+
 
   <div class="mt-8 rounded-2xl border border-brand-border bg-brand-surface p-4 shadow-sm sm:p-5">
     <div class="grid gap-4 md:grid-cols-4">

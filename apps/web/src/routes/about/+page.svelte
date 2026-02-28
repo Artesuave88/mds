@@ -1,8 +1,8 @@
 <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
   <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">About</p>
-  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">A focused web engineering team for businesses that need results.</h1>
+  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">A UK-based custom web development partner for businesses that need results.</h1>
   <p class="mt-6 max-w-3xl text-base leading-relaxed text-brand-text/85 sm:text-lg">
-    Midas Web Development plans, builds, and ships production websites that are fast, maintainable, and easy to scale.
+    Midas Web Development plans, builds, and ships high-performance custom websites tailored to business goals.
   </p>
 
   <div class="mt-10 grid gap-6 md:grid-cols-3">
@@ -18,7 +18,7 @@
       <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">Principle 02</p>
       <h2 class="mt-3 text-xl font-bold text-brand-text">Speed with Rigor</h2>
       <p class="mt-3 text-sm leading-relaxed text-brand-text/75">
-        Fast delivery does not require shortcuts. We prioritize execution quality and measurable impact.
+        Fast delivery does not require shortcuts. We prioritise execution quality and measurable impact.
       </p>
     </article>
 
@@ -44,7 +44,7 @@
       </li>
       <li class="flex gap-3">
         <span class="mt-1 h-2 w-2 rounded-full bg-brand-highlight"></span>
-        <span>Production-ready assets and code that can be owned by your internal team.</span>
+        <span>Production ready websites built with clean, maintainable code and business intent.</span>
       </li>
     </ul>
   </div>

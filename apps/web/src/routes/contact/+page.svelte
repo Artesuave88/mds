@@ -147,9 +147,9 @@
   <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
     <div>
       <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Contact</p>
-      <h1 class="mt-3 text-4xl font-extrabold text-brand-text sm:text-5xl">Let us map the next release.</h1>
+      <h1 class="mt-3 text-4xl font-extrabold text-brand-text sm:text-5xl">Plan your next high-performance website.</h1>
       <p class="mt-6 max-w-md text-base leading-relaxed text-brand-text/85">
-        Share your context, timeline, and goals. We will respond with next steps and a recommended engagement model.
+        Tell us what you need from your website. We will recommend a practical, conversion-focused plan from a UK-based delivery team.
       </p>
 
       <div class="mt-8 rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
