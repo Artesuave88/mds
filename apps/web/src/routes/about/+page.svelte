@@ -2,7 +2,7 @@
   <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">About</p>
   <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">A focused web engineering team for businesses that need results.</h1>
   <p class="mt-6 max-w-3xl text-base leading-relaxed text-brand-text/85 sm:text-lg">
-    MDS plans, builds, and ships production websites that are fast, maintainable, and easy to scale.
+    Midas Web Development plans, builds, and ships production websites that are fast, maintainable, and easy to scale.
   </p>
 
   <div class="mt-10 grid gap-6 md:grid-cols-3">

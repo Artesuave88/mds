@@ -227,7 +227,7 @@
           on:change={() => clearFieldError("consent")}
           required
         />
-        <span class="text-sm text-brand-text/85">I consent to being contacted by MDS regarding this inquiry.</span>
+        <span class="text-sm text-brand-text/85">I consent to being contacted by Midas Web Development regarding this inquiry.</span>
       </label>
       {#if fieldErrors.consent}
         <p class="mt-2 text-xs font-semibold text-brand-accent">{fieldErrors.consent}</p>

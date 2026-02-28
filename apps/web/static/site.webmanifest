@@ -1,7 +1,7 @@
 {
-  "name": "MDS",
-  "short_name": "MDS",
-  "description": "MDS builds fast, reliable, and conversion-focused websites.",
+  "name": "Midas Web Development",
+  "short_name": "Midas Web Development",
+  "description": "Midas Web Development builds fast, reliable, and conversion-focused websites.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0A0F1A",
@@ -13,9 +13,9 @@
       "type": "image/svg+xml"
     },
     {
-      "src": "/brand/logo-mark.svg",
+      "src": "/brand/logo-mark.png",
       "sizes": "any",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "maskable"
     }
   ]

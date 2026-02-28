@@ -1,5 +1,5 @@
 {
-  "name": "mds-monorepo",
+  "name": "midas-web-development-monorepo",
   "private": true,
   "packageManager": "pnpm@9.15.5",
   "workspaces": [

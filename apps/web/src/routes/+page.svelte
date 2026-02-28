@@ -16,15 +16,15 @@
   const latestProject = featuredWork[0];
 
   const meta = setMeta({
-    title: "MDS",
-    description: "MDS builds fast, reliable, and conversion-focused websites.",
+    title: "Midas Web Development",
+    description: "Midas Web Development builds fast, reliable, and conversion-focused websites.",
     url: "/"
   });
 
   const structuredData = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "MDS",
+    name: "Midas Web Development",
     url: meta.url,
     image: meta.image,
     description: meta.description,
@@ -58,12 +58,12 @@
 >
   <div class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-24">
     <div in:fly={{ y: 18, duration: 500 }}>
-      <Badge variant="subtle" class="border-white/80 bg-brand-surface/70 text-brand-text/75">MDS</Badge>
+      <Badge variant="subtle" class="border-white/80 bg-brand-surface/70 text-brand-text/75">Midas Web Development</Badge>
       <h1 class="mt-5 max-w-xl text-4xl font-extrabold leading-tight text-brand-text sm:text-5xl">
         We build websites that are fast, clear, and built to convert.
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-text/85 sm:text-lg">
-        MDS helps teams launch and improve production websites with strong performance and business intent.
+        Midas Web Development helps teams launch and improve production websites with strong performance and business intent.
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a

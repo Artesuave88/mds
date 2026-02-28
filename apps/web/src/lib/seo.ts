@@ -13,7 +13,7 @@ type MetaOutput = {
   siteName: string;
 };
 
-const SITE_NAME = "MDS";
+const SITE_NAME = "Midas Web Development";
 const DEFAULT_IMAGE = "/brand/logo-full.png";
 const DEFAULT_BASE = "http://localhost:5173";
 

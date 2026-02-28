@@ -7,7 +7,7 @@
     <div>
       <img
         src="/brand/logo-full.png"
-        alt="MDS logo"
+        alt="Midas Web Development logo"
         class="h-auto w-36"
         loading="lazy"
       />
@@ -42,7 +42,7 @@
 
   <div class="border-t border-brand-border">
     <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-      <p class="text-xs text-brand-text/65">© {year} MDS</p>
+      <p class="text-xs text-brand-text/65">© {year} Midas Web Development</p>
       <p class="font-['Space_Mono'] text-[10px] uppercase tracking-[0.2em] text-brand-text/55">Built with Svelte + Tailwind</p>
     </div>
   </div>
