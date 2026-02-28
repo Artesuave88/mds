@@ -14,7 +14,7 @@ type MetaOutput = {
 };
 
 const SITE_NAME = "MDS";
-const DEFAULT_IMAGE = "/brand/logo-full.svg";
+const DEFAULT_IMAGE = "/brand/logo-full.png";
 const DEFAULT_BASE = "http://localhost:5173";
 
 function resolveBaseUrl() {
@@ -39,19 +39,27 @@ function toAbsolute(pathOrUrl: string, baseUrl: string) {
     return pathOrUrl;
   }
 
-  const normalizedPath = pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`;
+  const normalizedPath = pathOrUrl.startsWith("/")
+    ? pathOrUrl
+    : `/${pathOrUrl}`;
   return new URL(normalizedPath, `${baseUrl}/`).toString();
 }
 
-export function setMeta({ title, description, image = DEFAULT_IMAGE, url = "/" }: MetaInput): MetaOutput {
+export function setMeta({
+  title,
+  description,
+  image = DEFAULT_IMAGE,
+  url = "/",
+}: MetaInput): MetaOutput {
   const baseUrl = resolveBaseUrl();
-  const computedTitle = title === SITE_NAME ? SITE_NAME : `${title} | ${SITE_NAME}`;
+  const computedTitle =
+    title === SITE_NAME ? SITE_NAME : `${title} | ${SITE_NAME}`;
 
   return {
     title: computedTitle,
     description,
     image: toAbsolute(image, baseUrl),
     url: toAbsolute(url, baseUrl),
-    siteName: SITE_NAME
+    siteName: SITE_NAME,
   };
 }

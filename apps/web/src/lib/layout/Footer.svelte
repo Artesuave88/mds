@@ -6,7 +6,7 @@
   <div class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
     <div>
       <img
-        src="/brand/logo-full.svg"
+        src="/brand/logo-full.png"
         alt="MDS logo"
         class="h-auto w-36"
         loading="lazy"
