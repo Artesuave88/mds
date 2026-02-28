@@ -10,7 +10,7 @@ export const services = [
     id: "02",
     title: "Website Development",
     summary:
-      "Conversion-focused websites built for speed, adaptability, and long-term maintainability.",
+      "Websites built for speed, adaptability, and long-term maintainability.",
     deliverables: [
       "Responsive pages",
       "Reusable components",
