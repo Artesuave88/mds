@@ -64,3 +64,11 @@ Vercel uses:
 - `pnpm build`
 - output directory: `apps/web/dist`
 - API functions from `/api/*.ts`
+
+### Required Web Environment Variable
+
+Set this on Vercel for correct canonical URLs, sitemap URLs, and JSON-LD:
+
+```bash
+VITE_SITE_URL=https://www.midasweb.org
+```

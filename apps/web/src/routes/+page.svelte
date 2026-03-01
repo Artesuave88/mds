@@ -20,19 +20,44 @@
     description: "UK-based custom web developer building high-performance websites for ambitious businesses.",
     url: "/"
   });
+  const logoUrl = new URL("/icon-512.png", meta.url).toString();
 
   const structuredData = JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Midas Web Development",
-    url: meta.url,
-    image: meta.image,
-    description: meta.description,
-    areaServed: "United Kingdom",
-    serviceType: [
-      "Custom Website Development",
-      "Website Strategy and UX",
-      "Performance Optimisation"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${meta.url}#organization`,
+        name: "Midas Web Development",
+        url: meta.url,
+        description: meta.description,
+        image: meta.image,
+        logo: {
+          "@type": "ImageObject",
+          url: logoUrl
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${meta.url}#professional-service`,
+        name: "Midas Web Development",
+        url: meta.url,
+        image: meta.image,
+        logo: {
+          "@type": "ImageObject",
+          url: logoUrl
+        },
+        description: meta.description,
+        areaServed: {
+          "@type": "Country",
+          name: "United Kingdom"
+        },
+        serviceType: [
+          "Custom Website Development",
+          "Website Strategy and UX",
+          "Performance Optimisation"
+        ]
+      }
     ]
   }).replace(/[<>&]/g, (char) => {
     if (char === "<") return "\\u003c";
