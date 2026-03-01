@@ -34,7 +34,11 @@
       "Website Strategy and UX",
       "Performance Optimisation"
     ]
-  }).replace(/</g, "\\u003c");
+  }).replace(/[<>&]/g, (char) => {
+    if (char === "<") return "\\u003c";
+    if (char === ">") return "\\u003e";
+    return "\\u0026";
+  });
   const structuredDataScript = `<script type="application/ld+json">${structuredData}<\/script>`;
 
   let showEngagementModal = false;
