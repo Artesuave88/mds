@@ -2,8 +2,31 @@
   import { fade, fly, scale } from "svelte/transition";
   import { reveal } from "../../lib/actions/reveal";
   import { services } from "../../lib/data/services";
+  import { setMeta } from "$lib/seo";
   import Card from "../../lib/ui/Card.svelte";
+
+  const meta = setMeta({
+    title: "Website Design and Development Services in Derbyshire",
+    description: "Explore website strategy, development, and optimisation services from a Derbyshire web design partner focused on speed and conversions.",
+    url: "/services"
+  });
 </script>
+
+<svelte:head>
+  <title>{meta.title}</title>
+  <meta name="description" content={meta.description} />
+  <link rel="canonical" href={meta.url} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={meta.siteName} />
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  <meta property="og:url" content={meta.url} />
+  <meta property="og:image" content={meta.image} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={meta.title} />
+  <meta name="twitter:description" content={meta.description} />
+  <meta name="twitter:image" content={meta.image} />
+</svelte:head>
 
 <section
   class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8"

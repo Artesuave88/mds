@@ -1,6 +1,7 @@
 <script>
   import Button from "$lib/ui/Button.svelte";
   import Input from "$lib/ui/Input.svelte";
+  import { setMeta } from "$lib/seo";
   import Select from "$lib/ui/Select.svelte";
   import Textarea from "$lib/ui/Textarea.svelte";
 
@@ -27,6 +28,12 @@
   let submitError = "";
   let submitSuccess = "";
   let submitting = false;
+
+  const meta = setMeta({
+    title: "Contact a Derbyshire Website Design Partner",
+    description: "Get a fast response on your website project. Contact Midas Web Development for Derbyshire and UK website design enquiries.",
+    url: "/contact"
+  });
 
   $: messageLength = form.message.trim().length;
 
@@ -142,6 +149,22 @@
     }
   }
 </script>
+
+<svelte:head>
+  <title>{meta.title}</title>
+  <meta name="description" content={meta.description} />
+  <link rel="canonical" href={meta.url} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={meta.siteName} />
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  <meta property="og:url" content={meta.url} />
+  <meta property="og:image" content={meta.image} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={meta.title} />
+  <meta name="twitter:description" content={meta.description} />
+  <meta name="twitter:image" content={meta.image} />
+</svelte:head>
 
 <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
   <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">

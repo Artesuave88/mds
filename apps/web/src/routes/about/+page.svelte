@@ -1,3 +1,29 @@
+<script>
+  import { setMeta } from "$lib/seo";
+
+  const meta = setMeta({
+    title: "About Our Derbyshire Web Design Studio",
+    description: "Meet Midas Web Development, a Derbyshire-based partner building fast, conversion-focused websites for UK businesses.",
+    url: "/about"
+  });
+</script>
+
+<svelte:head>
+  <title>{meta.title}</title>
+  <meta name="description" content={meta.description} />
+  <link rel="canonical" href={meta.url} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={meta.siteName} />
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  <meta property="og:url" content={meta.url} />
+  <meta property="og:image" content={meta.image} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={meta.title} />
+  <meta name="twitter:description" content={meta.description} />
+  <meta name="twitter:image" content={meta.image} />
+</svelte:head>
+
 <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
   <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">About</p>
   <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">A UK-based custom web development partner for businesses that need results.</h1>

@@ -1,16 +1,49 @@
 <script lang="ts">
   import { getProjectBySlug, getProjects } from "$lib/content";
+  import { setMeta } from "$lib/seo";
   import type { PageData } from "./$types";
 
   export let data: PageData;
 
   const orderedProjects = getProjects({ sort: "newest" });
+  const fallbackMeta = setMeta({
+    title: "Website Case Study Not Found",
+    description: "The requested case study could not be found. Explore more website projects from Midas Web Development.",
+    url: "/work"
+  });
 
   $: slug = data.slug ?? "";
   $: project = slug ? getProjectBySlug(slug) : undefined;
   $: currentIndex = orderedProjects.findIndex((entry) => entry.slug === slug);
   $: nextProject = currentIndex >= 0 ? orderedProjects[(currentIndex + 1) % orderedProjects.length] : undefined;
+  $: meta = project
+    ? setMeta({
+        title: `${project.client} Website Case Study`,
+        description: project.summary,
+        image: project.heroImage,
+        url: `/work/${project.slug}`
+      })
+    : fallbackMeta;
 </script>
+
+<svelte:head>
+  <title>{meta.title}</title>
+  <meta name="description" content={meta.description} />
+  <link rel="canonical" href={meta.url} />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content={meta.siteName} />
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  <meta property="og:url" content={meta.url} />
+  <meta property="og:image" content={meta.image} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={meta.title} />
+  <meta name="twitter:description" content={meta.description} />
+  <meta name="twitter:image" content={meta.image} />
+  {#if !project}
+    <meta name="robots" content="noindex,follow" />
+  {/if}
+</svelte:head>
 
 {#if !project}
   <section class="mx-auto w-full max-w-4xl px-4 py-20 text-center sm:px-6 lg:px-8">
