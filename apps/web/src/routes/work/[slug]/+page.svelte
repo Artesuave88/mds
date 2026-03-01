@@ -16,6 +16,7 @@
   $: project = slug ? getProjectBySlug(slug) : undefined;
   $: currentIndex = orderedProjects.findIndex((entry) => entry.slug === slug);
   $: nextProject = currentIndex >= 0 ? orderedProjects[(currentIndex + 1) % orderedProjects.length] : undefined;
+  $: siteScreenshots = (project?.siteScreenshots ?? []).slice(0, 2);
   $: meta = project
     ? setMeta({
         title: `${project.client} Website Case Study`,
@@ -93,7 +94,7 @@
       </aside>
     </div>
 
-    <div class="mt-10 overflow-hidden rounded-2xl border border-brand-border bg-brand-surface shadow-sm">
+    <div class="mt-10 aspect-[16/9] overflow-hidden rounded-2xl border border-brand-border bg-brand-surface shadow-sm">
       <img alt={`${project.title} hero image`} class="h-full w-full object-cover" src={project.heroImage} />
     </div>
 
@@ -114,21 +115,23 @@
       </article>
     </div>
 
-    <div class="mt-12">
-      <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/65">Gallery</p>
-      <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {#each project.galleryImages as image, index}
-          <figure class={`overflow-hidden rounded-xl border border-brand-border bg-brand-surface ${index === 0 ? "sm:col-span-2" : ""}`}>
-            <img
-              alt={`${project.title} gallery ${index + 1}`}
-              class="h-full w-full object-cover"
-              loading="lazy"
-              src={image}
-            />
-          </figure>
-        {/each}
+    {#if siteScreenshots.length > 0}
+      <div class="mt-12">
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/65">Website screenshots</p>
+        <div class="mt-4 grid gap-4 md:grid-cols-2">
+          {#each siteScreenshots as image, index}
+            <figure class="overflow-hidden rounded-xl border border-brand-border bg-brand-surface shadow-sm">
+              <img
+                alt={`${project.title} website screenshot ${index + 1}`}
+                class="h-full w-full object-cover"
+                loading="lazy"
+                src={image}
+              />
+            </figure>
+          {/each}
+        </div>
       </div>
-    </div>
+    {/if}
 
     {#if project.testimonial}
       <div class="mt-12 rounded-3xl border border-brand-border bg-brand-bg p-8 text-brand-text sm:p-10">

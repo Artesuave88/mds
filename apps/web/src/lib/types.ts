@@ -19,7 +19,7 @@ export type Project = {
   services: string[];
   tools: string[];
   heroImage: string;
-  galleryImages: string[];
+  siteScreenshots?: string[];
   summary: string;
   problem: string;
   approach: string;

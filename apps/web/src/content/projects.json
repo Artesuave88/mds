@@ -12,13 +12,9 @@
     ],
     "tools": ["SvelteKit", "Tailwind CSS", "Vercel"],
     "heroImage": "https://lebjj.vercel.app/_app/immutable/assets/LE-BJJ-24-JM-030.Dh4y1nCN.jpg",
-    "galleryImages": [
-      "https://lebjj.vercel.app/_app/immutable/assets/LE-BJJ-24-JM-030.Dh4y1nCN.jpg",
-      "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-011.BsIi5FoZ.jpg",
-      "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-012.Byq2n9jh.jpg",
-      "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-171.DFW1RCyP.jpg",
-      "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-217.BZRM74vN.jpg",
-      "https://lebjj.vercel.app/_app/immutable/assets/LEBJJ-25-JMP-237.BySfLhd9.jpg"
+    "siteScreenshots": [
+      "/case-studies/long-eaton-bjj/home.jpg",
+      "/case-studies/long-eaton-bjj/trial.jpg"
     ],
     "summary": "Built and launched the public website for Long Eaton BJJ with clear navigation for timetable, pricing, instructors, kids classes, gallery, and contact.",
     "problem": "The gym needed a clearer digital presence so new students and parents could quickly understand the offer and book a free trial.",
@@ -62,7 +58,10 @@
     ],
     "tools": ["SvelteKit", "Tailwind CSS", "Vercel"],
     "heroImage": "https://hockey-eight.vercel.app/_app/immutable/assets/logo.D_9K_QSU.png",
-    "galleryImages": [],
+    "siteScreenshots": [
+      "/case-studies/nottingham-phantoms-ihc/home.jpg",
+      "/case-studies/nottingham-phantoms-ihc/fixtures.jpg"
+    ],
     "summary": "Designed and launched a branded team website for Nottingham Phantoms IHC with clear sections for club background, roster, fixtures, and contact.",
     "problem": "The club needed a clearer digital home so new and returning players could quickly understand the team and find contact channels.",
     "approach": "Structured the site around core routes, added straightforward navigation, and prioritised mobile-first interactions with visible join/contact CTAs.",
