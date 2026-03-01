@@ -94,8 +94,32 @@
       </aside>
     </div>
 
-    <div class="mt-10 aspect-[16/9] overflow-hidden rounded-2xl border border-brand-border bg-brand-surface shadow-sm">
-      <img alt={`${project.title} hero image`} class="h-full w-full object-cover" src={project.heroImage} />
+    <div class="mt-10">
+      <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/65">Visual preview</p>
+      <div class={`mt-4 grid gap-4 ${siteScreenshots.length > 0 ? "lg:grid-cols-[1.2fr_0.8fr]" : ""}`}>
+        <figure class="overflow-hidden rounded-2xl border border-brand-border bg-brand-surface p-3 shadow-sm sm:p-4">
+          <img
+            alt={`${project.title} hero image`}
+            class="mx-auto block max-h-[420px] w-full object-contain"
+            src={project.heroImage}
+          />
+        </figure>
+
+        {#if siteScreenshots.length > 0}
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            {#each siteScreenshots as image, index}
+              <figure class="overflow-hidden rounded-xl border border-brand-border bg-brand-surface p-2 shadow-sm">
+                <img
+                  alt={`${project.title} website screenshot ${index + 1}`}
+                  class="mx-auto block max-h-[200px] w-full object-contain"
+                  loading="lazy"
+                  src={image}
+                />
+              </figure>
+            {/each}
+          </div>
+        {/if}
+      </div>
     </div>
 
     <div class="mt-12 grid gap-6 lg:grid-cols-3">
@@ -114,24 +138,6 @@
         <p class="mt-4 leading-relaxed text-brand-text/85">{project.outcome}</p>
       </article>
     </div>
-
-    {#if siteScreenshots.length > 0}
-      <div class="mt-12">
-        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/65">Website screenshots</p>
-        <div class="mt-4 grid gap-4 md:grid-cols-2">
-          {#each siteScreenshots as image, index}
-            <figure class="overflow-hidden rounded-xl border border-brand-border bg-brand-surface shadow-sm">
-              <img
-                alt={`${project.title} website screenshot ${index + 1}`}
-                class="h-full w-full object-cover"
-                loading="lazy"
-                src={image}
-              />
-            </figure>
-          {/each}
-        </div>
-      </div>
-    {/if}
 
     {#if project.testimonial}
       <div class="mt-12 rounded-3xl border border-brand-border bg-brand-bg p-8 text-brand-text sm:p-10">
