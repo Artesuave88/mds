@@ -146,7 +146,7 @@
         <p class="mt-4 text-sm text-brand-text/70">{project.testimonial.author} - {project.testimonial.role}</p>
       </div>
     {/if}
-
+<!-- 
     {#if project.links && project.links.length > 0}
       <div class="mt-10 rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
         <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/65">Related links</p>
@@ -163,7 +163,7 @@
           {/each}
         </div>
       </div>
-    {/if}
+    {/if} -->
 
     {#if nextProject && nextProject.slug !== project.slug}
       <nav class="mt-12 rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
