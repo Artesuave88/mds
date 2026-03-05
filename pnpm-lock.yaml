@@ -63,6 +63,9 @@ importers:
       '@vercel/analytics':
         specifier: ^1.4.1
         version: 1.6.1(@sveltejs/kit@2.53.2(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.53.5)(vite@7.3.1(@types/node@24.10.14)(jiti@1.21.7)(tsx@4.21.0)))(svelte@5.53.5)(typescript@5.9.3)(vite@7.3.1(@types/node@24.10.14)(jiti@1.21.7)(tsx@4.21.0)))(svelte@5.53.5)
+      feed:
+        specifier: ^4.2.2
+        version: 4.2.2
       resend:
         specifier: ^6.9.2
         version: 6.9.2
@@ -1795,6 +1798,10 @@ packages:
       picomatch:
         optional: true
 
+  feed@4.2.2:
+    resolution: {integrity: sha512-u5/sxGfiMfZNtJ3OvQpXcvotFpYkL0n9u9mM2vkui2nGo8b4wvDkJ8gAkYqbA8QpGyFCv3RK0Z+Iv+9veCS9bQ==}
+    engines: {node: '>=0.4.0'}
+
   file-uri-to-path@1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
 
@@ -2450,6 +2457,10 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
+  sax@1.5.0:
+    resolution: {integrity: sha512-21IYA3Q5cQf089Z6tgaUTr7lDAyzoTPx5HRtbhsME8Udispad8dC/+sziTNugOEx54ilvatQ9YCzl4KQLPcRHA==}
+    engines: {node: '>=11.0.0'}
+
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
@@ -2831,6 +2842,10 @@ packages:
   xdg-portable@7.3.0:
     resolution: {integrity: sha512-sqMMuL1rc0FmMBOzCpd0yuy9trqF2yTTVe+E9ogwCSWQCdDEtQUwrZPT6AxqtsFGRNxycgncbP/xmOOSPw5ZUw==}
     engines: {node: '>= 6.0'}
+
+  xml-js@1.6.11:
+    resolution: {integrity: sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==}
+    hasBin: true
 
   y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
@@ -4441,6 +4456,10 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.3
 
+  feed@4.2.2:
+    dependencies:
+      xml-js: 1.6.11
+
   file-uri-to-path@1.0.0: {}
 
   fill-range@7.1.1:
@@ -5045,6 +5064,8 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
+  sax@1.5.0: {}
+
   semver@6.3.1: {}
 
   semver@7.5.4:
@@ -5467,6 +5488,10 @@ snapshots:
   xdg-portable@7.3.0:
     dependencies:
       os-paths: 4.4.0
+
+  xml-js@1.6.11:
+    dependencies:
+      sax: 1.5.0
 
   y18n@5.0.8: {}
 
