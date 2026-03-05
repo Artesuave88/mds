@@ -16,9 +16,11 @@
   const latestProject = featuredWork[0];
 
   const meta = setMeta({
-    title: "Midas Web Development",
-    description: "UK-based custom web developer building high-performance websites for ambitious businesses.",
-    url: "/"
+    title: "UK-Based Custom Web Development | High-Performance Websites - Midas Web",
+    description:
+      "Expert in UK-based custom web development, creating high-performance, conversion-optimised websites for ambitious businesses. Contact us for tailored solutions.",
+    url: "/",
+    includeSiteName: false
   });
   const logoUrl = new URL("/icon-512.png", meta.url).toString();
 
@@ -93,11 +95,12 @@
   <div class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-24">
     <div in:fly={{ y: 18, duration: 500 }}>
       <Badge variant="subtle" class="border-brand-primary/55 bg-brand-primary/15 text-black">UK-based custom web development</Badge>
-      <h1 class="mt-5 max-w-xl text-4xl font-extrabold leading-tight text-white sm:text-5xl">
-        High-performance custom websites built to convert.
+      <h1 class="mt-5 max-w-xl text-4xl font-bold text-center leading-tight text-white sm:text-5xl lg:text-left">
+        High-Performance Custom Web Development in the UK
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-        We help UK businesses design and build custom websites that load fast, communicate clearly, and drive enquiries.
+        We help UK businesses plan and build high-performance websites with clear navigation, creating websites built to convert
+        and drive enquiries.
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
@@ -153,7 +156,7 @@
 </section>
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
-  <Section eyebrow="Featured Work" title="Selected case studies" containerClass="py-16">
+  <Section eyebrow="Featured Work" title="Selected Case Studies" containerClass="py-16">
     <a slot="actions" class="text-sm font-semibold text-brand-text/85 transition hover:text-brand-text" href="/work">
       View all projects
     </a>
@@ -177,7 +180,7 @@
   <Section
     class="border-y border-brand-border bg-brand-surface"
     eyebrow="Services"
-    title="What we help with"
+    title="Our Web Development Services"
     containerClass="py-16"
   >
     <a slot="actions" class="text-sm font-semibold text-brand-text/85 transition hover:text-brand-text" href="/services">
@@ -196,6 +199,63 @@
       {/each}
     </div>
   </Section>
+</div>
+
+<div use:reveal={{ distance: 24, duration: 520, threshold: 0.1 }} in:fade={{ duration: 430 }}>
+  <section class="border-y border-brand-border bg-brand-bg text-brand-text">
+    <div class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="prose mx-auto max-w-3xl prose-invert">
+        <h2>UK-Based Custom Web Development, Explained</h2>
+        <p>
+          UK-based custom web development is most effective when it starts with clarity about the problem you are solving and
+          the people you need to reach. We design high-performance websites that load quickly, communicate value in seconds, and
+          keep teams aligned around measurable outcomes. From the first workshop we map your audience, messaging, and conversion
+          paths, so the build does more than look polished. When stakeholders can see a clear plan for content, structure, and
+          measurement, delivery becomes faster and more predictable.
+        </p>
+        <p>
+          For many organisations, a public website is the first sales conversation, so we prioritise clear navigation, readable
+          typography, and page hierarchy that guides visitors forward. We build websites built to convert by removing friction:
+          concise headlines, confident calls to action, and layouts that help visitors understand what to do next. The result is
+          a site that feels calm yet decisive, giving your team a reliable platform for enquiries, event signups, and product
+          leads.
+        </p>
+        <p>
+          Recent local projects such as Long Eaton BJJ and Nottingham Phantoms IHC show how tailored storytelling and performance
+          can serve real communities. Each site needed energy without clutter, and content that helps fans, members, and sponsors
+          find schedules, coaching details, and contact routes in just a few clicks. We used disciplined layouts, accessible
+          components, and smart media handling so the experience stays fast on mobile connections.
+        </p>
+        <p>
+          Content planning is baked in early, because even the most beautiful layout fails if the story is scattered. We run
+          content audits, define page goals, and create a clear navigation model so visitors can move from awareness to action
+          without confusion. For teams with multiple stakeholders, we document tone, terminology, and reusable components so
+          updates stay consistent after launch. This approach helps marketing teams keep a public website fresh, while giving
+          technical teams a stable foundation for future integrations, from booking platforms to CRM forms. It also creates a
+          shared language for decisions, which reduces revisions and keeps the timeline on track.
+        </p>
+        <p>
+          Our approach includes strategy, UX, design systems, and engineering, so nothing falls through the cracks when a site
+          scales. If you want a full overview, explore our
+          <a href="/services" class="text-brand-accent hover:text-brand-text">services</a> page and see how UK-based custom web
+          development supports launches, migrations, and ongoing optimisation. We pair agile delivery with careful QA so
+          stakeholders stay aligned as pages are built, tested, and refined.
+        </p>
+        <p>
+          Performance is a feature, not a phase. We engineer high-performance websites with modern tooling, image optimisation,
+          and lean front-end architecture. That means fewer slowdowns, more stability during traffic spikes, and improved
+          visibility in search. We also audit content flows to maintain clear navigation across every key page, especially when
+          new sections, campaigns, or event pages are added.
+        </p>
+        <p>
+          If you want UK-based custom web development that balances brand, speed, and measurable results, let's talk. Review our
+          <a href="/work" class="text-brand-accent hover:text-brand-text">work</a> to see outcomes for teams who needed websites
+          built to convert, then tell us where your current public website is falling short. We can map a realistic timeline,
+          define success metrics, and ship a site that supports your marketing in weeks, not quarters.
+        </p>
+      </div>
+    </div>
+  </section>
 </div>
 
 <section class="bg-brand-bg text-brand-text" use:reveal={{ distance: 18, duration: 500, threshold: 0.08 }}>
@@ -217,8 +277,11 @@
     <Card padding="lg" class="rounded-3xl" interactive>
       <Badge variant="subtle">Ready to build</Badge>
       <h2 class="mt-4 max-w-2xl text-3xl font-bold text-brand-text">
-        Need a custom website that performs as well as it looks?
+        Need a Custom Website?
       </h2>
+      <p class="mt-3 max-w-2xl text-base leading-relaxed text-brand-text/75">
+        Let's build a site that looks sharp, loads fast, and supports your next growth milestone.
+      </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a
           class="rounded-xl bg-brand-highlight px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-highlight/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight/50 focus-visible:ring-offset-2"

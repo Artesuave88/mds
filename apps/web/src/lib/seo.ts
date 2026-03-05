@@ -3,6 +3,7 @@ type MetaInput = {
   description: string;
   image?: string;
   url?: string;
+  includeSiteName?: boolean;
 };
 
 type MetaOutput = {
@@ -50,10 +51,13 @@ export function setMeta({
   description,
   image = DEFAULT_IMAGE,
   url = "/",
+  includeSiteName = true,
 }: MetaInput): MetaOutput {
   const baseUrl = resolveBaseUrl();
   const computedTitle =
-    title === SITE_NAME ? SITE_NAME : `${title} | ${SITE_NAME}`;
+    includeSiteName && title !== SITE_NAME
+      ? `${title} | ${SITE_NAME}`
+      : title;
 
   return {
     title: computedTitle,
