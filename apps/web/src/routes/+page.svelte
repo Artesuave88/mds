@@ -7,6 +7,7 @@
   import Badge from "$lib/ui/Badge.svelte";
   import Button from "$lib/ui/Button.svelte";
   import Card from "$lib/ui/Card.svelte";
+  import LazyPicture from "$lib/ui/LazyPicture.svelte";
   import Modal from "$lib/ui/Modal.svelte";
   import Section from "$lib/ui/Section.svelte";
 
@@ -74,13 +75,12 @@
 <svelte:head>
   <title>{meta.title}</title>
   <meta name="description" content={meta.description} />
-  <link rel="canonical" href={meta.url} />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content={meta.siteName} />
-  <meta property="og:title" content={meta.title} />
-  <meta property="og:description" content={meta.description} />
-  <meta property="og:url" content={meta.url} />
-  <meta property="og:image" content={meta.image} />
+  <meta property="og:type" content="website" key="og:type" />
+  <meta property="og:site_name" content={meta.siteName} key="og:site_name" />
+  <meta property="og:title" content={meta.title} key="og:title" />
+  <meta property="og:description" content={meta.description} key="og:description" />
+  <meta property="og:url" content={meta.url} key="og:url" />
+  <meta property="og:image" content={meta.image} key="og:image" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={meta.title} />
   <meta name="twitter:description" content={meta.description} />
@@ -154,6 +154,40 @@
     </div>
   </div>
 </section>
+
+<div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
+  <Section eyebrow="Visual Preview" title="High-Performance Website Highlights" containerClass="py-16">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <LazyPicture
+        src="/assets/image.jpg"
+        webpSrc="/assets/image.webp"
+        width={400}
+        height={300}
+        alt="High-performance custom website for UK business - Midas Web"
+        loading="lazy"
+        className="w-full h-auto rounded-lg shadow-md"
+      />
+      <LazyPicture
+        src="/assets/image.jpg"
+        webpSrc="/assets/image.webp"
+        width={400}
+        height={300}
+        alt="High-performance custom website for UK business - Midas Web"
+        loading="lazy"
+        className="w-full h-auto rounded-lg shadow-md"
+      />
+      <LazyPicture
+        src="/assets/image.jpg"
+        webpSrc="/assets/image.webp"
+        width={400}
+        height={300}
+        alt="High-performance custom website for UK business - Midas Web"
+        loading="lazy"
+        className="w-full h-auto rounded-lg shadow-md"
+      />
+    </div>
+  </Section>
+</div>
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
   <Section eyebrow="Featured Work" title="Selected Case Studies" containerClass="py-16">

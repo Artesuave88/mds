@@ -41,8 +41,46 @@
   </div>
 
   <div class="border-t border-brand-border">
-    <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <div class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6 lg:px-8">
       <p class="text-xs text-brand-text/65">© {year} Midas Web Development</p>
+      <!-- <div class="flex justify-center space-x-4 text-2xl">
+        <a
+          class="text-brand-text/70 hover:text-blue-500"
+          href="https://facebook.com/midasweborg"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Midas Web Development on Facebook"
+        >
+          Facebook
+        </a>
+        <a
+          class="text-brand-text/70 hover:text-blue-500"
+          href="https://twitter.com/midasweborg"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Midas Web Development on X"
+        >
+          X
+        </a>
+        <a
+          class="text-brand-text/70 hover:text-blue-500"
+          href="https://instagram.com/midasweborg"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Midas Web Development on Instagram"
+        >
+          Instagram
+        </a>
+        <a
+          class="text-brand-text/70 hover:text-blue-500"
+          href="https://linkedin.com/company/midasweborg"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Midas Web Development on LinkedIn"
+        >
+          LinkedIn
+        </a>
+      </div> -->
       <p class="font-['Space_Mono'] text-[10px] uppercase tracking-[0.2em] text-brand-text/55">Built with Svelte + Tailwind</p>
     </div>
   </div>

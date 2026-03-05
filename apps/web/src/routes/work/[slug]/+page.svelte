@@ -30,7 +30,6 @@
 <svelte:head>
   <title>{meta.title}</title>
   <meta name="description" content={meta.description} />
-  <link rel="canonical" href={meta.url} />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content={meta.siteName} />
   <meta property="og:title" content={meta.title} />

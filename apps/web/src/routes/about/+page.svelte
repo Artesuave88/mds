@@ -11,13 +11,12 @@
 <svelte:head>
   <title>{meta.title}</title>
   <meta name="description" content={meta.description} />
-  <link rel="canonical" href={meta.url} />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content={meta.siteName} />
-  <meta property="og:title" content={meta.title} />
-  <meta property="og:description" content={meta.description} />
-  <meta property="og:url" content={meta.url} />
-  <meta property="og:image" content={meta.image} />
+  <meta property="og:type" content="website" key="og:type" />
+  <meta property="og:site_name" content={meta.siteName} key="og:site_name" />
+  <meta property="og:title" content={meta.title} key="og:title" />
+  <meta property="og:description" content={meta.description} key="og:description" />
+  <meta property="og:url" content={meta.url} key="og:url" />
+  <meta property="og:image" content={meta.image} key="og:image" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={meta.title} />
   <meta name="twitter:description" content={meta.description} />
