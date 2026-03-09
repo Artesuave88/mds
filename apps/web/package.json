@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.4.1",
+    "@vercel/speed-insights": "^1.4.0",
     "feed": "^4.2.2",
     "resend": "^6.9.2",
     "svelte": "^5.38.6",
