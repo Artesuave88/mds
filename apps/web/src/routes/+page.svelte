@@ -235,63 +235,6 @@
   </Section>
 </div>
 
-<div use:reveal={{ distance: 24, duration: 520, threshold: 0.1 }} in:fade={{ duration: 430 }}>
-  <section class="border-y border-brand-border bg-brand-bg text-brand-text">
-    <div class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-      <div class="prose mx-auto max-w-3xl prose-invert">
-        <h2>UK-Based Custom Web Development, Explained</h2>
-        <p>
-          UK-based custom web development is most effective when it starts with clarity about the problem you are solving and
-          the people you need to reach. We design high-performance websites that load quickly, communicate value in seconds, and
-          keep teams aligned around measurable outcomes. From the first workshop we map your audience, messaging, and conversion
-          paths, so the build does more than look polished. When stakeholders can see a clear plan for content, structure, and
-          measurement, delivery becomes faster and more predictable.
-        </p>
-        <p>
-          For many organisations, a public website is the first sales conversation, so we prioritise clear navigation, readable
-          typography, and page hierarchy that guides visitors forward. We build websites built to convert by removing friction:
-          concise headlines, confident calls to action, and layouts that help visitors understand what to do next. The result is
-          a site that feels calm yet decisive, giving your team a reliable platform for enquiries, event signups, and product
-          leads.
-        </p>
-        <p>
-          Recent local projects such as Long Eaton BJJ and Nottingham Phantoms IHC show how tailored storytelling and performance
-          can serve real communities. Each site needed energy without clutter, and content that helps fans, members, and sponsors
-          find schedules, coaching details, and contact routes in just a few clicks. We used disciplined layouts, accessible
-          components, and smart media handling so the experience stays fast on mobile connections.
-        </p>
-        <p>
-          Content planning is baked in early, because even the most beautiful layout fails if the story is scattered. We run
-          content audits, define page goals, and create a clear navigation model so visitors can move from awareness to action
-          without confusion. For teams with multiple stakeholders, we document tone, terminology, and reusable components so
-          updates stay consistent after launch. This approach helps marketing teams keep a public website fresh, while giving
-          technical teams a stable foundation for future integrations, from booking platforms to CRM forms. It also creates a
-          shared language for decisions, which reduces revisions and keeps the timeline on track.
-        </p>
-        <p>
-          Our approach includes strategy, UX, design systems, and engineering, so nothing falls through the cracks when a site
-          scales. If you want a full overview, explore our
-          <a href="/services" class="text-brand-accent hover:text-brand-text">services</a> page and see how UK-based custom web
-          development supports launches, migrations, and ongoing optimisation. We pair agile delivery with careful QA so
-          stakeholders stay aligned as pages are built, tested, and refined.
-        </p>
-        <p>
-          Performance is a feature, not a phase. We engineer high-performance websites with modern tooling, image optimisation,
-          and lean front-end architecture. That means fewer slowdowns, more stability during traffic spikes, and improved
-          visibility in search. We also audit content flows to maintain clear navigation across every key page, especially when
-          new sections, campaigns, or event pages are added.
-        </p>
-        <p>
-          If you want UK-based custom web development that balances brand, speed, and measurable results, let's talk. Review our
-          <a href="/work" class="text-brand-accent hover:text-brand-text">work</a> to see outcomes for teams who needed websites
-          built to convert, then tell us where your current public website is falling short. We can map a realistic timeline,
-          define success metrics, and ship a site that supports your marketing in weeks, not quarters.
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-
 <section class="bg-brand-bg text-brand-text" use:reveal={{ distance: 18, duration: 500, threshold: 0.08 }}>
   <div class="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8" in:fade={{ duration: 460 }}>
     <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.25em] text-brand-text/55">Client Voice</p>
@@ -300,8 +243,7 @@
         "{latestProject.testimonial.quote}"
       </p>
       <p class="mt-4 text-sm text-brand-text/70">{latestProject.testimonial.author} · {latestProject.testimonial.role}</p>
-    {:else}
-      <p class="mt-4 max-w-4xl text-2xl font-bold leading-snug sm:text-3xl">Add a project testimonial in your local JSON to feature it here.</p>
+
     {/if}
   </div>
 </section>
