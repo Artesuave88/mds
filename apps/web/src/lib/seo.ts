@@ -14,9 +14,9 @@ type MetaOutput = {
   siteName: string;
 };
 
-const SITE_NAME = "Midas Web Development";
-const DEFAULT_IMAGE = "/brand/logo-full.png";
-const DEFAULT_BASE = "http://localhost:5173";
+const SITE_NAME = 'Midas Web Development';
+const DEFAULT_IMAGE = '/brand/logo-full.png';
+const DEFAULT_BASE = 'http://localhost:5173';
 
 function resolveBaseUrl() {
   const raw = (import.meta.env.VITE_SITE_URL as string | undefined)?.trim();
@@ -40,9 +40,7 @@ function toAbsolute(pathOrUrl: string, baseUrl: string) {
     return pathOrUrl;
   }
 
-  const normalizedPath = pathOrUrl.startsWith("/")
-    ? pathOrUrl
-    : `/${pathOrUrl}`;
+  const normalizedPath = pathOrUrl.startsWith('/') ? pathOrUrl : `/${pathOrUrl}`;
   return new URL(normalizedPath, `${baseUrl}/`).toString();
 }
 
@@ -50,14 +48,11 @@ export function setMeta({
   title,
   description,
   image = DEFAULT_IMAGE,
-  url = "/",
+  url = '/',
   includeSiteName = true,
 }: MetaInput): MetaOutput {
   const baseUrl = resolveBaseUrl();
-  const computedTitle =
-    includeSiteName && title !== SITE_NAME
-      ? `${title} | ${SITE_NAME}`
-      : title;
+  const computedTitle = includeSiteName && title !== SITE_NAME ? `${title} | ${SITE_NAME}` : title;
 
   return {
     title: computedTitle,

@@ -1,5 +1,5 @@
-import { browser } from "$app/environment";
-import type { Action } from "svelte/action";
+import { browser } from '$app/environment';
+import type { Action } from 'svelte/action';
 
 export type RevealOptions = {
   delay?: number;
@@ -13,38 +13,50 @@ export type RevealOptions = {
   rootMargin?: string;
 };
 
-const defaultOptions: Required<Omit<RevealOptions, "root">> & { root: Element | Document | null } = {
-  delay: 0,
-  duration: 500,
-  distance: 18,
-  scale: 0.98,
-  easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-  once: true,
-  threshold: 0.18,
-  root: null,
-  rootMargin: "0px 0px -10% 0px"
-};
+const defaultOptions: Required<Omit<RevealOptions, 'root'>> & { root: Element | Document | null } =
+  {
+    delay: 0,
+    duration: 500,
+    distance: 18,
+    scale: 0.98,
+    easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+    once: true,
+    threshold: 0.18,
+    root: null,
+    rootMargin: '0px 0px -10% 0px',
+  };
 
-function buildTransition(options: Required<Omit<RevealOptions, "root">> & { root: Element | Document | null }) {
+function buildTransition(
+  options: Required<Omit<RevealOptions, 'root'>> & { root: Element | Document | null },
+) {
   return [
     `opacity ${options.duration}ms ${options.easing} ${options.delay}ms`,
-    `transform ${options.duration}ms ${options.easing} ${options.delay}ms`
-  ].join(", ");
+    `transform ${options.duration}ms ${options.easing} ${options.delay}ms`,
+  ].join(', ');
 }
 
-function setHidden(node: HTMLElement, options: Required<Omit<RevealOptions, "root">> & { root: Element | Document | null }) {
-  node.style.opacity = "0";
+function setHidden(
+  node: HTMLElement,
+  options: Required<Omit<RevealOptions, 'root'>> & { root: Element | Document | null },
+) {
+  node.style.opacity = '0';
   node.style.transform = `translate3d(0, ${options.distance}px, 0) scale(${options.scale})`;
 }
 
-function setVisible(node: HTMLElement, options: Required<Omit<RevealOptions, "root">> & { root: Element | Document | null }) {
+function setVisible(
+  node: HTMLElement,
+  options: Required<Omit<RevealOptions, 'root'>> & { root: Element | Document | null },
+) {
   node.style.transition = buildTransition(options);
-  node.style.opacity = "1";
-  node.style.transform = "translate3d(0, 0, 0) scale(1)";
+  node.style.opacity = '1';
+  node.style.transform = 'translate3d(0, 0, 0) scale(1)';
 }
 
-function reset(node: HTMLElement, options: Required<Omit<RevealOptions, "root">> & { root: Element | Document | null }) {
-  node.style.transition = "none";
+function reset(
+  node: HTMLElement,
+  options: Required<Omit<RevealOptions, 'root'>> & { root: Element | Document | null },
+) {
+  node.style.transition = 'none';
   setHidden(node, options);
   void node.offsetHeight;
   node.style.transition = buildTransition(options);
@@ -55,7 +67,7 @@ export const reveal: Action<HTMLElement, RevealOptions> = (node, params = {}) =>
   let observer: IntersectionObserver | null = null;
 
   const prefersReducedMotion = () =>
-    browser && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    browser && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const disconnect = () => {
     observer?.disconnect();
@@ -67,12 +79,12 @@ export const reveal: Action<HTMLElement, RevealOptions> = (node, params = {}) =>
       return;
     }
 
-    node.style.willChange = "opacity, transform";
+    node.style.willChange = 'opacity, transform';
 
-    if (prefersReducedMotion() || typeof IntersectionObserver === "undefined") {
-      node.style.transition = "none";
-      node.style.opacity = "1";
-      node.style.transform = "none";
+    if (prefersReducedMotion() || typeof IntersectionObserver === 'undefined') {
+      node.style.transition = 'none';
+      node.style.opacity = '1';
+      node.style.transform = 'none';
       return;
     }
 
@@ -99,8 +111,8 @@ export const reveal: Action<HTMLElement, RevealOptions> = (node, params = {}) =>
       {
         threshold: options.threshold,
         root: options.root,
-        rootMargin: options.rootMargin
-      }
+        rootMargin: options.rootMargin,
+      },
     );
 
     observer.observe(node);
@@ -116,7 +128,7 @@ export const reveal: Action<HTMLElement, RevealOptions> = (node, params = {}) =>
     },
     destroy() {
       disconnect();
-      node.style.willChange = "";
-    }
+      node.style.willChange = '';
+    },
   };
 };

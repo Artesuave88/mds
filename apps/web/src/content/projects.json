@@ -4,12 +4,7 @@
     "title": "Long Eaton BJJ Website",
     "client": "Long Eaton BJJ",
     "year": 2026,
-    "services": [
-      "Website Development",
-      "Content Architecture",
-      "Responsive UI",
-      "Deployment"
-    ],
+    "services": ["Website Development", "Content Architecture", "Responsive UI", "Deployment"],
     "tools": ["SvelteKit", "Tailwind CSS", "Vercel"],
     "heroImage": "https://lebjj.vercel.app/_app/immutable/assets/LE-BJJ-24-JM-030.Dh4y1nCN.jpg",
     "siteScreenshots": [
@@ -26,9 +21,7 @@
       "Contact surfaces include click-to-call plus WhatsApp, Instagram, and Facebook links."
     ],
     "testimonial": {
-      "quote": "The new website has been fantastic for our club. It's easy to navigate, looks great on mobile, and has definitely helped us attract new students. The clear CTAs and dedicated gallery have made a big difference in how we present ourselves online.",
-      "author": "Mikey Dean",
-      "role": "Owner, Long Eaton BJJ"
+      "quote": "The new website has been fantastic for us. It's easy to navigate, looks great on mobile, and has definitely helped us attract new customers."
     },
     "links": [
       {
@@ -50,12 +43,7 @@
     "title": "Nottingham Phantoms IHC Website",
     "client": "Nottingham Phantoms IHC",
     "year": 2026,
-    "services": [
-      "Website Development",
-      "Content Architecture",
-      "Responsive UI",
-      "Deployment"
-    ],
+    "services": ["Website Development", "Content Architecture", "Responsive UI", "Deployment"],
     "tools": ["SvelteKit", "Tailwind CSS", "Vercel"],
     "heroImage": "https://hockey-eight.vercel.app/_app/immutable/assets/logo.D_9K_QSU.png",
     "siteScreenshots": [

@@ -3,7 +3,7 @@ function toClassArray(value) {
     return [];
   }
 
-  if (typeof value === "string") {
+  if (typeof value === 'string') {
     return value.split(/\s+/).filter(Boolean);
   }
 
@@ -11,7 +11,7 @@ function toClassArray(value) {
     return value.flatMap(toClassArray);
   }
 
-  if (typeof value === "object") {
+  if (typeof value === 'object') {
     return Object.entries(value)
       .filter(([, enabled]) => Boolean(enabled))
       .map(([className]) => className);
@@ -21,5 +21,5 @@ function toClassArray(value) {
 }
 
 export function cn(...inputs) {
-  return toClassArray(inputs).join(" ");
+  return toClassArray(inputs).join(' ');
 }

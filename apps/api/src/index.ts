@@ -1,9 +1,9 @@
-import cors from "cors";
-import dotenv from "dotenv";
-import express, { type Request, type Response } from "express";
-import rateLimit from "express-rate-limit";
-import { Resend } from "resend";
-import { z } from "zod";
+import cors from 'cors';
+import dotenv from 'dotenv';
+import express, { type Request, type Response } from 'express';
+import rateLimit from 'express-rate-limit';
+import { Resend } from 'resend';
+import { z } from 'zod';
 
 dotenv.config();
 
@@ -11,18 +11,18 @@ const envSchema = z.object({
   PORT: z.coerce.number().int().positive().default(3001),
   RESEND_API_KEY: z.string().min(1),
   TO_EMAIL: z.string().email(),
-  FROM_EMAIL: z.string().min(1)
+  FROM_EMAIL: z.string().min(1),
 });
 
 const envResult = envSchema.safeParse({
-  PORT: process.env.PORT ?? "3001",
+  PORT: process.env.PORT ?? '3001',
   RESEND_API_KEY: process.env.RESEND_API_KEY,
   TO_EMAIL: process.env.TO_EMAIL,
-  FROM_EMAIL: process.env.FROM_EMAIL
+  FROM_EMAIL: process.env.FROM_EMAIL,
 });
 
 if (!envResult.success) {
-  const invalid = envResult.error.issues.map((issue) => issue.path.join(".")).join(", ");
+  const invalid = envResult.error.issues.map((issue) => issue.path.join('.')).join(', ');
   console.error(`[api] Invalid environment configuration: ${invalid}`);
   process.exit(1);
 }
@@ -32,7 +32,7 @@ const env = envResult.data;
 const app = express();
 const resend = new Resend(env.RESEND_API_KEY);
 
-const allowedOrigins = new Set(["http://localhost:5173", "http://127.0.0.1:5173"]);
+const allowedOrigins = new Set(['http://localhost:5173', 'http://127.0.0.1:5173']);
 
 app.use(
   cors({
@@ -42,14 +42,14 @@ app.use(
         return;
       }
 
-      callback(new Error("CORS origin not allowed"));
+      callback(new Error('CORS origin not allowed'));
     },
-    methods: ["GET", "POST", "OPTIONS"],
-    allowedHeaders: ["Content-Type"]
-  })
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type'],
+  }),
 );
 
-app.use(express.json({ limit: "100kb" }));
+app.use(express.json({ limit: '100kb' }));
 
 const contactLimiter = rateLimit({
   windowMs: 60 * 60 * 1000,
@@ -58,27 +58,27 @@ const contactLimiter = rateLimit({
   legacyHeaders: false,
   message: {
     ok: false,
-    error: "Too many requests. Please try again later."
-  }
+    error: 'Too many requests. Please try again later.',
+  },
 });
 
 const contactSchema = z.object({
-  name: z.string().trim().min(1, "Name is required.").max(120, "Name is too long."),
-  email: z.string().trim().email("Please provide a valid email address."),
-  timeline: z.string().trim().min(1, "Timeline is required.").max(120, "Timeline is too long."),
+  name: z.string().trim().min(1, 'Name is required.').max(120, 'Name is too long.'),
+  email: z.string().trim().email('Please provide a valid email address.'),
+  timeline: z.string().trim().min(1, 'Timeline is required.').max(120, 'Timeline is too long.'),
   message: z
     .string()
     .trim()
-    .min(20, "Message must be at least 20 characters.")
-    .max(5000, "Message is too long."),
+    .min(20, 'Message must be at least 20 characters.')
+    .max(5000, 'Message is too long.'),
   website: z
-    .union([z.literal(""), z.string().trim().url("Website must be a valid URL.")])
+    .union([z.literal(''), z.string().trim().url('Website must be a valid URL.')])
     .optional()
-    .default(""),
-  honeypot: z.string().optional().default(""),
+    .default(''),
+  honeypot: z.string().optional().default(''),
   consent: z.literal(true, {
-    errorMap: () => ({ message: "Consent is required." })
-  })
+    errorMap: () => ({ message: 'Consent is required.' }),
+  }),
 });
 
 function mapFieldErrors(error: z.ZodError) {
@@ -86,22 +86,22 @@ function mapFieldErrors(error: z.ZodError) {
   return Object.fromEntries(
     Object.entries(flattened)
       .filter(([, messages]) => Array.isArray(messages) && messages.length > 0)
-      .map(([key, messages]) => [key, messages?.[0] ?? "Invalid value"]) 
+      .map(([key, messages]) => [key, messages?.[0] ?? 'Invalid value']),
   );
 }
 
-app.get("/health", (_req: Request, res: Response) => {
+app.get('/health', (_req: Request, res: Response) => {
   res.status(200).json({ ok: true });
 });
 
-app.post("/contact", contactLimiter, async (req: Request, res: Response) => {
+app.post('/contact', contactLimiter, async (req: Request, res: Response) => {
   const parsed = contactSchema.safeParse(req.body ?? {});
 
   if (!parsed.success) {
     return res.status(400).json({
       ok: false,
-      error: "Validation failed.",
-      fieldErrors: mapFieldErrors(parsed.error)
+      error: 'Validation failed.',
+      fieldErrors: mapFieldErrors(parsed.error),
     });
   }
 
@@ -121,18 +121,18 @@ app.post("/contact", contactLimiter, async (req: Request, res: Response) => {
         `Name: ${payload.name}`,
         `Email: ${payload.email}`,
         `Timeline: ${payload.timeline}`,
-        `Website: ${payload.website || "Not provided"}`,
-        "",
-        "Message:",
-        payload.message
-      ].join("\n")
+        `Website: ${payload.website || 'Not provided'}`,
+        '',
+        'Message:',
+        payload.message,
+      ].join('\n'),
     });
 
     if (emailResult.error) {
-      console.error("[api] Failed to deliver contact email.");
+      console.error('[api] Failed to deliver contact email.');
       return res.status(502).json({
         ok: false,
-        error: "Failed to deliver message. Please try again shortly."
+        error: 'Failed to deliver message. Please try again shortly.',
       });
     }
 
@@ -140,14 +140,14 @@ app.post("/contact", contactLimiter, async (req: Request, res: Response) => {
 
     return res.status(200).json({
       ok: true,
-      message: "Message sent successfully."
+      message: 'Message sent successfully.',
     });
   } catch (error) {
-    console.error("[api] Failed to deliver contact email.");
+    console.error('[api] Failed to deliver contact email.');
 
     return res.status(502).json({
       ok: false,
-      error: "Failed to deliver message. Please try again shortly."
+      error: 'Failed to deliver message. Please try again shortly.',
     });
   }
 });
@@ -155,7 +155,7 @@ app.post("/contact", contactLimiter, async (req: Request, res: Response) => {
 app.use((_req: Request, res: Response) => {
   res.status(404).json({
     ok: false,
-    error: "Not found."
+    error: 'Not found.',
   });
 });
 

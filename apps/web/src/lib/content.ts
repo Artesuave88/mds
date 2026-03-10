@@ -1,5 +1,5 @@
-import projectData from "../content/projects.json";
-import type { Project, ProjectFilters, ProjectSort } from "./types";
+import projectData from '../content/projects.json';
+import type { Project, ProjectFilters, ProjectSort } from './types';
 
 const projects = projectData as Project[];
 
@@ -7,13 +7,13 @@ function normalize(value: string): string {
   return value.trim().toLowerCase();
 }
 
-export function sortProjects(items: Project[], sort: ProjectSort = "newest"): Project[] {
+export function sortProjects(items: Project[], sort: ProjectSort = 'newest'): Project[] {
   return [...items].sort((a, b) => {
-    if (sort === "oldest") {
+    if (sort === 'oldest') {
       return a.year - b.year || a.title.localeCompare(b.title);
     }
 
-    if (sort === "title") {
+    if (sort === 'title') {
       return a.title.localeCompare(b.title) || b.year - a.year;
     }
 
@@ -23,10 +23,10 @@ export function sortProjects(items: Project[], sort: ProjectSort = "newest"): Pr
 
 export function filterProjects(
   items: Project[],
-  { service, tool }: Pick<ProjectFilters, "service" | "tool"> = {}
+  { service, tool }: Pick<ProjectFilters, 'service' | 'tool'> = {},
 ): Project[] {
-  const normalizedService = service ? normalize(service) : "";
-  const normalizedTool = tool ? normalize(tool) : "";
+  const normalizedService = service ? normalize(service) : '';
+  const normalizedTool = tool ? normalize(tool) : '';
 
   return items.filter((project) => {
     const hasService = normalizedService
@@ -43,7 +43,7 @@ export function filterProjects(
 
 export function getProjects(filters: ProjectFilters = {}): Project[] {
   const filtered = filterProjects(projects, filters);
-  return sortProjects(filtered, filters.sort ?? "newest");
+  return sortProjects(filtered, filters.sort ?? 'newest');
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {
@@ -53,12 +53,12 @@ export function getProjectBySlug(slug: string): Project | undefined {
 
 export function getServiceOptions(): string[] {
   return [...new Set(projects.flatMap((project) => project.services))].sort((a, b) =>
-    a.localeCompare(b)
+    a.localeCompare(b),
   );
 }
 
 export function getToolOptions(): string[] {
   return [...new Set(projects.flatMap((project) => project.tools))].sort((a, b) =>
-    a.localeCompare(b)
+    a.localeCompare(b),
   );
 }

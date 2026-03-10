@@ -1,4 +1,4 @@
-import type { VercelRequest, VercelResponse } from "@vercel/node";
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 type ContactPayload = {
   name?: string;
@@ -7,9 +7,9 @@ type ContactPayload = {
 };
 
 export default function handler(req: VercelRequest, res: VercelResponse) {
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method Not Allowed" });
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
   const body = (req.body ?? {}) as ContactPayload;
@@ -19,7 +19,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
 
   if (!name || !email || !message) {
     return res.status(400).json({
-      error: "Missing required fields: name, email, message"
+      error: 'Missing required fields: name, email, message',
     });
   }
 
@@ -28,7 +28,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     received: {
       name,
       email,
-      messageLength: message.length
-    }
+      messageLength: message.length,
+    },
   });
 }

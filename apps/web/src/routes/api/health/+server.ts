@@ -1,9 +1,9 @@
-import { json } from "@sveltejs/kit";
-import type { RequestHandler } from "./$types";
+import { json } from '@sveltejs/kit';
+import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async () =>
   json({
     ok: true,
-    service: "web",
-    timestamp: new Date().toISOString()
+    service: 'web',
+    timestamp: new Date().toISOString(),
   });

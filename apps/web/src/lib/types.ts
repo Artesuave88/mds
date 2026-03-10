@@ -29,7 +29,7 @@ export type Project = {
   links?: ProjectLink[];
 };
 
-export type ProjectSort = "newest" | "oldest" | "title";
+export type ProjectSort = 'newest' | 'oldest' | 'title';
 
 export type ProjectFilters = {
   service?: string;
