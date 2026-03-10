@@ -16,6 +16,7 @@
   const featuredServices = services.slice(0, 3);
   const latestProject = featuredWork[0];
 
+
   const meta = setMeta({
     title: "UK-Based Custom Web Development | High-Performance Websites - Midas Web",
     description:
@@ -155,39 +156,7 @@
   </div>
 </section>
 
-<div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
-  <Section eyebrow="Visual Preview" title="High-Performance Website Highlights" containerClass="py-16">
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <LazyPicture
-        src="/assets/image.jpg"
-        webpSrc="/assets/image.webp"
-        width={400}
-        height={300}
-        alt="High-performance custom website for UK business - Midas Web"
-        loading="lazy"
-        className="w-full h-auto rounded-lg shadow-md"
-      />
-      <LazyPicture
-        src="/assets/image.jpg"
-        webpSrc="/assets/image.webp"
-        width={400}
-        height={300}
-        alt="High-performance custom website for UK business - Midas Web"
-        loading="lazy"
-        className="w-full h-auto rounded-lg shadow-md"
-      />
-      <LazyPicture
-        src="/assets/image.jpg"
-        webpSrc="/assets/image.webp"
-        width={400}
-        height={300}
-        alt="High-performance custom website for UK business - Midas Web"
-        loading="lazy"
-        className="w-full h-auto rounded-lg shadow-md"
-      />
-    </div>
-  </Section>
-</div>
+
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
   <Section eyebrow="Featured Work" title="Selected Case Studies" containerClass="py-16">
