@@ -18,9 +18,9 @@
 
 
   const meta = setMeta({
-    title: "UK-Based Custom Web Development | High-Performance Websites - Midas Web",
+    title: "Professional Websites for  UK Businesses | Midas Web",
     description:
-      "Expert in UK-based custom web development, creating high-performance, conversion-optimised websites for ambitious businesses. Contact us for tailored solutions.",
+      "Midas Web builds fast, modern websites for  UK businesses that want to look professional, work well on mobile, and win more enquiries.",
     url: "/",
     includeSiteName: false
   });
@@ -57,9 +57,9 @@
           name: "United Kingdom"
         },
         serviceType: [
+          "Business Website Design",
           "Custom Website Development",
-          "Website Strategy and UX",
-          "Performance Optimisation"
+          "Website Launch Support"
         ]
       }
     ]
@@ -95,26 +95,27 @@
 >
   <div class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-24">
     <div in:fly={{ y: 18, duration: 500 }}>
-      <Badge variant="subtle" class="border-brand-primary/55 bg-brand-primary/15 text-black">UK-based custom web development</Badge>
+      <Badge variant="subtle" class="border-brand-primary/55 bg-brand-primary/15 text-black">Websites for UK businesses</Badge>
       <h1 class="mt-5 max-w-xl text-4xl font-bold text-center leading-tight text-white sm:text-5xl lg:text-left">
-        High-Performance Custom Web Development in the UK
+        Professional websites for  UK businesses
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-        We help UK businesses plan and build high-performance websites with clear navigation, creating websites built to convert
-        and drive enquiries.
+        We build fast, modern websites for local businesses that want to look professional, show up well online, and turn
+        visitors into enquiries. Ideal for service businesses that have outgrown Facebook-only or need something better than
+        a DIY site.
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
           class="inline-flex items-center rounded-xl bg-brand-primary px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/40 focus-visible:ring-offset-2"
-          href="/work"
+          href="/contact"
         >
-          Explore work
+          Get a website quote
         </a>
         <a
           class="inline-flex items-center rounded-xl border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:border-brand-accent hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/35 focus-visible:ring-offset-2"
-          href="/contact"
+          href="/work"
         >
-          Start a project
+          See example websites
         </a>
         <Button
           variant="outline"
@@ -123,7 +124,7 @@
           aria-haspopup="dialog"
           aria-expanded={showEngagementModal}
         >
-          See engagement model
+          See how it works
         </Button>
       </div>
     </div>
@@ -131,25 +132,25 @@
     <div class="grid gap-4 sm:grid-cols-2" in:fly={{ y: 24, duration: 550, delay: 80 }}>
       <div in:scale={{ start: 0.96, duration: 320, delay: 100 }}>
         <Card class="bg-brand-surface/90" interactive>
-          <Badge size="sm" variant="subtle">Projects</Badge>
-          <p class="mt-3 text-3xl font-extrabold text-brand-text">{allProjects.length}</p>
-          <p class="mt-2 text-sm text-brand-text/75">Published case study currently in portfolio.</p>
+          <Badge size="sm" variant="subtle">Fast turnaround</Badge>
+          <p class="mt-3 text-lg font-bold text-brand-text">Focused builds without the usual drag</p>
+          <p class="mt-2 text-sm text-brand-text/75">A clear scope, quick feedback, and a straightforward path from plan to launch.</p>
         </Card>
       </div>
 
       <div in:scale={{ start: 0.96, duration: 320, delay: 170 }}>
         <Card class="bg-brand-surface/90" interactive>
-          <Badge size="sm" variant="subtle">Latest Client</Badge>
-          <p class="mt-3 text-lg font-bold text-brand-text">{latestProject?.client ?? "TBD"}</p>
-          <p class="mt-2 text-sm text-brand-text/75">Most recently documented web project.</p>
+          <Badge size="sm" variant="subtle">Mobile-friendly</Badge>
+          <p class="mt-3 text-lg font-bold text-brand-text">Built to look sharp on every screen</p>
+          <p class="mt-2 text-sm text-brand-text/75">Your website needs to work just as well on a phone as it does on a desktop.</p>
         </Card>
       </div>
 
       <div class="sm:col-span-2" in:scale={{ start: 0.97, duration: 360, delay: 240 }}>
         <Card variant="contrast">
-          <Badge size="sm" variant="subtle" class="border-brand-accent/40 bg-brand-primary/25 text-brand-text/70">Current Build</Badge>
-          <p class="mt-3 text-xl font-bold">{latestProject?.title ?? "No case study added yet"}</p>
-          <p class="mt-2 text-sm text-brand-text/70">{latestProject?.summary ?? "Add your first project in src/content/projects.json."}</p>
+          <Badge size="sm" variant="subtle" class="border-brand-accent/40 bg-brand-primary/25 text-brand-text/70">Custom built</Badge>
+          <p class="mt-3 text-xl font-bold">A website that fits your business properly</p>
+          <p class="mt-2 text-sm text-brand-text/70">No generic template feel. Each site is built around your service, your customers, and the enquiries you want more of.</p>
         </Card>
       </div>
     </div>
@@ -159,9 +160,9 @@
 
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
-  <Section eyebrow="Featured Work" title="Selected Case Studies" containerClass="py-16">
+  <Section eyebrow="Example Websites" title="Recent Websites and Case Studies" containerClass="py-16">
     <a slot="actions" class="text-sm font-semibold text-brand-text/85 transition hover:text-brand-text" href="/work">
-      View all projects
+      See example websites
     </a>
 
     <div class="grid gap-5 md:grid-cols-3">
@@ -183,11 +184,11 @@
   <Section
     class="border-y border-brand-border bg-brand-surface"
     eyebrow="Services"
-    title="Our Web Development Services"
+    title="Website Support for Local Businesses"
     containerClass="py-16"
   >
     <a slot="actions" class="text-sm font-semibold text-brand-text/85 transition hover:text-brand-text" href="/services">
-      See service details
+      See what we offer
     </a>
 
     <div class="grid gap-5 md:grid-cols-3">
@@ -220,25 +221,26 @@
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.1 }} in:fade={{ duration: 430 }}>
   <Section containerClass="py-16">
     <Card padding="lg" class="rounded-3xl" interactive>
-      <Badge variant="subtle">Ready to build</Badge>
+      <Badge variant="subtle">Ready for a better website?</Badge>
       <h2 class="mt-4 max-w-2xl text-3xl font-bold text-brand-text">
-        Need a Custom Website?
+        Need a website that makes your business look the part?
       </h2>
       <p class="mt-3 max-w-2xl text-base leading-relaxed text-brand-text/75">
-        Let's build a site that looks sharp, loads fast, and supports your next growth milestone.
+        We build clean, modern websites for businesses that want a stronger first impression, a simple process, and
+        more enquiries from the right customers.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a
           class="rounded-xl bg-brand-highlight px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-highlight/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight/50 focus-visible:ring-offset-2"
           href="/contact"
         >
-          Book a discovery call
+          Get a website quote
         </a>
         <a
           class="rounded-xl border border-brand-border px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:border-brand-accent/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/35 focus-visible:ring-offset-2"
           href="/work"
         >
-          Review case studies
+          See example websites
         </a>
       </div>
     </Card>
@@ -247,32 +249,32 @@
 
 <Modal
   bind:open={showEngagementModal}
-  title="Engagement model"
-  description="A typical project combines planning, development, and launch support in a focused 4-10 week sprint."
+  title="Simple process"
+  description="Most projects move from planning to launch in a focused few weeks, with clear check-ins and no unnecessary layers."
   on:close={() => (showEngagementModal = false)}
 >
   <div class="grid gap-4 sm:grid-cols-3">
     <div in:scale={{ start: 0.95, duration: 280 }}>
       <Card variant="muted" padding="sm" class="h-full">
         <Badge size="sm" variant="success">Week 1</Badge>
-        <p class="mt-3 text-sm font-semibold text-brand-text">Discovery and requirements</p>
-        <p class="mt-2 text-sm text-brand-text/75">Align on goals, constraints, and measurable outcomes.</p>
+        <p class="mt-3 text-sm font-semibold text-brand-text">Plan the right website</p>
+        <p class="mt-2 text-sm text-brand-text/75">We map out what your business needs, what pages matter, and what should drive enquiries.</p>
       </Card>
     </div>
 
     <div in:scale={{ start: 0.95, duration: 280, delay: 80 }}>
       <Card variant="muted" padding="sm" class="h-full">
         <Badge size="sm" variant="warning">Weeks 2-4</Badge>
-        <p class="mt-3 text-sm font-semibold text-brand-text">Build and iteration</p>
-        <p class="mt-2 text-sm text-brand-text/75">Implement pages and components with fast weekly review loops.</p>
+        <p class="mt-3 text-sm font-semibold text-brand-text">Build with quick feedback</p>
+        <p class="mt-2 text-sm text-brand-text/75">You review progress as the site takes shape, so changes stay simple and the build stays on track.</p>
       </Card>
     </div>
 
     <div in:scale={{ start: 0.95, duration: 280, delay: 140 }}>
       <Card variant="muted" padding="sm" class="h-full">
-        <Badge size="sm" variant="neutral">Weeks 5+</Badge>
-        <p class="mt-3 text-sm font-semibold text-brand-text">Build and ship</p>
-        <p class="mt-2 text-sm text-brand-text/75">Production implementation, QA, launch prep, and handoff.</p>
+        <Badge size="sm" variant="neutral">Launch</Badge>
+        <p class="mt-3 text-sm font-semibold text-brand-text">Go live with confidence</p>
+        <p class="mt-2 text-sm text-brand-text/75">We handle the final checks, launch setup, and handover so your new site is ready to work for your business.</p>
       </Card>
     </div>
   </div>
@@ -283,7 +285,7 @@
       class="inline-flex h-11 items-center rounded-xl bg-brand-primary px-5 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent"
       href="/contact"
     >
-      Start a project
+      Get a website quote
     </a>
   </div>
 </Modal>
