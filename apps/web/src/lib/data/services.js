@@ -1,22 +1,22 @@
 export const services = [
   {
     id: '01',
-    title: 'Website Strategy',
+    title: 'Planning the right website',
     summary:
-      'Page architecture, content planning, and technical scoping to ship the right website faster.',
-    deliverables: ['Site map', 'Content plan', 'Technical scope'],
+      'We work out what your website needs to say, what pages it needs, and how it should guide people towards getting in touch.',
+    deliverables: ['Page plan', 'Content guidance', 'Clear structure'],
   },
   {
     id: '02',
-    title: 'Website Development',
-    summary: 'Websites built for speed, adaptability, and long-term maintainability.',
-    deliverables: ['Responsive pages', 'Reusable components', 'Front-end implementation'],
+    title: 'Building your website',
+    summary: 'A custom website that looks professional, works properly on mobile, and reflects your business properly.',
+    deliverables: ['Custom pages', 'Mobile-friendly layout', 'Professional finish'],
   },
   {
     id: '03',
-    title: 'Growth Optimisation',
+    title: 'Improving what works',
     summary:
-      'Data-driven improvements to increase website traffic, engagement, and conversions over time.',
-    deliverables: ['Funnel audits', 'A/B tests', 'Performance dashboards'],
+      'Once the site is live, we can improve pages, messaging, and calls to action so the website does a better job for the business.',
+    deliverables: ['Page improvements', 'Stronger calls to action', 'Ongoing refinements'],
   },
 ];

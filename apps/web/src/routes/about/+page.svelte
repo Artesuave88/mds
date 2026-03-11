@@ -2,8 +2,8 @@
   import { setMeta } from "$lib/seo";
 
   const meta = setMeta({
-    title: "About Our Derbyshire Web Design Studio",
-    description: "Meet Midas Web Development, a Derbyshire-based partner building fast, conversion-focused websites for UK businesses.",
+    title: "About Midas Web",
+    description: "Midas Web builds straightforward, professional websites for UK businesses that need more trust and more enquiries online.",
     url: "/about"
   });
 </script>
@@ -25,51 +25,52 @@
 
 <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
   <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">About</p>
-  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">A UK-based custom web development partner for businesses that need results.</h1>
+  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">Why businesses hire Midas Web</h1>
   <p class="mt-6 max-w-3xl text-base leading-relaxed text-brand-text/85 sm:text-lg">
-    Midas Web Development plans, builds, and ships high-performance custom websites tailored to business goals.
+    Businesses usually come to Midas Web because they need a website that looks more professional, feels easier to trust, and
+    helps turn visits into real enquiries.
   </p>
 
   <div class="mt-10 grid gap-6 md:grid-cols-3">
     <article class="rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
-      <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">Principle 01</p>
-      <h2 class="mt-3 text-xl font-bold text-brand-text">User Clarity First</h2>
+
+      <h2 class="mt-3 text-xl font-bold text-brand-text">Customers understand what you do quickly</h2>
       <p class="mt-3 text-sm leading-relaxed text-brand-text/75">
-        We structure pages and flows so visitors understand what to do in seconds.
+        The site is laid out so people can quickly see your services, where you work, and how to contact you.
       </p>
     </article>
 
     <article class="rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
-      <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">Principle 02</p>
-      <h2 class="mt-3 text-xl font-bold text-brand-text">Speed with Rigor</h2>
+
+      <h2 class="mt-3 text-xl font-bold text-brand-text">You get a proper site without a drawn-out process</h2>
       <p class="mt-3 text-sm leading-relaxed text-brand-text/75">
-        Fast delivery does not require shortcuts. We prioritise execution quality and measurable impact.
+        The work moves quickly, but the end result still feels polished and built properly for your business.
       </p>
     </article>
 
     <article class="rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
-      <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">Principle 03</p>
-      <h2 class="mt-3 text-xl font-bold text-brand-text">Long-Term Thinking</h2>
+
+      <h2 class="mt-3 text-xl font-bold text-brand-text">It is built to fit your business, not just fill a template</h2>
       <p class="mt-3 text-sm leading-relaxed text-brand-text/75">
-        We build systems your team can scale, maintain, and evolve without constant reinvention.
+        You get a website that matches how you work now and gives you room to improve it later without starting again.
       </p>
     </article>
   </div>
 
   <div class="mt-12 rounded-3xl border border-brand-border bg-brand-surface p-8 shadow-sm sm:p-10">
-    <h2 class="text-2xl font-bold text-brand-text">What to expect</h2>
+    <h2 class="text-2xl font-bold text-brand-text">What that means for your business</h2>
     <ul class="mt-5 space-y-3 text-sm leading-relaxed text-brand-text/85">
       <li class="flex gap-3">
         <span class="mt-1 h-2 w-2 rounded-full bg-brand-highlight"></span>
-        <span>Collaborative discovery that aligns website decisions to business goals.</span>
+        <span>A website that gives customers a better first impression of your business.</span>
       </li>
       <li class="flex gap-3">
         <span class="mt-1 h-2 w-2 rounded-full bg-brand-highlight"></span>
-        <span>Lean delivery cycles with transparent progress updates every week.</span>
+        <span>A simpler route to launch without needing to manage lots of technical details.</span>
       </li>
       <li class="flex gap-3">
         <span class="mt-1 h-2 w-2 rounded-full bg-brand-highlight"></span>
-        <span>Production ready websites built with clean, maintainable code and business intent.</span>
+        <span>A site that is easier for customers to use and more likely to turn visits into enquiries.</span>
       </li>
     </ul>
   </div>

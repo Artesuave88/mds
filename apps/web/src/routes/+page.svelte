@@ -172,7 +172,7 @@
   {@html structuredDataScript}
 </svelte:head>
 
-<section
+<section  
   class="border-b border-black bg-[#050505]"
   use:reveal={{ distance: 20, duration: 550, threshold: 0.1 }}
 >
@@ -180,12 +180,12 @@
     <div in:fly={{ y: 18, duration: 500 }}>
       <Badge variant="subtle" class="border-brand-primary/55 bg-brand-primary/15 text-black">Custom websites for UK businesses</Badge>
       <h1 class="mt-5 max-w-xl text-4xl font-bold text-center leading-tight text-white sm:text-5xl lg:text-left">
-        Modern websites that help UK businesses win more enquiries
+        If your business needs a better website, I build it properly
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-        We build custom websites for UK businesses that want to look more professional, build trust quickly, and make it
-        easier for customers to get in touch. Fast turnaround, mobile-friendly design, and a simple process from start to
-        launch.
+        For businesses that need to look more professional, show customers they are credible, and make it easier for people
+        to get in touch. You get a custom site, a fast turnaround, and a straightforward process without having to figure out
+        the technical side yourself.
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
@@ -216,24 +216,24 @@
       <div in:scale={{ start: 0.96, duration: 320, delay: 100 }}>
         <Card class="bg-brand-surface/90" interactive>
           <Badge size="sm" variant="subtle">Fast turnaround</Badge>
-          <p class="mt-3 text-lg font-bold text-brand-text">A clear route from idea to launch</p>
-          <p class="mt-2 text-sm text-brand-text/75">Straightforward planning, quick feedback, and a website built without unnecessary delays.</p>
+          <p class="mt-3 text-lg font-bold text-brand-text">You do not need months of back and forth</p>
+          <p class="mt-2 text-sm text-brand-text/75">If you need a good website soon, the process stays focused and moves quickly from brief to launch.</p>
         </Card>
       </div>
 
       <div in:scale={{ start: 0.96, duration: 320, delay: 170 }}>
         <Card class="bg-brand-surface/90" interactive>
           <Badge size="sm" variant="subtle">Mobile-friendly</Badge>
-          <p class="mt-3 text-lg font-bold text-brand-text">Designed to work properly on every screen</p>
-          <p class="mt-2 text-sm text-brand-text/75">Your customers should get a smooth experience whether they find you on mobile or desktop.</p>
+          <p class="mt-3 text-lg font-bold text-brand-text">Your customers can use it easily on their phone</p>
+          <p class="mt-2 text-sm text-brand-text/75">Most people will find your business on mobile, so the site is built to look right and work properly there.</p>
         </Card>
       </div>
 
       <div class="sm:col-span-2" in:scale={{ start: 0.97, duration: 360, delay: 240 }}>
         <Card variant="contrast">
           <Badge size="sm" variant="subtle" class="border-brand-accent/40 bg-brand-primary/25 text-brand-text/70">Custom built</Badge>
-          <p class="mt-3 text-xl font-bold">Built around your business, not a template</p>
-          <p class="mt-2 text-sm text-brand-text/70">A sharper online presence with pages shaped around your services, your customers, and the enquiries you want to bring in.</p>
+          <p class="mt-3 text-xl font-bold">It will look like your business, not a generic template</p>
+          <p class="mt-2 text-sm text-brand-text/70">The pages are built around what you do, where you work, and what customers need to see before they contact you.</p>
         </Card>
       </div>
     </div>
@@ -243,7 +243,7 @@
 
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
-  <Section eyebrow="Recent Work" title="Websites built for real businesses" containerClass="py-16">
+  <Section eyebrow="Recent Work" title="The kind of websites I build for businesses like yours" containerClass="py-16">
     <a slot="actions" class="text-sm font-semibold text-brand-text/85 transition hover:text-brand-text" href="/work">
       See example websites
     </a>
@@ -267,12 +267,12 @@
   <Section
     class="border-y border-brand-border bg-brand-surface"
     eyebrow="Who We Build For"
-    title="A good fit for service-led businesses"
+    title="If you run a service business, this is built for you"
     containerClass="py-16"
   >
     <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
-      We build custom websites for businesses that need a more professional online presence, a clear message, and a site that
-      helps turn visits into genuine enquiries.
+      This is a good fit if your business relies on trust, local visibility, and enquiries. The aim is simple: help people
+      understand what you do, trust you quickly, and contact you.
     </p>
 
     <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -289,14 +289,14 @@
 </div>
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
-  <Section
+    <Section
     eyebrow="Built Properly From The Start"
-    title="Why businesses choose custom over website builders"
+    title="Why hiring me makes more sense than wrestling with a website builder"
     containerClass="py-16"
   >
     <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
-      Website builders can be useful for getting something online, but businesses that want to look more established usually
-      need a site that feels more polished, works better on mobile, and fits the business properly from day one.
+      If you just need something basic online, a builder might do. If you want a site that makes your business look properly
+      established and brings in better enquiries, a custom build is usually the better call.
     </p>
 
     <div class="grid gap-5 lg:grid-cols-2">
@@ -304,7 +304,7 @@
         <Badge size="sm" variant="subtle">DIY builder</Badge>
         <h3 class="mt-3 text-xl font-bold text-brand-text">DIY website builders</h3>
         <p class="mt-3 text-sm leading-relaxed text-brand-text/75">
-          Useful for getting started, but often harder to shape into something that feels properly polished and tailored.
+          Fine for getting a page live, but often frustrating when you want it to actually look right and fit your business.
         </p>
 
         <div class="mt-6 space-y-4">
@@ -328,8 +328,7 @@
         </Badge>
         <h3 class="mt-3 text-xl font-bold">A website built around your business</h3>
         <p class="mt-3 text-sm leading-relaxed text-brand-text/70">
-          A cleaner, more confident website shaped around your services, your customers, and the kind of enquiries you want
-          to attract.
+          A site built for the way your business actually works, so customers get the right impression and know what to do next.
         </p>
 
         <div class="mt-6 space-y-4">
@@ -354,13 +353,12 @@
   <Section
     class="border-y border-brand-border bg-brand-surface"
     eyebrow="Simple Process"
-    title="A straightforward process from first message to launch"
+    title="You send the basics, I turn it into a proper website"
     containerClass="py-16"
   >
     <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
-      The process is clear, low stress, and built for busy business owners. You do not need technical knowledge or perfectly
-      prepared content. I can take rough information and turn it into a polished website that looks professional and gets
-      online quickly.
+      You do not need a full brief, polished copy, or any technical knowledge. If you can explain your business and what you
+      want the site to do, I can turn that into something clear, professional, and ready to go live.
     </p>
 
     <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -385,11 +383,11 @@
     <Card padding="lg" class="rounded-3xl" interactive>
       <Badge variant="subtle">Ready to look more professional online?</Badge>
       <h2 class="mt-4 max-w-2xl text-3xl font-bold text-brand-text">
-        Need a website that gives customers confidence to contact you?
+        If your current website is holding the business back, I can fix that
       </h2>
       <p class="mt-3 max-w-2xl text-base leading-relaxed text-brand-text/75">
-        Midas Web builds modern, custom websites for UK businesses that want a stronger first impression, better visibility,
-        and more enquiries from the right customers.
+        You will get a modern custom website that makes the business look more credible, works properly on mobile, and helps
+        more of the right people get in touch.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a

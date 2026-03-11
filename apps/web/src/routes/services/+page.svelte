@@ -33,9 +33,10 @@
 >
   <div in:fly={{ y: 16, duration: 480 }}>
     <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Services</p>
-    <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">Custom website services for businesses that want to look sharper online.</h1>
+    <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">What you get when you hire Midas Web</h1>
     <p class="mt-5 max-w-2xl text-base leading-relaxed text-brand-text/85">
-      From planning to launch, we build modern websites that help businesses look more professional, work well on mobile, and bring in more enquiries.
+      Everything is built around a simple goal: help your business look more professional online and make it easier for the
+      right people to contact you.
     </p>
   </div>
 
@@ -65,9 +66,10 @@
     in:fade={{ duration: 420 }}
   >
     <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">How we work</p>
-    <h2 class="mt-3 max-w-2xl text-2xl font-bold sm:text-3xl">Straightforward communication and a simple route to launch.</h2>
+    <h2 class="mt-3 max-w-2xl text-2xl font-bold sm:text-3xl">You do not need to know the website side of things</h2>
     <p class="mt-4 max-w-2xl text-sm leading-relaxed text-brand-text/70">
-      You get direct communication, a clear plan, and a website built around your business without unnecessary back and forth.
+      You explain the business, I handle the planning and build, and you review it as it comes together. Simple, direct, and
+      built to keep moving.
     </p>
     <a
       class="mt-8 inline-flex rounded-full bg-brand-highlight px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-highlight/90"

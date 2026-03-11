@@ -171,14 +171,15 @@
       <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Contact</p>
       <h1 class="mt-3 text-4xl font-extrabold text-brand-text sm:text-5xl">Tell me about your business</h1>
       <p class="mt-6 max-w-md text-base leading-relaxed text-brand-text/85">
-        Share a few details about your business and what you need from your website. You do not need anything technical prepared to get started.
+        If you know what your business does and what you want the website to help with, that is enough to get started. I can
+        turn rough information into a polished site.
       </p>
 
       <div class="mt-8 rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
         <p class="font-semibold text-brand-text">Typical start window</p>
-        <p class="mt-1 text-sm text-brand-text/75">1 to 2 weeks depending on scope</p>
+        <p class="mt-1 text-sm text-brand-text/75">1 to 2 days depending on scope</p>
         <p class="mt-5 font-semibold text-brand-text">Typical build window</p>
-        <p class="mt-1 text-sm text-brand-text/75">Usually a focused few weeks from plan to launch</p>
+        <p class="mt-1 text-sm text-brand-text/75">Usually a focused couple of weeks from first brief to launch</p>
       </div>
     </div>
 
