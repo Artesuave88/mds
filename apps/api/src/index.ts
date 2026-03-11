@@ -66,11 +66,7 @@ const contactSchema = z.object({
   name: z.string().trim().min(1, 'Name is required.').max(120, 'Name is too long.'),
   email: z.string().trim().email('Please provide a valid email address.'),
   timeline: z.string().trim().min(1, 'Timeline is required.').max(120, 'Timeline is too long.'),
-  message: z
-    .string()
-    .trim()
-    .min(20, 'Message must be at least 20 characters.')
-    .max(5000, 'Message is too long.'),
+  message: z.string().trim().max(5000, 'Message is too long.'),
   website: z
     .union([z.literal(''), z.string().trim().url('Website must be a valid URL.')])
     .optional()

@@ -9,7 +9,8 @@ export const services = [
   {
     id: '02',
     title: 'Building your website',
-    summary: 'A custom website that looks professional, works properly on mobile, and reflects your business properly.',
+    summary:
+      'A custom website that looks professional, works properly on mobile, and reflects your business properly.',
     deliverables: ['Custom pages', 'Mobile-friendly layout', 'Professional finish'],
   },
   {

@@ -83,9 +83,7 @@
 
     if (!message) {
       errors.message = "Message is required.";
-    } else if (message.length < 20) {
-      errors.message = "Message must be at least 20 characters.";
-    }
+    } 
 
     if (website && !isValidWebsite(website)) {
       errors.website = "Website must be a valid URL (include http:// or https://).";
