@@ -76,6 +76,28 @@
       custom: "Easier to grow, refine, and tailor as your business changes over time."
     }
   ];
+  const processSteps = [
+    {
+      step: "01",
+      title: "Tell me about your business",
+      summary: "Send over the basics in whatever form you have, from rough notes to an existing Facebook page. You do not need to know any technical details."
+    },
+    {
+      step: "02",
+      title: "I plan and build your site",
+      summary: "I turn your services, key information, and goals into a clean, professional website built around your business."
+    },
+    {
+      step: "03",
+      title: "You review and approve",
+      summary: "You check the draft, request any changes, and make sure everything feels right before launch."
+    },
+    {
+      step: "04",
+      title: "Your website goes live",
+      summary: "Once approved, the site is launched properly so you have a polished online presence ready to bring in enquiries."
+    }
+  ];
 
 
   const meta = setMeta({
@@ -221,7 +243,7 @@
 
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
-  <Section eyebrow="Example Websites" title="Recent Websites and Case Studies" containerClass="py-16">
+  <Section eyebrow="Example Websites" title="Recent Websites" containerClass="py-16">
     <a slot="actions" class="text-sm font-semibold text-brand-text/85 transition hover:text-brand-text" href="/work">
       See example websites
     </a>
@@ -245,7 +267,7 @@
   <Section
     class="border-y border-brand-border bg-brand-surface"
     eyebrow="Who We Build For"
-    title="Built for local businesses that need to look professional online"
+    title="Built for local businesses"
     containerClass="py-16"
   >
     <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
@@ -269,7 +291,7 @@
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
   <Section
     eyebrow="Built Properly From The Start"
-    title="Why businesses choose a custom website over Wix or GoDaddy"
+    title="Why choose a custom website?"
     containerClass="py-16"
   >
     <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
@@ -330,22 +352,27 @@
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
   <Section
-    class="bg-brand-bg"
-    eyebrow="Services"
-    title="Website Support for Local Businesses"
+    class="border-y border-brand-border bg-brand-surface"
+    eyebrow="Simple Process"
+    title="Getting your website sorted should feel straightforward"
     containerClass="py-16"
   >
-    <a slot="actions" class="text-sm font-semibold text-brand-text/85 transition hover:text-brand-text" href="/services">
-      See what we offer
-    </a>
+    <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
+      The process is clear, low stress, and built for busy business owners. You do not need technical knowledge or perfectly
+      prepared content. I can take rough information and turn it into a polished website that looks professional and gets
+      online quickly.
+    </p>
 
-    <div class="grid gap-5 md:grid-cols-3">
-      {#each featuredServices as service, index}
-        <div in:scale={{ start: 0.96, duration: 300, delay: index * 65 }}>
-          <Card variant="muted" interactive>
-            <Badge size="sm" variant="subtle">{service.id}</Badge>
-            <h3 class="mt-3 text-lg font-bold text-brand-text">{service.title}</h3>
-            <p class="mt-3 text-sm leading-relaxed text-brand-text/75">{service.summary}</p>
+    <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      {#each processSteps as item, index}
+        <div in:scale={{ start: 0.96, duration: 300, delay: index * 55 }}>
+          <Card class="h-full bg-brand-bg/70" interactive>
+            <div class="flex items-center justify-between gap-3">
+              <Badge size="sm" variant="subtle">Step {item.step}</Badge>
+              <span class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/45">{item.step}</span>
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-brand-text">{item.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-brand-text/75">{item.summary}</p>
           </Card>
         </div>
       {/each}
@@ -353,18 +380,6 @@
   </Section>
 </div>
 
-<section class="bg-brand-bg text-brand-text" use:reveal={{ distance: 18, duration: 500, threshold: 0.08 }}>
-  <div class="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8" in:fade={{ duration: 460 }}>
-    <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.25em] text-brand-text/55">Client Voice</p>
-    {#if latestProject?.testimonial}
-      <p class="mt-4 max-w-4xl text-2xl font-bold leading-snug sm:text-3xl">
-        "{latestProject.testimonial.quote}"
-      </p>
-      <p class="mt-4 text-sm text-brand-text/70">{latestProject.testimonial.author} · {latestProject.testimonial.role}</p>
-
-    {/if}
-  </div>
-</section>
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.1 }} in:fade={{ duration: 430 }}>
   <Section containerClass="py-16">
