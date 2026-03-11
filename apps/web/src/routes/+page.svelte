@@ -49,6 +49,33 @@
       summary: "Custom sites built to give your business a stronger online presence without the template feel."
     }
   ];
+  const comparisonItems = [
+    {
+      label: "Look and feel",
+      diy: "Often starts from a generic template that can feel similar to countless other sites.",
+      custom: "Designed around your business so it looks professional, trustworthy, and specific to what you offer."
+    },
+    {
+      label: "Speed",
+      diy: "Can feel weighed down by builder features and layouts you do not really need.",
+      custom: "Built with a clear purpose, helping pages feel faster and more focused for visitors."
+    },
+    {
+      label: "Mobile experience",
+      diy: "Usually responsive, but not always shaped around how your customers actually browse on phones.",
+      custom: "Planned to work properly on mobile from the start, where most local service searches happen."
+    },
+    {
+      label: "Fit for your business",
+      diy: "You adapt your business to the template and work around its limits.",
+      custom: "Your website is built around your services, service area, customer journey, and enquiry goals."
+    },
+    {
+      label: "Long-term flexibility",
+      diy: "Changes can become awkward once you want something beyond the builder’s standard options.",
+      custom: "Easier to grow, refine, and tailor as your business changes over time."
+    }
+  ];
 
 
   const meta = setMeta({
@@ -235,6 +262,68 @@
           </Card>
         </div>
       {/each}
+    </div>
+  </Section>
+</div>
+
+<div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
+  <Section
+    eyebrow="Built Properly From The Start"
+    title="Why businesses choose a custom website over Wix or GoDaddy"
+    containerClass="py-16"
+  >
+    <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
+      Website builders can be fine for getting something online quickly, but businesses that want to look more established
+      usually need a site that feels sharper, works better on mobile, and fits the business properly from day one.
+    </p>
+
+    <div class="grid gap-5 lg:grid-cols-2">
+      <Card variant="muted" class="h-full">
+        <Badge size="sm" variant="subtle">DIY builder</Badge>
+        <h3 class="mt-3 text-xl font-bold text-brand-text">Wix, GoDaddy and similar</h3>
+        <p class="mt-3 text-sm leading-relaxed text-brand-text/75">
+          Quick to start, but often harder to shape into something that feels genuinely professional and tailored.
+        </p>
+
+        <div class="mt-6 space-y-4">
+          {#each comparisonItems as item}
+            <div class="rounded-2xl border border-brand-border bg-brand-bg/65 p-4">
+              <p class="text-sm font-semibold text-brand-text">{item.label}</p>
+              <div class="mt-2 flex items-start gap-3">
+                <span class="mt-0.5 inline-flex min-h-6 min-w-6 items-center justify-center rounded-full bg-brand-border text-xs font-bold text-brand-text/70">
+                  -
+                </span>
+                <p class="text-sm leading-relaxed text-brand-text/75">{item.diy}</p>
+              </div>
+            </div>
+          {/each}
+        </div>
+      </Card>
+
+      <Card variant="contrast" class="h-full">
+        <Badge size="sm" variant="subtle" class="border-brand-accent/40 bg-brand-primary/25 text-brand-text/70">
+          Custom website by Midas Web
+        </Badge>
+        <h3 class="mt-3 text-xl font-bold">Built around your business</h3>
+        <p class="mt-3 text-sm leading-relaxed text-brand-text/70">
+          A cleaner, more confident website that is shaped around your services, your customers, and the enquiries you want
+          to generate.
+        </p>
+
+        <div class="mt-6 space-y-4">
+          {#each comparisonItems as item}
+            <div class="rounded-2xl border border-brand-accent/20 bg-brand-primary/10 p-4">
+              <p class="text-sm font-semibold text-brand-text">{item.label}</p>
+              <div class="mt-2 flex items-start gap-3">
+                <span class="mt-0.5 inline-flex min-h-6 min-w-6 items-center justify-center rounded-full bg-brand-primary text-xs font-bold text-brand-text">
+                  ✓
+                </span>
+                <p class="text-sm leading-relaxed text-brand-text/75">{item.custom}</p>
+              </div>
+            </div>
+          {/each}
+        </div>
+      </Card>
     </div>
   </Section>
 </div>
