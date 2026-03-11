@@ -15,6 +15,40 @@
   const featuredWork = allProjects.slice(0, 3);
   const featuredServices = services.slice(0, 3);
   const latestProject = featuredWork[0];
+  const businessTypes = [
+    {
+      title: "Plumbers",
+      summary: "Clear, professional websites that help homeowners and landlords get in touch quickly."
+    },
+    {
+      title: "Electricians",
+      summary: "Trust-building websites that showcase services, coverage areas, and make enquiries simple."
+    },
+    {
+      title: "Decorators",
+      summary: "Modern brochure sites that present your work properly and support more quote requests."
+    },
+    {
+      title: "Dog groomers",
+      summary: "Friendly, polished websites that make it easy for pet owners to learn more and book."
+    },
+    {
+      title: "Personal trainers",
+      summary: "Focused websites that explain your offer clearly and help turn interest into leads."
+    },
+    {
+      title: "Martial arts clubs",
+      summary: "Professional club websites for classes, memberships, and first enquiries from new students."
+    },
+    {
+      title: "Local trades",
+      summary: "Straightforward websites that show what you do, where you work, and why people should choose you."
+    },
+    {
+      title: "Service businesses",
+      summary: "Custom sites built to give your business a stronger online presence without the template feel."
+    }
+  ];
 
 
   const meta = setMeta({
@@ -183,6 +217,31 @@
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
   <Section
     class="border-y border-brand-border bg-brand-surface"
+    eyebrow="Who We Build For"
+    title="Built for local businesses that need to look professional online"
+    containerClass="py-16"
+  >
+    <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
+      We build quick, custom websites for independent businesses that need a professional online presence, a simple process,
+      and a site that helps turn visitors into real enquiries.
+    </p>
+
+    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      {#each businessTypes as business, index}
+        <div in:scale={{ start: 0.96, duration: 300, delay: index * 45 }}>
+          <Card class="h-full bg-brand-bg/70" interactive>
+            <h3 class="text-lg font-bold text-brand-text">{business.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-brand-text/75">{business.summary}</p>
+          </Card>
+        </div>
+      {/each}
+    </div>
+  </Section>
+</div>
+
+<div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
+  <Section
+    class="bg-brand-bg"
     eyebrow="Services"
     title="Website Support for Local Businesses"
     containerClass="py-16"
