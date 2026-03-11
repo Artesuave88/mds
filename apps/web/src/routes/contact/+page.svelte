@@ -30,8 +30,8 @@
   let submitting = false;
 
   const meta = setMeta({
-    title: "Contact a Derbyshire Website Design Partner",
-    description: "Get a fast response on your website project. Contact Midas Web Development for Derbyshire and UK website design enquiries.",
+    title: "Get a Website Quote | Midas Web",
+    description: "Tell Midas Web about your business and get a website quote for a modern, professional site built in the UK.",
     url: "/contact"
   });
 
@@ -169,16 +169,16 @@
   <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
     <div>
       <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Contact</p>
-      <h1 class="mt-3 text-4xl font-extrabold text-brand-text sm:text-5xl">Plan your next high-performance website.</h1>
+      <h1 class="mt-3 text-4xl font-extrabold text-brand-text sm:text-5xl">Tell me about your business</h1>
       <p class="mt-6 max-w-md text-base leading-relaxed text-brand-text/85">
-        Tell us what you need from your website. We will recommend a practical, performance-focused plan from a UK-based delivery team.
+        Share a few details about your business and what you need from your website. You do not need anything technical prepared to get started.
       </p>
 
       <div class="mt-8 rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
-        <p class="font-semibold text-brand-text">Typical kickoff window</p>
+        <p class="font-semibold text-brand-text">Typical start window</p>
         <p class="mt-1 text-sm text-brand-text/75">1 to 2 weeks depending on scope</p>
-        <p class="mt-5 font-semibold text-brand-text">Preferred project length</p>
-        <p class="mt-1 text-sm text-brand-text/75">4 to 10 weeks for focused outcomes</p>
+        <p class="mt-5 font-semibold text-brand-text">Typical build window</p>
+        <p class="mt-1 text-sm text-brand-text/75">Usually a focused few weeks from plan to launch</p>
       </div>
     </div>
 
@@ -222,7 +222,7 @@
       <Textarea
         wrapperClass="mt-5"
         label="Message"
-        placeholder="Tell us what you need, goals, and constraints."
+        placeholder="Tell me about your business, what the website needs to do, and any links or notes you already have."
         bind:value={form.message}
         error={fieldErrors.message}
         hint={`${messageLength}/20 minimum characters`}
@@ -256,7 +256,7 @@
       {/if}
 
       <Button class="mt-6 rounded-full px-6" type="submit" disabled={submitting}>
-        {submitting ? "Sending..." : "Send inquiry"}
+        {submitting ? "Sending..." : "Get my website quote"}
       </Button>
 
       {#if submitError}

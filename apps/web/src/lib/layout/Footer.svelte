@@ -12,10 +12,10 @@
         loading="lazy"
       />
       <h2 class="mt-3 max-w-md text-xl font-bold text-brand-text">
-        UK-based custom web development for high-performance business websites.
+        UK-based custom websites for businesses that want to look professional online.
       </h2>
       <p class="mt-4 max-w-lg text-sm leading-relaxed text-brand-text/75">
-        We design and build fast, dependable websites that improve visibility, trust, and inbound leads.
+        We design and build fast, modern websites that improve trust, visibility, and enquiries.
       </p>
     </div>
 
@@ -33,7 +33,7 @@
         <p class="font-semibold text-brand-text">Company</p>
         <div class="mt-3 space-y-2">
           <a class="block text-brand-text/75 hover:text-brand-text" href="/about">About</a>
-          <a class="block text-brand-text/75 hover:text-brand-text" href="/contact">Contact</a>
+          <a class="block text-brand-text/75 hover:text-brand-text" href="/contact">Get a website quote</a>
           <a class="block text-brand-text/75 hover:text-brand-text" href="/api/health" target="_blank" rel="noreferrer">API Health</a>
         </div>
       </div>

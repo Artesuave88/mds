@@ -6,10 +6,11 @@
     { href: "/work", label: "Work" },
     { href: "/services", label: "Services" },
     { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" }
+    { href: "/contact", label: "Get a quote" }
   ];
   const ACTIVE_LINK_CLASS = "bg-brand-highlight/20 text-brand-text";
   const INACTIVE_LINK_CLASS = "text-brand-text/85 hover:bg-brand-surface-alt hover:text-brand-text";
+  const CTA_CLASS = "bg-brand-primary text-brand-text hover:bg-brand-accent";
 
   let mobileOpen = false;
 
@@ -75,7 +76,7 @@
     <nav class="hidden items-center gap-1 md:flex">
       {#each navItems as item}
         <a
-          class={`rounded-full px-3 py-2 text-sm font-semibold transition ${activeHref === item.href ? ACTIVE_LINK_CLASS : INACTIVE_LINK_CLASS}`}
+          class={`rounded-full px-3 py-2 text-sm font-semibold transition ${item.href === "/contact" ? CTA_CLASS : activeHref === item.href ? ACTIVE_LINK_CLASS : INACTIVE_LINK_CLASS}`}
           href={item.href}
           aria-current={activeHref === item.href ? "page" : undefined}
         >
@@ -108,7 +109,7 @@
       <nav class="mx-auto w-full max-w-6xl space-y-2 px-4 py-4 sm:px-6 lg:px-8">
         {#each navItems as item}
           <a
-            class={`block rounded-xl px-4 py-3 text-sm font-semibold transition ${activeHref === item.href ? ACTIVE_LINK_CLASS : INACTIVE_LINK_CLASS}`}
+            class={`block rounded-xl px-4 py-3 text-sm font-semibold transition ${item.href === "/contact" ? CTA_CLASS : activeHref === item.href ? ACTIVE_LINK_CLASS : INACTIVE_LINK_CLASS}`}
             href={item.href}
             aria-current={activeHref === item.href ? "page" : undefined}
           >
