@@ -178,9 +178,8 @@
 >
   <div class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-24">
     <div in:fly={{ y: 18, duration: 500 }}>
-      <Badge variant="subtle" class="border-brand-primary/55 bg-brand-primary/15 text-black">Custom websites for UK businesses</Badge>
       <h1 class="mt-5 max-w-xl text-4xl font-bold text-center leading-tight text-white sm:text-5xl lg:text-left">
-        If your business needs a better website, I build it properly
+        If your business needs a better website,we build it properly
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
         For businesses that need to look more professional, show customers they are credible, and make it easier for people
