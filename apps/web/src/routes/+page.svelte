@@ -4,6 +4,7 @@
   import { getProjects } from "$lib/content";
   import { services } from "$lib/data/services";
   import { setMeta } from "$lib/seo";
+  import StarterPackageSection from "$lib/sections/StarterPackageSection.svelte";
   import Badge from "$lib/ui/Badge.svelte";
   import Button from "$lib/ui/Button.svelte";
   import Card from "$lib/ui/Card.svelte";
@@ -238,7 +239,7 @@ Request a free mockup
   </div>
 </section>
 
-
+<StarterPackageSection />
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
   <Section eyebrow="Recent Work" title="The kind of websites I build for businesses like yours" containerClass="py-16">
