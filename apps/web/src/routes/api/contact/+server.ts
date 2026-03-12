@@ -13,16 +13,12 @@ const envSchema = z.object({
 const contactSchema = z.object({
   name: z.string().trim().min(1, 'Name is required.').max(120, 'Name is too long.'),
   email: z.string().trim().email('Please provide a valid email address.'),
-  timeline: z.string().trim().min(1, 'Timeline is required.').max(120, 'Timeline is too long.'),
   message: z.string().trim().max(5000, 'Message is too long.'),
   website: z
     .union([z.literal(''), z.string().trim().url('Website must be a valid URL.')])
     .optional()
     .default(''),
   honeypot: z.string().optional().default(''),
-  consent: z.literal(true, {
-    errorMap: () => ({ message: 'Consent is required.' }),
-  }),
 });
 
 type RateLimitEntry = {
@@ -162,9 +158,7 @@ export const POST: RequestHandler = async ({ request, getClientAddress }) => {
   const details = [
     `Name: ${payload.name}`,
     `Email: ${payload.email}`,
-    `Timeline: ${payload.timeline}`,
     `Website: ${payload.website || 'Not provided'}`,
-    `Consent: ${payload.consent ? 'Yes' : 'No'}`,
     `Source: ${source}`,
     `Submitted: ${submittedAt}`,
   ];
@@ -184,9 +178,7 @@ export const POST: RequestHandler = async ({ request, getClientAddress }) => {
             <tbody>
               <tr><td style="padding:6px 0;font-weight:600">Name</td><td style="padding:6px 0">${escapeHtml(payload.name)}</td></tr>
               <tr><td style="padding:6px 0;font-weight:600">Email</td><td style="padding:6px 0">${escapeHtml(payload.email)}</td></tr>
-              <tr><td style="padding:6px 0;font-weight:600">Timeline</td><td style="padding:6px 0">${escapeHtml(payload.timeline)}</td></tr>
               <tr><td style="padding:6px 0;font-weight:600">Website</td><td style="padding:6px 0">${escapeHtml(payload.website || 'Not provided')}</td></tr>
-              <tr><td style="padding:6px 0;font-weight:600">Consent</td><td style="padding:6px 0">Yes</td></tr>
               <tr><td style="padding:6px 0;font-weight:600">Source</td><td style="padding:6px 0">${escapeHtml(source)}</td></tr>
               <tr><td style="padding:6px 0;font-weight:600">Submitted</td><td style="padding:6px 0">${escapeHtml(submittedAt)}</td></tr>
             </tbody>

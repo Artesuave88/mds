@@ -179,19 +179,18 @@
   <div class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-24">
     <div in:fly={{ y: 18, duration: 500 }}>
       <h1 class="mt-5 max-w-xl text-4xl font-bold text-center leading-tight text-white sm:text-5xl lg:text-left">
-        If your business needs a better website,we build it properly
+        Get a free website mockup for your business
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-        For businesses that need to look more professional, show customers they are credible, and make it easier for people
-        to get in touch. You get a custom site, a fast turnaround, and a straightforward process without having to figure out
-        the technical side yourself.
+        Send us your business name and we'll show you how your website could look. It's a simple way to see a custom
+        direction before committing to anything.
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
           class="inline-flex items-center rounded-xl bg-brand-primary px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/40 focus-visible:ring-offset-2"
           href="/contact"
         >
-          Get a website quote
+Request a free mockup
         </a>
         <a
           class="inline-flex items-center rounded-xl border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:border-brand-accent hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/35 focus-visible:ring-offset-2"

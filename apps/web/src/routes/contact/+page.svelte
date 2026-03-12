@@ -6,21 +6,14 @@
   import Textarea from "$lib/ui/Textarea.svelte";
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const timelineOptions = [
-    { value: "ASAP (1-2 weeks)", label: "ASAP (1-2 weeks)" },
-    { value: "This month", label: "This month" },
-    { value: "Next 1-2 months", label: "Next 1-2 months" },
-    { value: "Exploring options", label: "Exploring options" }
-  ];
+
 
   const initialForm = {
     name: "",
     email: "",
-    timeline: "",
     message: "",
     website: "",
     honeypot: "",
-    consent: false
   };
 
   let form = { ...initialForm };
@@ -63,7 +56,6 @@
     const errors = {};
     const name = form.name.trim();
     const email = form.email.trim();
-    const timeline = form.timeline.trim();
     const message = form.message.trim();
     const website = form.website.trim();
 
@@ -77,9 +69,7 @@
       errors.email = "Please provide a valid email address.";
     }
 
-    if (!timeline) {
-      errors.timeline = "Please choose a timeline.";
-    }
+
 
     if (!message) {
       errors.message = "Message is required.";
@@ -87,10 +77,6 @@
 
     if (website && !isValidWebsite(website)) {
       errors.website = "Website must be a valid URL (include http:// or https://).";
-    }
-
-    if (!form.consent) {
-      errors.consent = "Consent is required.";
     }
 
     fieldErrors = errors;
@@ -112,11 +98,9 @@
       const payload = {
         name: form.name.trim(),
         email: form.email.trim(),
-        timeline: form.timeline.trim(),
         message: form.message.trim(),
         website: form.website.trim(),
         honeypot: form.honeypot,
-        consent: form.consent
       };
 
       const response = await fetch("/api/contact", {
@@ -207,17 +191,6 @@
         required
       />
 
-      <Select
-        wrapperClass="mt-5"
-        label="Timeline"
-        placeholder="Select a timeline"
-        options={timelineOptions}
-        bind:value={form.timeline}
-        error={fieldErrors.timeline}
-        on:change={() => clearFieldError("timeline")}
-        required
-      />
-
       <Textarea
         wrapperClass="mt-5"
         label="Message"
@@ -239,20 +212,6 @@
         error={fieldErrors.website}
         on:input={() => clearFieldError("website")}
       />
-
-      <label class="mt-5 flex items-start gap-3 rounded-xl border border-brand-border bg-brand-surface-alt/40 p-4">
-        <input
-          class="mt-0.5 h-4 w-4 rounded border-brand-border text-brand-primary focus:ring-brand-accent"
-          type="checkbox"
-          bind:checked={form.consent}
-          on:change={() => clearFieldError("consent")}
-          required
-        />
-        <span class="text-sm text-brand-text/85">I consent to being contacted by Midas Web Development regarding this inquiry.</span>
-      </label>
-      {#if fieldErrors.consent}
-        <p class="mt-2 text-xs font-semibold text-brand-accent">{fieldErrors.consent}</p>
-      {/if}
 
       <Button class="mt-6 rounded-full px-6" type="submit" disabled={submitting}>
         {submitting ? "Sending..." : "Get my website quote"}
