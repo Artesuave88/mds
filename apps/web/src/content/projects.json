@@ -6,35 +6,37 @@
     "year": 2026,
     "services": ["Website Development", "Content Architecture", "Responsive UI", "Deployment"],
     "tools": ["SvelteKit", "Tailwind CSS", "Vercel"],
-    "heroImage": "https://lebjj.vercel.app/_app/immutable/assets/LE-BJJ-24-JM-030.Dh4y1nCN.jpg",
+    "heroImage": "/case-studies/long-eaton-bjj/home.jpg",
     "siteScreenshots": [
       "/case-studies/long-eaton-bjj/home.jpg",
       "/case-studies/long-eaton-bjj/trial.jpg"
     ],
-    "summary": "Built and launched the public website for Long Eaton BJJ with clear navigation for timetable, pricing, instructors, kids classes, gallery, and contact.",
+    "summary": "Built and launched the live public website for Long Eaton BJJ with clear navigation for timetable, pricing, instructors, kids classes, gallery, and contact.",
     "problem": "The gym needed a clearer digital presence so new students and parents could quickly understand the offer and book a free trial.",
     "approach": "Built a mobile-first site structure with direct CTAs, concise page sections, and route-level navigation for each core info area.",
-    "outcome": "The club now has a live production site with clear trial and contact pathways, social links, and a dedicated gallery experience.",
+    "outcome": "The club now has a live production site at www.longeatonbjj.co.uk with clear trial and contact pathways, social links, and a dedicated gallery experience.",
     "metrics": [
       "8 core routes published: /, /timetable, /pricing, /coaches, /kids, /gallery, /contact, /trial.",
       "Sticky mobile action bar includes direct Book Trial and Call buttons.",
       "Contact surfaces include click-to-call plus WhatsApp, Instagram, and Facebook links."
     ],
     "testimonial": {
-      "quote": "The new website has been fantastic for us. It's easy to navigate, looks great on mobile, and has definitely helped us attract new customers."
+      "quote": "The new website has been fantastic for us. It's easy to navigate, looks great on mobile, and has definitely helped us attract new customers.",
+      "author": "Long Eaton BJJ",
+      "role": "Client"
     },
     "links": [
       {
         "label": "Live site",
-        "url": "https://lebjj.vercel.app/"
+        "url": "https://www.longeatonbjj.co.uk/"
       },
       {
         "label": "Gallery page",
-        "url": "https://lebjj.vercel.app/gallery"
+        "url": "https://www.longeatonbjj.co.uk/gallery"
       },
       {
         "label": "Free trial page",
-        "url": "https://lebjj.vercel.app/trial"
+        "url": "https://www.longeatonbjj.co.uk/trial"
       }
     ]
   },

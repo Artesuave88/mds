@@ -243,6 +243,18 @@ Request a free mockup
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
   <Section eyebrow="Recent Work" title="The kind of websites I build for businesses like yours" containerClass="py-16">
+    <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
+      Latest launch: <span class="font-semibold text-brand-text">{latestProject.client}</span> is now live at
+      <a
+        class="font-semibold text-brand-text underline decoration-brand-accent/55 underline-offset-4 transition hover:text-brand-text/80"
+        href={latestProject.links?.[0]?.url}
+        rel="noreferrer"
+        target="_blank"
+      >
+        {latestProject.links?.[0]?.url?.replace("https://", "").replace(/\/$/, "")}
+      </a>.
+    </p>
+
     <a slot="actions" class="text-sm font-semibold text-brand-text/85 transition hover:text-brand-text" href="/work">
       See example websites
     </a>
@@ -251,7 +263,7 @@ Request a free mockup
       {#each featuredWork as item, index}
         <a class="block" href={`/work/${item.slug}`} in:scale={{ start: 0.96, duration: 320, delay: index * 70 }}>
           <Card class="group h-full" interactive>
-            <Badge size="sm" variant="subtle">{item.year} · {item.client}</Badge>
+            <Badge size="sm" variant="subtle">{item === latestProject ? "Latest project" : item.year + " · " + item.client}</Badge>
             <h3 class="mt-3 text-lg font-bold text-brand-text transition group-hover:text-brand-text/85">{item.title}</h3>
             <p class="mt-3 text-sm leading-relaxed text-brand-text/75">{item.summary}</p>
             <p class="mt-5 text-sm font-semibold text-brand-text">View website details -></p>

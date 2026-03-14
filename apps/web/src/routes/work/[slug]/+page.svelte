@@ -138,14 +138,13 @@
       </article>
     </div>
 
-    {#if project.testimonial}
+    <!-- {#if project.testimonial}
       <div class="mt-12 rounded-3xl border border-brand-border bg-brand-bg p-8 text-brand-text sm:p-10">
         <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">Client testimonial</p>
         <p class="mt-4 text-xl font-bold leading-relaxed sm:text-2xl">"{project.testimonial.quote}"</p>
         <p class="mt-4 text-sm text-brand-text/70">{project.testimonial.author} - {project.testimonial.role}</p>
       </div>
-    {/if}
-<!-- 
+    {/if} -->
     {#if project.links && project.links.length > 0}
       <div class="mt-10 rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
         <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/65">Related links</p>
@@ -162,7 +161,7 @@
           {/each}
         </div>
       </div>
-    {/if} -->
+    {/if}
 
     {#if nextProject && nextProject.slug !== project.slug}
       <nav class="mt-12 rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
