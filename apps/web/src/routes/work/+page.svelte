@@ -49,7 +49,7 @@
   <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">Here are some of our recent projects.</h1>
 
 
-  <div class="mt-8 rounded-2xl border border-brand-border bg-brand-surface p-4 shadow-sm sm:p-5">
+  <!-- <div class="mt-8 rounded-2xl border border-brand-border bg-brand-surface p-4 shadow-sm sm:p-5">
     <div class="grid gap-4 md:grid-cols-4">
       <label class="block">
         <span class="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-brand-text/65">Service</span>
@@ -101,7 +101,7 @@
     </div>
 
     <p class="mt-4 text-sm text-brand-text/75">{projects.length} project{projects.length === 1 ? "" : "s"} found</p>
-  </div>
+  </div> -->
 
   {#if projects.length === 0}
     <div class="mt-10 rounded-2xl border border-dashed border-brand-border bg-brand-surface px-6 py-12 text-center">
