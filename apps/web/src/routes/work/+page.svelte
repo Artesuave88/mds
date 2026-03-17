@@ -32,12 +32,12 @@
 <svelte:head>
   <title>{meta.title}</title>
   <meta name="description" content={meta.description} />
-  <meta property="og:type" content="website" key="og:type" />
-  <meta property="og:site_name" content={meta.siteName} key="og:site_name" />
-  <meta property="og:title" content={meta.title} key="og:title" />
-  <meta property="og:description" content={meta.description} key="og:description" />
-  <meta property="og:url" content={meta.url} key="og:url" />
-  <meta property="og:image" content={meta.image} key="og:image" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={meta.siteName} />
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  <meta property="og:url" content={meta.url} />
+  <meta property="og:image" content={meta.image} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={meta.title} />
   <meta name="twitter:description" content={meta.description} />
@@ -47,6 +47,9 @@
 <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
   <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Portfolio</p>
   <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">Here are some of our recent projects.</h1>
+  <p class="mt-4 max-w-3xl text-lg leading-relaxed text-brand-text/75">
+    When you buy a site from us, it is yours for good. No yearly website builder fees, no renting your own website, just a site you fully own.
+  </p>
 
 
   <!-- <div class="mt-8 rounded-2xl border border-brand-border bg-brand-surface p-4 shadow-sm sm:p-5">

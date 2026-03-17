@@ -73,8 +73,8 @@
     },
     {
       label: "Long-term flexibility",
-      diy: "Changes can become awkward once you want something beyond the builder’s standard options.",
-      custom: "Easier to grow, refine, and tailor as your business changes over time."
+      diy: "You usually keep paying yearly platform fees, and the site still lives inside someone else's system.",
+      custom: "You own the website outright, with no yearly builder fees just to keep your site."
     }
   ];
   const processSteps = [
@@ -184,7 +184,8 @@
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
         Send us your business name and we'll show you how your website could look. It's a simple way to see a custom
-        direction before committing to anything.
+        direction before committing to anything. When you buy your site from us, you own it outright, with no yearly
+        website builder fees.
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
@@ -230,9 +231,9 @@ Request a free mockup
 
       <div class="sm:col-span-2" in:scale={{ start: 0.97, duration: 360, delay: 240 }}>
         <Card variant="contrast">
-          <Badge size="sm" variant="subtle" class="border-brand-accent/40 bg-brand-primary/25 text-brand-text/70">Custom built</Badge>
-          <p class="mt-3 text-xl font-bold">It will look like your business, not a generic template</p>
-          <p class="mt-2 text-sm text-brand-text/70">The pages are built around what you do, where you work, and what customers need to see before they contact you.</p>
+          <Badge size="sm" variant="subtle" class="border-brand-accent/40 bg-brand-primary/25 text-brand-text/70">You own it</Badge>
+          <p class="mt-3 text-xl font-bold">Your website is yours, not a rented builder subscription</p>
+          <p class="mt-2 text-sm text-brand-text/70">You get a custom site built around your business, without being locked into yearly builder fees just to keep it online.</p>
         </Card>
       </div>
     </div>
