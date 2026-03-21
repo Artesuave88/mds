@@ -184,8 +184,7 @@
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
         Send us your business name and we'll show you how your website could look. It's a simple way to see a custom
-        direction before committing to anything. When you buy your site from us, you own it outright, with no yearly
-        website builder fees.
+        direction before committing to anything.
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
@@ -214,27 +213,27 @@ Request a free mockup
 
     <div class="grid gap-4 sm:grid-cols-2" in:fly={{ y: 24, duration: 550, delay: 80 }}>
       <div in:scale={{ start: 0.96, duration: 320, delay: 100 }}>
-        <Card class="bg-brand-surface/90" interactive>
-          <Badge size="sm" variant="subtle">Fast turnaround</Badge>
+          <Card class="bg-brand-surface/90" interactive>
+            <Badge size="sm" variant="subtle">Fast turnaround</Badge>
           <p class="mt-3 text-lg font-bold text-brand-text">You do not need months of back and forth</p>
           <p class="mt-2 text-sm text-brand-text/75">If you need a good website soon, the process stays focused and moves quickly from brief to launch.</p>
-        </Card>
+          </Card>
       </div>
 
       <div in:scale={{ start: 0.96, duration: 320, delay: 170 }}>
-        <Card class="bg-brand-surface/90" interactive>
-          <Badge size="sm" variant="subtle">Mobile-friendly</Badge>
+          <Card class="bg-brand-surface/90" interactive>
+            <Badge size="sm" variant="subtle">Mobile-friendly</Badge>
           <p class="mt-3 text-lg font-bold text-brand-text">Your customers can use it easily on their phone</p>
           <p class="mt-2 text-sm text-brand-text/75">Most people will find your business on mobile, so the site is built to look right and work properly there.</p>
-        </Card>
+          </Card>
       </div>
 
       <div class="sm:col-span-2" in:scale={{ start: 0.97, duration: 360, delay: 240 }}>
-        <Card variant="contrast">
-          <Badge size="sm" variant="subtle" class="border-brand-accent/40 bg-brand-primary/25 text-brand-text/70">You own it</Badge>
+          <Card variant="contrast">
+            <Badge size="sm" variant="subtle" class="border-brand-accent/40 bg-brand-primary/25 text-brand-text/70">You own it</Badge>
           <p class="mt-3 text-xl font-bold">Your website is yours, not a rented builder subscription</p>
           <p class="mt-2 text-sm text-brand-text/70">You get a custom site built around your business, without being locked into yearly builder fees just to keep it online.</p>
-        </Card>
+          </Card>
       </div>
     </div>
   </div>
@@ -428,7 +427,7 @@ Request a free mockup
   <div class="grid gap-4 sm:grid-cols-3">
     <div in:scale={{ start: 0.95, duration: 280 }}>
       <Card variant="muted" padding="sm" class="h-full">
-        <Badge size="sm" variant="success">Week 1</Badge>
+        <Badge size="sm" variant="success">Step 1</Badge>
         <p class="mt-3 text-sm font-semibold text-brand-text">Plan the right website</p>
         <p class="mt-2 text-sm text-brand-text/75">We map out what your business needs, what pages matter, and what should drive enquiries.</p>
       </Card>
@@ -436,7 +435,7 @@ Request a free mockup
 
     <div in:scale={{ start: 0.95, duration: 280, delay: 80 }}>
       <Card variant="muted" padding="sm" class="h-full">
-        <Badge size="sm" variant="warning">Weeks 2+</Badge>
+        <Badge size="sm" variant="warning">Step 2</Badge>
         <p class="mt-3 text-sm font-semibold text-brand-text">Build with quick feedback</p>
         <p class="mt-2 text-sm text-brand-text/75">You review progress as the site takes shape, so changes stay simple and the build stays on track.</p>
       </Card>
