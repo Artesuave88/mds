@@ -118,10 +118,10 @@
           class="group overflow-hidden rounded-2xl border border-brand-border bg-brand-surface shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
           href={`/work/${project.slug}`}
         >
-          <div class="aspect-[16/10] overflow-hidden bg-brand-surface-alt">
+          <div class="flex aspect-[16/10] items-center justify-center overflow-hidden bg-brand-surface-alt p-4">
             <img
               alt={`${project.title} hero`}
-              class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+              class="h-full w-full object-contain object-center transition duration-500 group-hover:scale-[1.03]"
               loading="lazy"
               src={project.heroImage}
             />

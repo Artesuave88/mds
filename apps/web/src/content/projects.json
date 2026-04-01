@@ -1,5 +1,31 @@
 [
   {
+    "slug": "flowstate-tracker",
+    "title": "FlowState Tracker",
+    "client": "FlowState Tracker",
+    "year": 2026,
+    "services": ["App Development", "Web App Development", "Product Design", "Backend Integration"],
+    "tools": ["Flutter", "Google Firebase"],
+    "heroImage": "/case-studies/flowstate/flowstate.webp",
+    "siteScreenshots": [
+      "/case-studies/flowstate/flowstate2.webp"
+    ],
+    "summary": "Built FlowState Tracker, a BJJ training and performance app/webapp that helps athletes log sessions, understand their training, and improve over time.",
+    "problem": "BJJ athletes needed a clearer way to record training consistently, spot patterns across sessions, and turn day-to-day mat time into useful performance insight.",
+    "approach": "Designed and built a responsive product experience focused on easy session logging, readable training data, and a streamlined interface that works well across mobile and desktop.",
+    "outcome": "FlowState Tracker is now live at www.flowstatebjj.online as a dedicated BJJ training and performance platform with portfolio-ready product imagery and a clear value proposition for athletes.",
+    "metrics": [
+      "BJJ-focused app/webapp designed to help athletes track sessions and monitor progress over time.",
+      "Live project published at www.flowstatebjj.online."
+    ],
+    "links": [
+      {
+        "label": "Live site",
+        "url": "https://www.flowstatebjj.online/"
+      }
+    ]
+  },
+  {
     "slug": "long-eaton-bjj-website",
     "title": "Long Eaton BJJ Website",
     "client": "Long Eaton BJJ",
@@ -8,7 +34,6 @@
     "tools": ["SvelteKit", "Tailwind CSS", "Vercel"],
     "heroImage": "/case-studies/long-eaton-bjj/home.jpg",
     "siteScreenshots": [
-      "/case-studies/long-eaton-bjj/home.jpg",
       "/case-studies/long-eaton-bjj/trial.jpg"
     ],
     "summary": "Built and launched the live public website for Long Eaton BJJ with clear navigation for timetable, pricing, instructors, kids classes, gallery, and contact.",

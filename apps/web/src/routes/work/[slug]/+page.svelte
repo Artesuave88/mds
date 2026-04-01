@@ -17,6 +17,7 @@
   $: currentIndex = orderedProjects.findIndex((entry) => entry.slug === slug);
   $: nextProject = currentIndex >= 0 ? orderedProjects[(currentIndex + 1) % orderedProjects.length] : undefined;
   $: siteScreenshots = (project?.siteScreenshots ?? []).slice(0, 2);
+  $: previewImages = project ? [project.heroImage, ...siteScreenshots].slice(0, 2) : [];
   $: meta = project
     ? setMeta({
         title: `${project.client} Website Case Study`,
@@ -95,29 +96,17 @@
 
     <div class="mt-10">
       <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/65">Visual preview</p>
-      <div class={`mt-4 grid gap-4 ${siteScreenshots.length > 0 ? "lg:grid-cols-[1.2fr_0.8fr]" : ""}`}>
-        <figure class="overflow-hidden rounded-2xl border border-brand-border bg-brand-surface p-3 shadow-sm sm:p-4">
-          <img
-            alt={`${project.title} hero image`}
-            class="mx-auto block max-h-[420px] w-full object-contain"
-            src={project.heroImage}
-          />
-        </figure>
-
-        {#if siteScreenshots.length > 0}
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-            {#each siteScreenshots as image, index}
-              <figure class="overflow-hidden rounded-xl border border-brand-border bg-brand-surface p-2 shadow-sm">
-                <img
-                  alt={`${project.title} website screenshot ${index + 1}`}
-                  class="mx-auto block max-h-[200px] w-full object-contain"
-                  loading="lazy"
-                  src={image}
-                />
-              </figure>
-            {/each}
-          </div>
-        {/if}
+      <div class={`mt-4 grid gap-4 ${previewImages.length > 1 ? "lg:grid-cols-2" : ""}`}>
+        {#each previewImages as image, index}
+          <figure class="overflow-hidden rounded-2xl border border-brand-border bg-brand-surface p-3 shadow-sm sm:p-4">
+            <img
+              alt={index === 0 ? `${project.title} hero image` : `${project.title} website screenshot ${index}`}
+              class="mx-auto block max-h-[520px] w-full object-contain"
+              loading={index === 0 ? "eager" : "lazy"}
+              src={image}
+            />
+          </figure>
+        {/each}
       </div>
     </div>
 
