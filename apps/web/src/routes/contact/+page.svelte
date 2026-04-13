@@ -149,7 +149,7 @@
 
 <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
   <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-    <div>
+    <div class="section-panel p-8 sm:p-10">
       <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Contact</p>
       <h1 class="mt-3 text-4xl font-extrabold text-brand-text sm:text-5xl">Tell me about your business</h1>
       <p class="mt-6 max-w-md text-base leading-relaxed text-brand-text/85">
@@ -157,7 +157,7 @@
         turn rough information into a polished site.
       </p>
 
-      <div class="mt-8 rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
+      <div class="mt-8 rounded-[1.5rem] border border-brand-border/70 bg-brand-surface/72 p-6">
         <p class="font-semibold text-brand-text">Typical start window</p>
         <p class="mt-1 text-sm text-brand-text/75">1 to 2 days depending on scope</p>
         <p class="mt-5 font-semibold text-brand-text">Typical build window</p>
@@ -165,7 +165,7 @@
       </div>
     </div>
 
-    <form class="relative rounded-3xl border border-brand-border bg-brand-surface p-7 shadow-sm sm:p-8" on:submit={handleSubmit} novalidate>
+    <form class="relative rounded-[2rem] border border-brand-border/75 bg-brand-surface/88 p-7 shadow-[0_24px_70px_rgba(23,18,13,0.1)] backdrop-blur-sm sm:p-8" on:submit={handleSubmit} novalidate>
       <div class="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
         <label for="contact-company">Company</label>
         <input id="contact-company" type="text" autocomplete="off" tabindex="-1" bind:value={form.honeypot} />

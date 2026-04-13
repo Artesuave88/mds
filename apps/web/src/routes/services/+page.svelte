@@ -31,7 +31,7 @@
   class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8"
   use:reveal={{ distance: 22, duration: 540, threshold: 0.1 }}
 >
-  <div in:fly={{ y: 16, duration: 480 }}>
+  <div class="section-panel p-8 sm:p-10" in:fly={{ y: 16, duration: 480 }}>
     <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Services</p>
     <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">What you get when you hire Midas Web</h1>
     <p class="mt-5 max-w-2xl text-base leading-relaxed text-brand-text/85">
@@ -61,7 +61,7 @@
   </div>
 
   <div
-    class="mt-12 rounded-3xl border border-brand-border bg-brand-bg p-8 text-brand-text sm:p-10"
+    class="mt-12 rounded-[2rem] border border-brand-border/75 bg-[linear-gradient(145deg,rgba(255,253,248,0.7),rgba(239,226,210,0.8))] p-8 text-brand-text shadow-[0_20px_60px_rgba(23,18,13,0.08)] sm:p-10"
     use:reveal={{ distance: 18, duration: 460, threshold: 0.2 }}
     in:fade={{ duration: 420 }}
   >

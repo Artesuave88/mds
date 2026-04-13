@@ -24,7 +24,7 @@
   $: describedBy = [hintId, errorId].filter(Boolean).join(" ") || undefined;
 
   $: textareaClass = cn(
-    "w-full rounded-xl border px-4 py-3 text-sm text-brand-text outline-none transition placeholder:text-brand-text/55 focus-visible:ring-2 focus-visible:ring-brand-accent/30 focus-visible:ring-offset-1",
+    "w-full rounded-2xl border bg-brand-surface/85 px-4 py-3 text-sm text-brand-text shadow-[inset_0_1px_0_rgba(255,255,255,0.45)] outline-none transition placeholder:text-brand-text/45 focus-visible:ring-2 focus-visible:ring-brand-accent/30 focus-visible:ring-offset-1",
     error ? "border-brand-accent focus:border-brand-accent" : "border-brand-border focus:border-brand-accent",
     disabled && "cursor-not-allowed bg-brand-surface-alt text-brand-text/65",
     className

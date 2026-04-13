@@ -45,11 +45,13 @@
 </svelte:head>
 
 <section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+  <div class="section-panel p-8 sm:p-10">
   <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Portfolio</p>
   <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">Here are some of our recent projects.</h1>
   <p class="mt-4 max-w-3xl text-lg leading-relaxed text-brand-text/75">
     When you buy a site from us, it is yours for good. No yearly website builder fees, no renting your own website, just a site you fully own.
   </p>
+  </div>
 
 
   <!-- <div class="mt-8 rounded-2xl border border-brand-border bg-brand-surface p-4 shadow-sm sm:p-5">
@@ -115,10 +117,10 @@
     <div class="mt-10 grid gap-6 md:grid-cols-2">
       {#each projects as project}
         <a
-          class="group overflow-hidden rounded-2xl border border-brand-border bg-brand-surface shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          class="group overflow-hidden rounded-[1.75rem] border border-brand-border/75 bg-brand-surface/85 shadow-[0_20px_60px_rgba(23,18,13,0.08)] transition hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(23,18,13,0.12)]"
           href={`/work/${project.slug}`}
         >
-          <div class="flex aspect-[16/10] items-center justify-center overflow-hidden bg-brand-surface-alt p-4">
+          <div class="flex aspect-[16/10] items-center justify-center overflow-hidden bg-brand-surface-alt/75 p-4">
             <img
               alt={`${project.title} hero`}
               class="h-full w-full object-contain object-center transition duration-500 group-hover:scale-[1.03]"
@@ -130,7 +132,7 @@
           <div class="p-6">
             <div class="flex flex-wrap items-center justify-between gap-3">
               <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">{project.year}</p>
-              <span class="rounded-full bg-brand-surface-alt px-3 py-1 text-xs font-semibold text-brand-text/85">{project.client}</span>
+              <span class="rounded-full bg-brand-surface-alt/80 px-3 py-1 text-xs font-semibold text-brand-text/85">{project.client}</span>
             </div>
 
             <h2 class="mt-4 text-2xl font-bold text-brand-text group-hover:text-brand-text/85">{project.title}</h2>
@@ -138,7 +140,7 @@
 
             <div class="mt-4 flex flex-wrap gap-2">
               {#each project.services.slice(0, 2) as service}
-                <span class="rounded-full border border-brand-border px-3 py-1 text-xs font-medium text-brand-text/75">{service}</span>
+                <span class="rounded-full border border-brand-border/80 px-3 py-1 text-xs font-medium text-brand-text/75">{service}</span>
               {/each}
             </div>
 

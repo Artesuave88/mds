@@ -41,7 +41,7 @@
   });
 
   $: selectClass = cn(
-    "w-full appearance-none rounded-xl border px-4 py-3 pr-10 text-sm text-brand-text outline-none transition focus-visible:ring-2 focus-visible:ring-brand-accent/30 focus-visible:ring-offset-1",
+    "w-full appearance-none rounded-2xl border bg-brand-surface/85 px-4 py-3 pr-10 text-sm text-brand-text shadow-[inset_0_1px_0_rgba(255,255,255,0.45)] outline-none transition focus-visible:ring-2 focus-visible:ring-brand-accent/30 focus-visible:ring-offset-1",
     error ? "border-brand-accent focus:border-brand-accent" : "border-brand-border focus:border-brand-accent",
     disabled && "cursor-not-allowed bg-brand-surface-alt text-brand-text/65",
     className

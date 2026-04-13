@@ -62,7 +62,7 @@
     </a>
 
     <div class="mt-8 grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
-      <div>
+      <div class="section-panel p-8 sm:p-10">
         <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">{project.year} - {project.client}</p>
         <h1 class="mt-3 text-4xl font-extrabold text-brand-text sm:text-5xl">{project.title}</h1>
         <p class="mt-5 max-w-2xl text-base leading-relaxed text-brand-text/85 sm:text-lg">{project.summary}</p>
@@ -74,7 +74,7 @@
         </div>
       </div>
 
-      <aside class="rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
+      <aside class="rounded-[1.75rem] border border-brand-border/75 bg-brand-surface/82 p-6 shadow-[0_20px_60px_rgba(23,18,13,0.08)] backdrop-blur-sm">
         <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">Tools</p>
         <div class="mt-3 flex flex-wrap gap-2">
           {#each project.tools as tool}
@@ -98,7 +98,7 @@
       <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/65">Visual preview</p>
       <div class={`mt-4 grid gap-4 ${previewImages.length > 1 ? "lg:grid-cols-2" : ""}`}>
         {#each previewImages as image, index}
-          <figure class="overflow-hidden rounded-2xl border border-brand-border bg-brand-surface p-3 shadow-sm sm:p-4">
+          <figure class="overflow-hidden rounded-[1.75rem] border border-brand-border/75 bg-brand-surface/82 p-3 shadow-[0_18px_50px_rgba(23,18,13,0.08)] sm:p-4">
             <img
               alt={index === 0 ? `${project.title} hero image` : `${project.title} website screenshot ${index}`}
               class="mx-auto block max-h-[520px] w-full object-contain"
@@ -111,17 +111,17 @@
     </div>
 
     <div class="mt-12 grid gap-6 lg:grid-cols-3">
-      <article class="rounded-2xl border border-brand-border bg-brand-surface p-7 shadow-sm">
+      <article class="rounded-[1.75rem] border border-brand-border/75 bg-brand-surface/84 p-7 shadow-[0_18px_50px_rgba(23,18,13,0.08)]">
         <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">Problem</p>
         <p class="mt-4 leading-relaxed text-brand-text/85">{project.problem}</p>
       </article>
 
-      <article class="rounded-2xl border border-brand-border bg-brand-surface p-7 shadow-sm">
+      <article class="rounded-[1.75rem] border border-brand-border/75 bg-brand-surface/84 p-7 shadow-[0_18px_50px_rgba(23,18,13,0.08)]">
         <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">Approach</p>
         <p class="mt-4 leading-relaxed text-brand-text/85">{project.approach}</p>
       </article>
 
-      <article class="rounded-2xl border border-brand-border bg-brand-surface p-7 shadow-sm">
+      <article class="rounded-[1.75rem] border border-brand-border/75 bg-brand-surface/84 p-7 shadow-[0_18px_50px_rgba(23,18,13,0.08)]">
         <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">Outcome</p>
         <p class="mt-4 leading-relaxed text-brand-text/85">{project.outcome}</p>
       </article>
@@ -135,7 +135,7 @@
       </div>
     {/if} -->
     {#if project.links && project.links.length > 0}
-      <div class="mt-10 rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
+      <div class="mt-10 rounded-[1.75rem] border border-brand-border/75 bg-brand-surface/84 p-6 shadow-[0_18px_50px_rgba(23,18,13,0.08)]">
         <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/65">Related links</p>
         <div class="mt-4 flex flex-wrap gap-3">
           {#each project.links as item}
@@ -153,7 +153,7 @@
     {/if}
 
     {#if nextProject && nextProject.slug !== project.slug}
-      <nav class="mt-12 rounded-2xl border border-brand-border bg-brand-surface p-6 shadow-sm">
+      <nav class="mt-12 rounded-[1.75rem] border border-brand-border/75 bg-brand-surface/84 p-6 shadow-[0_18px_50px_rgba(23,18,13,0.08)]">
         <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/65">Next project</p>
         <a class="mt-2 inline-flex text-xl font-bold text-brand-text hover:text-brand-text/85" href={`/work/${nextProject.slug}`}>
           {nextProject.title} →

@@ -1,14 +1,14 @@
 <script>
   import { cn } from "./cn";
 
-  const baseClass = "inline-flex items-center rounded-full border font-['Space_Mono'] uppercase tracking-[0.18em]";
+  const baseClass = "inline-flex items-center rounded-full border font-['Space_Mono'] uppercase tracking-[0.2em]";
 
   const variantClasses = {
-    neutral: "border-brand-border bg-brand-surface text-brand-text/75",
-    subtle: "border-brand-border bg-brand-surface-alt text-brand-text/75",
-    success: "border-brand-highlight/45 bg-brand-highlight/25 text-brand-text",
-    warning: "border-brand-accent/35 bg-brand-accent/20 text-brand-text",
-    danger: "border-brand-accent/35 bg-brand-accent/20 text-brand-text"
+    neutral: "border-brand-border/80 bg-brand-surface/75 text-brand-text/72",
+    subtle: "border-brand-border/65 bg-brand-surface-alt/72 text-brand-text/72",
+    success: "border-brand-highlight/35 bg-brand-highlight/15 text-brand-text",
+    warning: "border-brand-accent/35 bg-brand-accent/18 text-brand-text",
+    danger: "border-brand-accent/35 bg-brand-accent/18 text-brand-text"
   };
 
   const sizeClasses = {
