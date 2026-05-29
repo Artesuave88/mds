@@ -1,11 +1,30 @@
 <script>
+  import Badge from "$lib/ui/Badge.svelte";
   import { setMeta } from "$lib/seo";
 
   const meta = setMeta({
     title: "About Midas Web",
-    description: "Midas Web builds straightforward, professional websites for UK businesses that need more trust and more enquiries online.",
+    description:
+      "Midas Web builds straightforward, professional websites for UK businesses that need more trust and more enquiries online.",
     url: "/about"
   });
+
+  const principles = [
+    {
+      title: "Make the offer obvious",
+      text: "People should understand what you do, where you work, and why they should trust you before they have to think."
+    },
+    {
+      title: "Use design as proof",
+      text: "A strong site makes a small business feel established. The layout, images, words, and speed all have a job."
+    },
+    {
+      title: "Keep the process moving",
+      text: "You should not need a perfect brief or technical confidence. Rough notes are enough to start shaping the site."
+    }
+  ];
+
+  const outcomes = ["Better first impression", "Clearer enquiry path", "Mobile pages that feel deliberate", "A website you own"];
 </script>
 
 <svelte:head>
@@ -23,57 +42,49 @@
   <meta name="twitter:image" content={meta.image} />
 </svelte:head>
 
-<section class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-  <div class="section-panel p-8 sm:p-10">
-  <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">About</p>
-  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">Why businesses hire Midas Web</h1>
-  <p class="mt-6 max-w-3xl text-base leading-relaxed text-brand-text/85 sm:text-lg">
-    Businesses usually come to Midas Web because they need a website that looks more professional, feels easier to trust, and
-    helps turn visits into real enquiries.
-  </p>
+<section class="border-b border-brand-border/70 bg-brand-text text-white">
+  <div class="mx-auto grid w-full max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-8 lg:py-24">
+    <div>
+      <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.14em] text-brand-primary">About Midas Web</p>
+      <h1 class="mt-4 max-w-4xl text-5xl font-bold leading-[1.03] sm:text-6xl">
+        Websites for businesses that need to look credible fast.
+      </h1>
+    </div>
+
+    <div class="grid content-end gap-6">
+      <p class="max-w-2xl text-lg leading-relaxed text-white/76">
+        Businesses usually come to Midas Web because the current site, Facebook page, or DIY builder does not match the quality
+        of the work they actually do.
+      </p>
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {#each outcomes as outcome}
+          <div class="border-t border-white/18 pt-3 text-sm font-semibold text-white/82">{outcome}</div>
+        {/each}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+  <div class="grid gap-5 md:grid-cols-3">
+    {#each principles as principle}
+      <article class="border border-brand-border/75 bg-white/88 p-6 shadow-[0_18px_55px_rgba(16,17,20,0.08)]">
+        <Badge variant="subtle">Principle</Badge>
+        <h2 class="mt-5 text-2xl font-bold text-brand-text">{principle.title}</h2>
+        <p class="mt-4 text-sm leading-relaxed text-brand-text/72">{principle.text}</p>
+      </article>
+    {/each}
   </div>
 
-  <div class="mt-10 grid gap-6 md:grid-cols-3">
-    <article class="rounded-[1.75rem] border border-brand-border/75 bg-brand-surface/85 p-6 shadow-[0_20px_55px_rgba(23,18,13,0.08)]">
-
-      <h2 class="mt-3 text-xl font-bold text-brand-text">Customers understand what you do quickly</h2>
-      <p class="mt-3 text-sm leading-relaxed text-brand-text/75">
-        The site is laid out so people can quickly see your services, where you work, and how to contact you.
-      </p>
-    </article>
-
-    <article class="rounded-[1.75rem] border border-brand-border/75 bg-brand-surface/85 p-6 shadow-[0_20px_55px_rgba(23,18,13,0.08)]">
-
-      <h2 class="mt-3 text-xl font-bold text-brand-text">You get a proper site without a drawn-out process</h2>
-      <p class="mt-3 text-sm leading-relaxed text-brand-text/75">
-        The work moves quickly, but the end result still feels polished and built properly for your business.
-      </p>
-    </article>
-
-    <article class="rounded-[1.75rem] border border-brand-border/75 bg-brand-surface/85 p-6 shadow-[0_20px_55px_rgba(23,18,13,0.08)]">
-
-      <h2 class="mt-3 text-xl font-bold text-brand-text">It is built to fit your business, not just fill a template</h2>
-      <p class="mt-3 text-sm leading-relaxed text-brand-text/75">
-        You get a website that matches how you work now and gives you room to improve it later without starting again.
-      </p>
-    </article>
-  </div>
-
-  <div class="mt-12 rounded-[2rem] border border-brand-border/75 bg-[linear-gradient(145deg,rgba(255,253,248,0.74),rgba(239,226,210,0.72))] p-8 shadow-[0_20px_60px_rgba(23,18,13,0.08)] sm:p-10">
-    <h2 class="text-2xl font-bold text-brand-text">What that means for your business</h2>
-    <ul class="mt-5 space-y-3 text-sm leading-relaxed text-brand-text/85">
-      <li class="flex gap-3">
-        <span class="mt-1 h-2 w-2 rounded-full bg-brand-highlight"></span>
-        <span>A website that gives customers a better first impression of your business.</span>
-      </li>
-      <li class="flex gap-3">
-        <span class="mt-1 h-2 w-2 rounded-full bg-brand-highlight"></span>
-        <span>A simpler route to launch without needing to manage lots of technical details.</span>
-      </li>
-      <li class="flex gap-3">
-        <span class="mt-1 h-2 w-2 rounded-full bg-brand-highlight"></span>
-        <span>A site that is easier for customers to use and more likely to turn visits into enquiries.</span>
-      </li>
-    </ul>
+  <div class="mt-16 grid gap-8 border-y border-brand-border/75 py-12 lg:grid-cols-[0.8fr_1.2fr]">
+    <div>
+      <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.14em] text-brand-highlight">The point</p>
+      <h2 class="mt-3 text-3xl font-bold text-brand-text sm:text-4xl">A good website should reduce doubt.</h2>
+    </div>
+    <p class="text-lg leading-relaxed text-brand-text/76">
+      Your visitors are asking quiet questions: is this business real, are they good, do they work near me, and how do I start?
+      The site is built to answer those questions quickly, with a visual standard that makes the business feel trustworthy
+      before anyone reads every word.
+    </p>
   </div>
 </section>

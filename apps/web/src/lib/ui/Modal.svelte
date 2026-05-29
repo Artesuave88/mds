@@ -30,7 +30,7 @@
   $: descriptionId = description ? `${uid}-description` : undefined;
 
   $: panelClass = cn(
-    "relative z-10 w-full rounded-[1.75rem] border border-white/60 bg-brand-surface/88 p-6 shadow-[0_28px_90px_rgba(23,18,13,0.18)] backdrop-blur-xl sm:p-7",
+    "relative z-10 w-full rounded-lg border border-white/60 bg-brand-surface/88 p-6 shadow-[0_28px_90px_rgba(16,17,20,0.18)] backdrop-blur-xl sm:p-7",
     sizeClasses[size] ?? sizeClasses.md,
     className
   );

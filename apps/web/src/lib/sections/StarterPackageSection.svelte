@@ -11,11 +11,11 @@
     <Card
       variant="contrast"
       padding="lg"
-      class="rounded-[2rem] border-brand-accent/20 bg-[linear-gradient(145deg,rgba(255,220,115,0.18),rgba(255,253,248,0.92))]"
+      class="border-brand-accent/20 bg-[linear-gradient(145deg,rgba(35,181,211,0.11),rgba(255,255,255,0.94))]"
     >
       <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10">
         <div in:fly={{ y: 16, duration: 440 }}>
-          <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">
+          <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-highlight">
             Clear starting price
           </p>
           <h2 class="mt-3 text-3xl font-bold text-brand-text sm:text-4xl">Starter Website</h2>
@@ -25,8 +25,8 @@
             get online with confidence.
           </p>
 
-          <div class="mt-8 rounded-[1.75rem] border border-brand-accent/20 bg-brand-primary/10 p-5 sm:p-6">
-            <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">Starting from</p>
+          <div class="mt-8 rounded-lg border border-brand-accent/25 bg-white/72 p-5 sm:p-6">
+            <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-highlight">Starting from</p>
             <p class="mt-3 text-4xl font-bold tracking-tight text-brand-text sm:text-5xl">£799</p>
             <p class="mt-3 max-w-lg text-sm leading-relaxed text-brand-text/75 sm:text-base">
               A professional small-business website with everything needed to start bringing in enquiries online.
@@ -35,7 +35,7 @@
 
           <div class="mt-8 flex flex-wrap items-center gap-3">
             <a
-              class="inline-flex items-center rounded-2xl bg-brand-primary px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/40 focus-visible:ring-offset-2"
+              class="inline-flex items-center rounded-lg bg-brand-primary px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/40 focus-visible:ring-offset-2"
               href="/contact"
             >
               Get a free mockup
@@ -52,11 +52,11 @@
         </div>
 
         <div in:scale={{ start: 0.97, duration: 320, delay: 70 }}>
-          <div class="rounded-[1.75rem] border border-brand-border/75 bg-brand-bg/60 p-6 sm:p-7">
-            <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">Included</p>
+          <div class="rounded-lg border border-brand-border/75 bg-brand-bg/70 p-6 sm:p-7">
+            <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-highlight">Included</p>
             <ul class="mt-5 grid gap-3 sm:grid-cols-2" aria-label="Starter Website package features">
               {#each starterPackageFeatures as feature}
-                <li class="flex items-start gap-3 rounded-2xl border border-brand-border/70 bg-brand-surface/72 px-4 py-3">
+                <li class="flex items-start gap-3 rounded-lg border border-brand-border/70 bg-brand-surface/82 px-4 py-3">
                   <span
                     class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-primary text-sm font-bold text-brand-text"
                     aria-hidden="true"

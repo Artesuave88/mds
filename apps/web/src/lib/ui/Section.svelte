@@ -40,7 +40,7 @@
       <header class={computedHeaderClass}>
         <div class={centered ? "mx-auto max-w-3xl" : ""}>
           {#if eyebrow}
-            <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.26em] text-brand-text/55">{eyebrow}</p>
+            <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.18em] text-brand-highlight">{eyebrow}</p>
           {/if}
           {#if title}
             <h2 id={headingId} class="mt-3 text-3xl font-bold text-brand-text sm:text-4xl">{title}</h2>

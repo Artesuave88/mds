@@ -8,7 +8,6 @@
   import Badge from "$lib/ui/Badge.svelte";
   import Button from "$lib/ui/Button.svelte";
   import Card from "$lib/ui/Card.svelte";
-  import LazyPicture from "$lib/ui/LazyPicture.svelte";
   import Modal from "$lib/ui/Modal.svelte";
   import Section from "$lib/ui/Section.svelte";
 
@@ -16,6 +15,16 @@
   const featuredWork = allProjects.slice(0, 3);
   const featuredServices = services.slice(0, 3);
   const latestProject = featuredWork[0];
+  const proofPoints = [
+    { value: "5 pages", label: "included in the starter build" },
+    { value: "£799", label: "clear starting price" },
+    { value: "UK", label: "based design and build" }
+  ];
+  const buildSignals = [
+    "Designed around your business, not a template",
+    "Mobile-first structure for local search traffic",
+    "Fast handover with hosting and launch handled"
+  ];
   const businessTypes = [
     {
       title: "Plumbers",
@@ -174,84 +183,101 @@
 </svelte:head>
 
 <section
-  class="relative overflow-hidden border-b border-brand-border/40 bg-[linear-gradient(180deg,#fffdf7_0%,#f8f3e8_52%,#f6f3ed_100%)]"
+  class="relative overflow-hidden border-b border-brand-text bg-brand-text text-white"
   use:reveal={{ distance: 20, duration: 550, threshold: 0.1 }}
 >
-  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,160,23,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(13,13,13,0.06),transparent_24%)]"></div>
-  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-primary/40 to-transparent"></div>
-  <div class="relative mx-auto grid w-full max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-28">
-    <div in:fly={{ y: 18, duration: 500 }}>
-      <div class="inline-flex items-center rounded-full border border-brand-primary/40 bg-brand-primary/10 px-4 py-2">
-        <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.28em] text-brand-highlight">Fresh websites, same message</p>
-      </div>
-      <h1 class="mt-6 max-w-xl text-center text-4xl font-bold leading-tight text-brand-text sm:text-5xl lg:text-left lg:text-[3.65rem]">
-        Get a free website mockup for your business
+  <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(212,160,23,0.25),transparent_30%),linear-gradient(300deg,rgba(35,181,211,0.22),transparent_38%)]"></div>
+  <div class="kinetic-strip absolute inset-x-0 top-0 h-3"></div>
+  <div class="relative mx-auto grid w-full max-w-7xl gap-12 px-4 pb-14 pt-16 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-8 lg:pb-20 lg:pt-24">
+    <div class="flex flex-col justify-center" in:fly={{ y: 18, duration: 500 }}>
+      <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.18em] text-brand-primary">Custom websites for UK service businesses</p>
+      <h1 class="mt-5 max-w-3xl text-5xl font-bold leading-[1.02] sm:text-6xl lg:text-7xl">
+        A sharper website that makes your business feel established.
       </h1>
-      <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-text/78 sm:text-lg">
-        Send us your business name and we'll show you how your website could look. It's a simple way to see a custom
-        direction before committing to anything.
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/76">
+        Midas Web designs and builds fast, custom sites for trades, clubs, coaches, and local service businesses that need
+        more trust, better mobile pages, and clearer enquiry paths.
       </p>
+
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
-          class="inline-flex items-center rounded-2xl bg-brand-primary px-6 py-3 text-sm font-semibold text-brand-text shadow-[0_16px_36px_rgba(212,160,23,0.28)] transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/40 focus-visible:ring-offset-2"
+          class="inline-flex items-center rounded-lg bg-brand-primary px-6 py-3 text-sm font-bold text-brand-text shadow-[0_18px_42px_rgba(212,160,23,0.28)] transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-text"
           href="/contact"
         >
-Request a free mockup
+          Request a free mockup
         </a>
         <a
-          class="inline-flex items-center rounded-2xl border border-brand-border bg-white/80 px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:border-brand-accent hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/35 focus-visible:ring-offset-2"
+          class="inline-flex items-center rounded-lg border border-white/24 bg-white/8 px-6 py-3 text-sm font-bold text-white backdrop-blur transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:border-brand-accent hover:bg-white/12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-text"
           href="/work"
         >
-          See example websites
+          See recent work
         </a>
         <Button
-          variant="outline"
-          class="border-brand-border bg-white/80 text-brand-text hover:border-brand-accent hover:bg-white hover:text-brand-text"
+          variant="ghost"
+          class="text-white hover:bg-white/10"
           on:click={() => (showEngagementModal = true)}
           aria-haspopup="dialog"
           aria-expanded={showEngagementModal}
         >
-          See the process
+          View process
         </Button>
+      </div>
+
+      <div class="mt-10 grid max-w-2xl grid-cols-3 border-y border-white/14">
+        {#each proofPoints as point}
+          <div class="py-4 pr-4">
+            <p class="text-2xl font-extrabold text-white">{point.value}</p>
+            <p class="mt-1 text-xs leading-relaxed text-white/58">{point.label}</p>
+          </div>
+        {/each}
       </div>
     </div>
 
-    <div class="relative" in:fly={{ y: 24, duration: 550, delay: 80 }}>
-      <div class="space-y-4">
-        <div in:scale={{ start: 0.96, duration: 320, delay: 100 }}>
-          <Card class="border-brand-primary/40 bg-white/96" interactive>
-            <Badge size="sm" variant="subtle" class="border-brand-primary/35 bg-brand-primary/10 text-brand-text/70">Fast turnaround</Badge>
-            <p class="mt-3 text-lg font-bold text-brand-text">You do not need months of back and forth</p>
-            <p class="mt-2 text-sm leading-relaxed text-brand-text/75">If you need a good website soon, the process stays focused and moves quickly from brief to launch.</p>
-          </Card>
+    <div class="relative min-h-[520px]" in:fly={{ y: 24, duration: 550, delay: 80 }}>
+      <div class="absolute right-8 top-0 z-0 h-28 w-28 border-[18px] border-brand-accent/70"></div>
+      <div class="absolute bottom-20 left-0 z-0 h-32 w-32 bg-brand-primary"></div>
+      <div class="absolute left-0 top-8 z-10 w-[82%] -rotate-2 overflow-hidden rounded-lg border border-white/16 bg-white shadow-[0_34px_90px_rgba(0,0,0,0.38)]">
+        <div class="flex h-9 items-center gap-2 border-b border-black/10 bg-brand-surface-alt px-4">
+          <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span>
         </div>
+        <img src={latestProject.heroImage} alt="{latestProject.client} website preview" class="h-[330px] w-full object-cover object-top" />
+      </div>
 
-        <div class="grid gap-4 sm:grid-cols-2">
-          <div in:scale={{ start: 0.96, duration: 320, delay: 170 }}>
-            <Card class="h-full border-brand-border bg-white/96" interactive>
-              <Badge size="sm" variant="subtle" class="border-brand-border bg-brand-surface-alt/70 text-brand-text/70">Mobile-friendly</Badge>
-              <p class="mt-3 text-base font-bold text-brand-text">Your customers can use it easily on their phone</p>
-              <p class="mt-2 text-sm leading-relaxed text-brand-text/75">Most people will find your business on mobile, so the site is built to look right and work properly there.</p>
-            </Card>
-          </div>
+      <div class="absolute bottom-8 right-0 z-20 w-[64%] rotate-2 overflow-hidden rounded-lg border border-white/18 bg-white shadow-[0_34px_90px_rgba(0,0,0,0.42)]">
+        <img src="/case-studies/long-eaton-bjj/trial.jpg" alt="Mobile-first website page preview" class="h-[300px] w-full object-cover object-top" />
+      </div>
 
-          <div in:scale={{ start: 0.97, duration: 360, delay: 240 }}>
-            <Card variant="contrast" class="h-full border-brand-primary/45 bg-[linear-gradient(135deg,rgba(212,160,23,0.18),rgba(255,255,255,0.98))]">
-              <Badge size="sm" variant="subtle" class="border-brand-primary/45 bg-brand-primary/18 text-brand-text/78">You own it</Badge>
-              <p class="mt-3 text-lg font-bold text-brand-text">Your website is yours, not a rented builder subscription</p>
-              <p class="mt-2 text-sm leading-relaxed text-brand-text/74">You get a custom site built around your business, without being locked into yearly builder fees just to keep it online.</p>
-            </Card>
-          </div>
-        </div>
+      <div class="absolute bottom-0 left-6 z-30 max-w-sm rounded-lg border border-white/16 bg-white/10 p-5 text-white shadow-[0_28px_70px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.18em] text-brand-primary">Free homepage mockup</p>
+        <p class="mt-3 text-xl font-bold">Send the basics. Get a visual direction before you commit.</p>
       </div>
     </div>
   </div>
 </section>
 
+<div class="overflow-hidden border-b border-brand-text bg-brand-primary py-4 text-brand-text">
+  <div class="marquee-track flex w-max gap-8 whitespace-nowrap font-['Space_Mono'] text-sm font-bold uppercase tracking-[0.14em]">
+    {#each Array(2) as _}
+      <span>Free mockup</span>
+      <span>/</span>
+      <span>Custom design</span>
+      <span>/</span>
+      <span>Mobile first</span>
+      <span>/</span>
+      <span>Fast launch</span>
+      <span>/</span>
+      <span>Your website, not a rented template</span>
+      <span>/</span>
+    {/each}
+  </div>
+</div>
+
 <StarterPackageSection />
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
-  <Section eyebrow="Recent Work" title="The kind of websites I build for businesses like yours" containerClass="py-20">
+  <Section eyebrow="Recent Work" title="Real launches, not template demos" containerClass="py-20">
     <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
       Latest launch: <span class="font-semibold text-brand-text">{latestProject.client}</span> is now live at
       <a
@@ -268,14 +294,17 @@ Request a free mockup
       See example websites
     </a>
 
-    <div class="grid gap-5 md:grid-cols-3">
+    <div class="grid gap-6 md:grid-cols-2">
       {#each featuredWork as item, index}
         <a class="block" href={`/work/${item.slug}`} in:scale={{ start: 0.96, duration: 320, delay: index * 70 }}>
-          <Card class="group h-full" interactive>
-            <Badge size="sm" variant="subtle">{item === latestProject ? "Latest project" : item.year + " · " + item.client}</Badge>
-            <h3 class="mt-3 text-lg font-bold text-brand-text transition group-hover:text-brand-text/85">{item.title}</h3>
-            <p class="mt-3 text-sm leading-relaxed text-brand-text/75">{item.summary}</p>
-            <p class="mt-5 text-sm font-semibold text-brand-text">View website details -></p>
+          <Card class="group h-full overflow-hidden border-brand-text/20 bg-brand-text p-0 text-white" interactive>
+            <img src={item.heroImage} alt="{item.client} website preview" class="h-72 w-full border-b border-white/15 object-cover object-top saturate-[1.08] transition duration-500 group-hover:scale-[1.03]" loading="lazy" />
+            <div class="p-6">
+              <Badge size="sm" variant="subtle" class="border-white/20 bg-white/10 text-white">{item === latestProject ? "Latest project" : item.year + " · " + item.client}</Badge>
+              <h3 class="mt-3 text-2xl font-bold text-white transition group-hover:text-brand-primary">{item.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-white/72">{item.summary}</p>
+              <p class="mt-5 text-sm font-semibold text-brand-primary">View website details -></p>
+            </div>
           </Card>
         </a>
       {/each}
@@ -285,9 +314,9 @@ Request a free mockup
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
   <Section
-    class="border-y border-brand-border/60 bg-[linear-gradient(180deg,rgba(255,253,248,0.55),rgba(239,226,210,0.45))]"
+    class="border-y border-brand-border/60 bg-white/62"
     eyebrow="Who We Build For"
-    title="If you run a service business, this is built for you"
+    title="Built for businesses where trust wins the enquiry"
     containerClass="py-16"
   >
     <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
@@ -298,7 +327,7 @@ Request a free mockup
     <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
       {#each businessTypes as business, index}
         <div in:scale={{ start: 0.96, duration: 300, delay: index * 45 }}>
-          <Card class="h-full bg-brand-bg/55" interactive>
+          <Card class="h-full border-l-4 border-l-brand-primary bg-white/86" interactive>
             <h3 class="text-lg font-bold text-brand-text">{business.title}</h3>
             <p class="mt-3 text-sm leading-relaxed text-brand-text/75">{business.summary}</p>
           </Card>
@@ -311,7 +340,7 @@ Request a free mockup
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
     <Section
     eyebrow="Built Properly From The Start"
-    title="Why hiring me makes more sense than wrestling with a website builder"
+    title="A custom site should look better and work harder"
     containerClass="py-20"
   >
     <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
@@ -329,7 +358,7 @@ Request a free mockup
 
         <div class="mt-6 space-y-4">
           {#each comparisonItems as item}
-            <div class="rounded-[1.5rem] border border-brand-border/70 bg-brand-bg/55 p-4">
+            <div class="rounded-lg border border-brand-border/70 bg-brand-bg/55 p-4">
               <p class="text-sm font-semibold text-brand-text">{item.label}</p>
               <div class="mt-2 flex items-start gap-3">
                 <span class="mt-0.5 inline-flex min-h-6 min-w-6 items-center justify-center rounded-full bg-brand-border text-xs font-bold text-brand-text/70">
@@ -353,7 +382,7 @@ Request a free mockup
 
         <div class="mt-6 space-y-4">
           {#each comparisonItems as item}
-            <div class="rounded-[1.5rem] border border-brand-accent/20 bg-brand-primary/10 p-4">
+            <div class="rounded-lg border border-brand-accent/25 bg-brand-accent/10 p-4">
               <p class="text-sm font-semibold text-brand-text">{item.label}</p>
               <div class="mt-2 flex items-start gap-3">
                 <span class="mt-0.5 inline-flex min-h-6 min-w-6 items-center justify-center rounded-full bg-brand-primary text-xs font-bold text-brand-text">
@@ -371,12 +400,13 @@ Request a free mockup
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.12 }} in:fade={{ duration: 420 }}>
   <Section
-    class="border-y border-brand-border/60 bg-[linear-gradient(180deg,rgba(255,253,248,0.35),rgba(239,226,210,0.38))]"
+    class="border-y border-brand-border/60 bg-brand-highlight text-white"
     eyebrow="Simple Process"
     title="You send the basics, I turn it into a proper website"
     containerClass="py-16"
+    headerClass="[&_*]:text-white"
   >
-    <p slot="description" class="max-w-3xl text-base leading-relaxed text-brand-text/75">
+    <p slot="description" class="max-w-3xl text-base leading-relaxed text-white/74">
       You do not need a full brief, polished copy, or any technical knowledge. If you can explain your business and what you
       want the site to do, I can turn that into something clear, professional, and ready to go live.
     </p>
@@ -384,12 +414,12 @@ Request a free mockup
     <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
       {#each processSteps as item, index}
         <div in:scale={{ start: 0.96, duration: 300, delay: index * 55 }}>
-          <Card class="h-full bg-brand-bg/55" interactive>
+          <Card class="h-full border-white/18 bg-white/8 text-white shadow-[0_18px_55px_rgba(0,0,0,0.16)]" interactive>
             <div class="flex items-center justify-between gap-3">
-              <Badge size="sm" variant="subtle">Step {item.step}</Badge>
+              <Badge size="sm" variant="subtle" class="border-white/20 bg-white/10 text-white">Step {item.step}</Badge>
             </div>
-            <h3 class="mt-4 text-lg font-bold text-brand-text">{item.title}</h3>
-            <p class="mt-3 text-sm leading-relaxed text-brand-text/75">{item.summary}</p>
+            <h3 class="mt-4 text-lg font-bold text-white">{item.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">{item.summary}</p>
           </Card>
         </div>
       {/each}
@@ -400,28 +430,40 @@ Request a free mockup
 
 <div use:reveal={{ distance: 24, duration: 520, threshold: 0.1 }} in:fade={{ duration: 430 }}>
   <Section containerClass="py-16">
-    <Card padding="lg" class="rounded-[2rem] bg-[linear-gradient(145deg,rgba(255,253,248,0.88),rgba(239,226,210,0.72))]" interactive>
-      <Badge variant="subtle">Ready to look more professional online?</Badge>
-      <h2 class="mt-4 max-w-2xl text-3xl font-bold text-brand-text">
-        If your current website is holding the business back, I can fix that
-      </h2>
-      <p class="mt-3 max-w-2xl text-base leading-relaxed text-brand-text/75">
-        You will get a modern custom website that makes the business look more credible, works properly on mobile, and helps
-        more of the right people get in touch.
-      </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a
-          class="rounded-2xl bg-brand-highlight px-6 py-3 text-sm font-semibold text-brand-surface transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-highlight/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight/50 focus-visible:ring-offset-2"
-          href="/contact"
-        >
-          Get a website quote
-        </a>
-        <a
-          class="rounded-2xl border border-brand-border px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:border-brand-accent/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/35 focus-visible:ring-offset-2"
-          href="/work"
-        >
-          See example websites
-        </a>
+    <Card padding="lg" class="bg-white/92" interactive>
+      <div class="grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+        <div>
+          <Badge variant="subtle">Ready to look more professional online?</Badge>
+          <h2 class="mt-4 max-w-2xl text-3xl font-bold text-brand-text">
+            If your current website is holding the business back, I can fix that
+          </h2>
+          <p class="mt-3 max-w-2xl text-base leading-relaxed text-brand-text/75">
+            You will get a modern custom website that makes the business look more credible, works properly on mobile, and helps
+            more of the right people get in touch.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              class="rounded-lg bg-brand-highlight px-6 py-3 text-sm font-semibold text-brand-surface transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight/50 focus-visible:ring-offset-2"
+              href="/contact"
+            >
+              Get a website quote
+            </a>
+            <a
+              class="rounded-lg border border-brand-border px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:border-brand-accent/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/35 focus-visible:ring-offset-2"
+              href="/work"
+            >
+              See example websites
+            </a>
+          </div>
+        </div>
+
+        <div class="grid gap-3">
+          {#each buildSignals as signal}
+            <div class="rounded-lg border border-brand-border/70 bg-brand-bg/72 px-4 py-3 text-sm font-semibold text-brand-text/78">
+              {signal}
+            </div>
+          {/each}
+        </div>
       </div>
     </Card>
   </Section>
@@ -462,7 +504,7 @@ Request a free mockup
   <div slot="footer" class="flex flex-wrap justify-end gap-3">
     <Button variant="ghost" on:click={() => (showEngagementModal = false)}>Close</Button>
     <a
-      class="inline-flex h-11 items-center rounded-2xl bg-brand-primary px-5 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent"
+      class="inline-flex h-11 items-center rounded-lg bg-brand-primary px-5 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-accent"
       href="/contact"
     >
       Get a website quote

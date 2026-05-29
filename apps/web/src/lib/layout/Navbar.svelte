@@ -8,7 +8,7 @@
     { href: "/about", label: "About" },
     { href: "/contact", label: "Get a quote" }
   ];
-  const ACTIVE_LINK_CLASS = "bg-brand-text text-brand-surface shadow-[0_10px_25px_rgba(13,13,13,0.16)]";
+  const ACTIVE_LINK_CLASS = "bg-brand-text text-brand-surface shadow-[0_10px_25px_rgba(16,17,20,0.16)]";
   const INACTIVE_LINK_CLASS = "text-brand-text/80 hover:bg-brand-surface hover:text-brand-text";
   const CTA_CLASS = "bg-brand-primary text-brand-text hover:bg-brand-accent shadow-[0_10px_30px_rgba(212,160,23,0.26)]";
 
@@ -61,25 +61,25 @@
   }
 </script>
 
-<header class="sticky top-0 z-50 border-b border-brand-border/80 bg-brand-surface/94 backdrop-blur">
+<header class="sticky top-0 z-50 border-b border-brand-border/80 bg-brand-surface/92 backdrop-blur-xl">
   <div class="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-    <a href="/" class="inline-flex items-center gap-3 rounded-full px-2 py-1 text-brand-text">
+    <a href="/" class="inline-flex items-center gap-3 rounded-lg px-2 py-1 text-brand-text">
       <img
         src="/brand/logo-mark.png"
         alt=""
         aria-hidden="true"
-        class="h-14 w-14 rounded-2xl border border-brand-primary/50 object-contain bg-black p-1 brightness-110 contrast-125 saturate-150 shadow-[0_12px_26px_rgba(13,13,13,0.15)]"
+        class="h-12 w-12 rounded-lg border border-brand-primary/50 bg-black object-contain p-1 brightness-110 contrast-125 saturate-150 shadow-[0_12px_26px_rgba(16,17,20,0.15)]"
       />
       <div class="hidden sm:block">
         <span class="block text-sm font-bold tracking-wide">Midas Web Development</span>
-        <span class="font-['Space_Mono'] text-[10px] uppercase tracking-[0.24em] text-brand-text/50">Custom sites for UK businesses</span>
+        <span class="font-['Space_Mono'] text-[10px] uppercase tracking-[0.14em] text-brand-text/50">Custom sites for UK businesses</span>
       </div>
     </a>
 
     <nav class="hidden items-center gap-1 md:flex">
       {#each navItems as item}
         <a
-          class={`rounded-full px-3 py-2 text-sm font-semibold transition ${item.href === "/contact" ? CTA_CLASS : activeHref === item.href ? ACTIVE_LINK_CLASS : INACTIVE_LINK_CLASS}`}
+          class={`rounded-lg px-3 py-2 text-sm font-semibold transition ${item.href === "/contact" ? CTA_CLASS : activeHref === item.href ? ACTIVE_LINK_CLASS : INACTIVE_LINK_CLASS}`}
           href={item.href}
           aria-current={activeHref === item.href ? "page" : undefined}
         >
@@ -91,7 +91,7 @@
     <button
       aria-controls="mobile-nav"
       aria-expanded={mobileOpen}
-      class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-brand-border/80 bg-brand-surface/70 text-brand-text/85 md:hidden"
+      class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-brand-border/80 bg-brand-surface/70 text-brand-text/85 md:hidden"
       on:click={() => {
         mobileOpen = !mobileOpen;
       }}

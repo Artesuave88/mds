@@ -8,7 +8,7 @@
       <img
         src="/brand/logo-full.png"
         alt="Midas Web Development logo"
-        class="h-auto w-44 rounded-[1.75rem] border border-brand-primary/40 bg-black p-2 brightness-110 contrast-125 saturate-150 shadow-[0_18px_48px_rgba(13,13,13,0.12)]"
+        class="h-auto w-44 rounded-lg border border-brand-primary/40 bg-black p-2 brightness-110 contrast-125 saturate-150 shadow-[0_18px_48px_rgba(16,17,20,0.12)]"
         loading="lazy"
       />
       <h2 class="mt-3 max-w-md text-xl font-bold text-brand-text">
@@ -81,7 +81,7 @@
           LinkedIn
         </a>
       </div> -->
-      <p class="font-['Space_Mono'] text-[10px] uppercase tracking-[0.2em] text-brand-text/55">Built with Svelte + Tailwind</p>
+      <p class="font-['Space_Mono'] text-[10px] uppercase tracking-[0.14em] text-brand-text/55">Built with Svelte + Tailwind</p>
     </div>
   </div>
 </footer>

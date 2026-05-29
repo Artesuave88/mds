@@ -15,9 +15,17 @@
 
   body {
     background:
-      radial-gradient(circle at top left, rgba(212, 160, 23, 0.16), transparent 30%),
-      radial-gradient(circle at top right, rgba(242, 201, 76, 0.1), transparent 24%),
-      linear-gradient(180deg, #fbfaf7 0%, #f4f1ea 32%, #ffffff 100%);
+      linear-gradient(rgba(16, 17, 20, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 17, 20, 0.035) 1px, transparent 1px),
+      radial-gradient(circle at top left, rgba(35, 181, 211, 0.14), transparent 28%),
+      radial-gradient(circle at 80% 10%, rgba(212, 160, 23, 0.15), transparent 24%),
+      linear-gradient(180deg, #f7f8f3 0%, #ffffff 42%, #eef2ea 100%);
+    background-size:
+      64px 64px,
+      64px 64px,
+      auto,
+      auto,
+      auto;
     @apply min-h-screen text-brand-text antialiased;
     font-family: 'Manrope', sans-serif;
   }
@@ -31,7 +39,7 @@
   h3,
   h4 {
     font-family: 'Fraunces', serif;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
   }
 
   a,
@@ -49,25 +57,53 @@
   }
 
   .page-shell::before {
-    content: "";
+    content: '';
     position: absolute;
     inset: 0;
-    background-image:
-      linear-gradient(rgba(13, 13, 13, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(13, 13, 13, 0.035) 1px, transparent 1px);
-    background-size: 72px 72px;
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), transparent 85%);
+    background:
+      linear-gradient(120deg, rgba(29, 58, 52, 0.08), transparent 32%),
+      linear-gradient(300deg, rgba(212, 160, 23, 0.08), transparent 34%);
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 78%);
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 0.65;
   }
 
   .section-panel {
-    @apply rounded-[2rem] border border-brand-border/80 bg-brand-surface shadow-[0_24px_80px_rgba(13,13,13,0.08)] backdrop-blur-sm;
+    @apply rounded-lg border border-brand-border/80 bg-brand-surface shadow-[0_24px_80px_rgba(16,17,20,0.08)] backdrop-blur-sm;
   }
 
   .soft-ring {
     box-shadow:
       0 0 0 1px rgba(255, 255, 255, 0.45),
-      0 22px 60px rgba(13, 13, 13, 0.08);
+      0 22px 60px rgba(16, 17, 20, 0.08);
+  }
+
+  .kinetic-strip {
+    background:
+      linear-gradient(90deg, rgba(212, 160, 23, 0.95) 0 18%, transparent 18% 24%, rgba(35, 181, 211, 0.95) 24% 42%, transparent 42% 48%, rgba(29, 58, 52, 0.95) 48% 68%, transparent 68% 74%, rgba(212, 160, 23, 0.95) 74% 100%);
+    background-size: 220px 100%;
+  }
+
+  .slant-panel {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+  }
+
+  .marquee-track {
+    animation: marquee 24s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }

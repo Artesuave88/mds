@@ -1,15 +1,23 @@
 <script>
   import { fade, fly, scale } from "svelte/transition";
-  import { reveal } from "../../lib/actions/reveal";
-  import { services } from "../../lib/data/services";
+  import { reveal } from "$lib/actions/reveal";
+  import { services } from "$lib/data/services";
   import { setMeta } from "$lib/seo";
-  import Card from "../../lib/ui/Card.svelte";
+  import Badge from "$lib/ui/Badge.svelte";
 
   const meta = setMeta({
     title: "Website Design and Development Services in Derbyshire",
-    description: "Explore custom website services for UK businesses that want a more professional online presence and more enquiries.",
+    description:
+      "Explore custom website services for UK businesses that want a more professional online presence and more enquiries.",
     url: "/services"
   });
+
+  const packageRows = [
+    ["Planning", "Pages, message, customer journey, and content structure."],
+    ["Design", "A visual direction that makes the business feel sharper and more trustworthy."],
+    ["Build", "Responsive pages, enquiry routes, hosting setup, and launch checks."],
+    ["Improve", "Post-launch refinements for wording, calls to action, and page clarity."]
+  ];
 </script>
 
 <svelte:head>
@@ -27,55 +35,61 @@
   <meta name="twitter:image" content={meta.image} />
 </svelte:head>
 
-<section
-  class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8"
-  use:reveal={{ distance: 22, duration: 540, threshold: 0.1 }}
->
-  <div class="section-panel p-8 sm:p-10" in:fly={{ y: 16, duration: 480 }}>
-    <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-brand-text/65">Services</p>
-    <h1 class="mt-3 max-w-3xl text-4xl font-extrabold text-brand-text sm:text-5xl">What you get when you hire Midas Web</h1>
-    <p class="mt-5 max-w-2xl text-base leading-relaxed text-brand-text/85">
-      Everything is built around a simple goal: help your business look more professional online and make it easier for the
-      right people to contact you.
+<section class="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8" use:reveal={{ distance: 22, duration: 540, threshold: 0.1 }}>
+  <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+    <div in:fly={{ y: 16, duration: 480 }}>
+      <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.14em] text-brand-highlight">Services</p>
+      <h1 class="mt-4 max-w-4xl text-5xl font-bold leading-[1.03] text-brand-text sm:text-6xl">
+        The website, shaped from rough idea to launch.
+      </h1>
+    </div>
+    <p class="max-w-2xl text-lg leading-relaxed text-brand-text/76">
+      Everything is built around one commercial job: help your business look more professional online and make it easier for
+      the right people to contact you.
     </p>
   </div>
 
-  <div class="mt-10 grid gap-6 md:grid-cols-3">
+  <div class="mt-14 grid gap-5 md:grid-cols-3">
     {#each services as service, index}
-      <div in:scale={{ start: 0.96, duration: 320, delay: index * 70 }}>
-        <Card interactive>
-          <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">{service.id}</p>
-          <h2 class="mt-3 text-xl font-bold text-brand-text">{service.title}</h2>
-          <p class="mt-3 text-sm leading-relaxed text-brand-text/75">{service.summary}</p>
-          <ul class="mt-5 space-y-2 text-sm text-brand-text/85">
-            {#each service.deliverables as deliverable}
-              <li class="flex items-start gap-2">
-                <span class="mt-1 h-2 w-2 rounded-full bg-brand-highlight"></span>
-                <span>{deliverable}</span>
-              </li>
-            {/each}
-          </ul>
-        </Card>
-      </div>
+      <article
+        class="border border-brand-border/75 bg-white/88 p-6 shadow-[0_18px_55px_rgba(16,17,20,0.08)]"
+        in:scale={{ start: 0.96, duration: 320, delay: index * 70 }}
+      >
+        <p class="font-['Space_Mono'] text-sm font-bold text-brand-primary">{service.id}</p>
+        <h2 class="mt-4 text-2xl font-bold text-brand-text">{service.title}</h2>
+        <p class="mt-4 text-sm leading-relaxed text-brand-text/72">{service.summary}</p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          {#each service.deliverables as deliverable}
+            <Badge variant="subtle">{deliverable}</Badge>
+          {/each}
+        </div>
+      </article>
     {/each}
   </div>
 
   <div
-    class="mt-12 rounded-[2rem] border border-brand-border/75 bg-[linear-gradient(145deg,rgba(255,253,248,0.7),rgba(239,226,210,0.8))] p-8 text-brand-text shadow-[0_20px_60px_rgba(23,18,13,0.08)] sm:p-10"
+    class="mt-16 grid gap-8 border border-brand-text bg-brand-text p-6 text-white shadow-[0_28px_80px_rgba(16,17,20,0.18)] sm:p-8 lg:grid-cols-[0.82fr_1.18fr]"
     use:reveal={{ distance: 18, duration: 460, threshold: 0.2 }}
     in:fade={{ duration: 420 }}
   >
-    <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.2em] text-brand-text/55">How we work</p>
-    <h2 class="mt-3 max-w-2xl text-2xl font-bold sm:text-3xl">You do not need to know the website side of things</h2>
-    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-brand-text/70">
-      You explain the business, I handle the planning and build, and you review it as it comes together. Simple, direct, and
-      built to keep moving.
-    </p>
-    <a
-      class="mt-8 inline-flex rounded-full bg-brand-highlight px-6 py-3 text-sm font-semibold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-brand-highlight/90"
-      href="/contact"
-    >
-      Tell me about your business
-    </a>
+    <div>
+      <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.14em] text-brand-primary">How we work</p>
+      <h2 class="mt-3 text-3xl font-bold sm:text-4xl">You bring the business knowledge. I turn it into the site.</h2>
+      <a
+        class="mt-8 inline-flex rounded-lg bg-brand-primary px-6 py-3 text-sm font-bold text-brand-text transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-white"
+        href="/contact"
+      >
+        Tell me about your business
+      </a>
+    </div>
+
+    <div class="divide-y divide-white/16 border-y border-white/16">
+      {#each packageRows as row}
+        <div class="grid gap-3 py-5 sm:grid-cols-[0.3fr_0.7fr]">
+          <p class="font-semibold text-white">{row[0]}</p>
+          <p class="text-sm leading-relaxed text-white/72">{row[1]}</p>
+        </div>
+      {/each}
+    </div>
   </div>
 </section>

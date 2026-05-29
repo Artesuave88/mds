@@ -1,7 +1,7 @@
 <script>
   import { cn } from "./cn";
 
-  const baseClass = "inline-flex items-center rounded-full border font-['Space_Mono'] uppercase tracking-[0.2em]";
+  const baseClass = "inline-flex items-center rounded-md border font-['Space_Mono'] uppercase tracking-[0.14em]";
 
   const variantClasses = {
     neutral: "border-brand-border/80 bg-brand-surface/75 text-brand-text/72",
