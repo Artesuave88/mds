@@ -182,24 +182,39 @@
   {@html structuredDataScript}
 </svelte:head>
 
-<section
-  class="relative overflow-hidden border-b border-brand-text bg-brand-text text-white"
-  use:reveal={{ distance: 20, duration: 550, threshold: 0.1 }}
->
-  <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(212,160,23,0.25),transparent_30%),linear-gradient(300deg,rgba(35,181,211,0.22),transparent_38%)]"></div>
+<section class="relative overflow-hidden border-b border-brand-text bg-brand-text text-white" use:reveal={{ distance: 20, duration: 550, threshold: 0.1 }}>
+  <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(212,160,23,0.22),transparent_26%),linear-gradient(290deg,rgba(35,181,211,0.24),transparent_34%),linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[length:auto,auto,72px_72px,72px_72px]"></div>
   <div class="kinetic-strip absolute inset-x-0 top-0 h-3"></div>
-  <div class="relative mx-auto grid w-full max-w-7xl gap-12 px-4 pb-14 pt-16 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-8 lg:pb-20 lg:pt-24">
-    <div class="flex flex-col justify-center" in:fly={{ y: 18, duration: 500 }}>
-      <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.18em] text-brand-primary">Custom websites for UK service businesses</p>
-      <h1 class="mt-5 max-w-3xl text-5xl font-bold leading-[1.02] sm:text-6xl lg:text-7xl">
-        A sharper website that makes your business feel established.
-      </h1>
-      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/76">
-        Midas Web designs and builds fast, custom sites for trades, clubs, coaches, and local service businesses that need
-        more trust, better mobile pages, and clearer enquiry paths.
-      </p>
 
-      <div class="mt-8 flex flex-wrap items-center gap-3">
+  <div class="relative mx-auto w-full max-w-7xl px-4 pb-12 pt-16 sm:px-6 lg:px-8 lg:pb-18 lg:pt-24">
+    <div class="grid gap-10 lg:grid-cols-[1fr_0.92fr] lg:items-end">
+      <div in:fly={{ y: 18, duration: 500 }}>
+        <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.18em] text-brand-primary">Custom websites for UK service businesses</p>
+        <h1 class="mt-5 max-w-5xl text-6xl font-bold leading-[0.95] sm:text-7xl lg:text-8xl">
+          Look established before they call.
+        </h1>
+      </div>
+
+      <div class="border-l border-white/18 pl-6" in:fly={{ y: 20, duration: 520, delay: 70 }}>
+        <p class="max-w-xl text-lg leading-relaxed text-white/76">
+          Midas Web designs and builds fast, custom websites that make local businesses feel sharper, clearer, and easier to trust.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="rounded-md border border-white/18 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-white/78">Design</span>
+          <span class="rounded-md border border-white/18 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-white/78">Build</span>
+          <span class="rounded-md border border-white/18 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-white/78">Launch</span>
+          <span class="rounded-md border border-white/18 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-white/78">Own it</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-stretch">
+      <div class="flex flex-col justify-between border border-white/16 bg-white/8 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.22)] backdrop-blur-xl" in:fly={{ y: 24, duration: 540, delay: 100 }}>
+        <div>
+          <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.18em] text-brand-primary">Free homepage mockup</p>
+          <p class="mt-4 text-3xl font-bold leading-tight">Send rough details. See a proper direction before you commit.</p>
+        </div>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
           class="inline-flex items-center rounded-lg bg-brand-primary px-6 py-3 text-sm font-bold text-brand-text shadow-[0_18px_42px_rgba(212,160,23,0.28)] transition duration-200 ease-out motion-safe:transform-gpu motion-safe:hover:-translate-y-0.5 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-text"
           href="/contact"
@@ -221,37 +236,29 @@
         >
           View process
         </Button>
-      </div>
-
-      <div class="mt-10 grid max-w-2xl grid-cols-3 border-y border-white/14">
-        {#each proofPoints as point}
-          <div class="py-4 pr-4">
-            <p class="text-2xl font-extrabold text-white">{point.value}</p>
-            <p class="mt-1 text-xs leading-relaxed text-white/58">{point.label}</p>
-          </div>
-        {/each}
-      </div>
-    </div>
-
-    <div class="relative min-h-[520px]" in:fly={{ y: 24, duration: 550, delay: 80 }}>
-      <div class="absolute right-8 top-0 z-0 h-28 w-28 border-[18px] border-brand-accent/70"></div>
-      <div class="absolute bottom-20 left-0 z-0 h-32 w-32 bg-brand-primary"></div>
-      <div class="absolute left-0 top-8 z-10 w-[82%] -rotate-2 overflow-hidden rounded-lg border border-white/16 bg-white shadow-[0_34px_90px_rgba(0,0,0,0.38)]">
-        <div class="flex h-9 items-center gap-2 border-b border-black/10 bg-brand-surface-alt px-4">
-          <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span>
-          <span class="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]"></span>
-          <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span>
         </div>
-        <img src={latestProject.heroImage} alt="{latestProject.client} website preview" class="h-[330px] w-full object-cover object-top" />
       </div>
 
-      <div class="absolute bottom-8 right-0 z-20 w-[64%] rotate-2 overflow-hidden rounded-lg border border-white/18 bg-white shadow-[0_34px_90px_rgba(0,0,0,0.42)]">
-        <img src="/case-studies/long-eaton-bjj/trial.jpg" alt="Mobile-first website page preview" class="h-[300px] w-full object-cover object-top" />
-      </div>
+      <div class="relative min-h-[390px] overflow-hidden border border-white/16 bg-white/6 shadow-[0_30px_90px_rgba(0,0,0,0.24)]" in:fly={{ y: 24, duration: 550, delay: 140 }}>
+        <div class="absolute inset-x-0 top-0 grid h-16 grid-cols-12 border-b border-white/12">
+          {#each Array(12) as _, index}
+            <span class={`border-r border-white/12 ${index === 1 || index === 8 ? "bg-brand-primary" : index === 4 ? "bg-brand-accent" : "bg-white/4"}`}></span>
+          {/each}
+        </div>
 
-      <div class="absolute bottom-0 left-6 z-30 max-w-sm rounded-lg border border-white/16 bg-white/10 p-5 text-white shadow-[0_28px_70px_rgba(0,0,0,0.25)] backdrop-blur-xl">
-        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.18em] text-brand-primary">Free homepage mockup</p>
-        <p class="mt-3 text-xl font-bold">Send the basics. Get a visual direction before you commit.</p>
+        <div class="absolute left-6 top-24 h-40 w-40 border-[22px] border-brand-accent/80"></div>
+        <div class="absolute right-8 top-28 h-48 w-48 bg-brand-primary"></div>
+        <div class="absolute bottom-8 left-14 h-28 w-[58%] border border-white/20 bg-brand-text shadow-[0_24px_70px_rgba(0,0,0,0.28)]"></div>
+        <div class="absolute bottom-14 left-20 right-16 grid grid-cols-3 gap-3">
+          {#each proofPoints as point}
+            <div class="border border-white/14 bg-white/10 p-4 backdrop-blur">
+              <p class="text-2xl font-extrabold text-white">{point.value}</p>
+              <p class="mt-1 text-xs leading-relaxed text-white/58">{point.label}</p>
+            </div>
+          {/each}
+        </div>
+        <p class="absolute right-8 top-20 font-['Space_Mono'] text-[11px] uppercase tracking-[0.18em] text-white/58">No templates / no rented builder</p>
+        <p class="absolute bottom-24 right-8 text-7xl font-extrabold leading-none text-white/10 sm:text-8xl">MW</p>
       </div>
     </div>
   </div>
