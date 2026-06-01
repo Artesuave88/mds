@@ -1,5 +1,40 @@
 [
   {
+    "slug": "love-long-eaton-website",
+    "title": "Love Long Eaton Website",
+    "client": "Love Long Eaton",
+    "year": 2026,
+    "services": ["Website Development", "Content Architecture", "Directory UX", "Responsive UI", "Deployment"],
+    "tools": ["SvelteKit", "Tailwind CSS", "Vercel"],
+    "heroImage": "/case-studies/love-long-eaton/carnival.webp",
+    "siteScreenshots": [
+      "/case-studies/love-long-eaton/logo.png"
+    ],
+    "summary": "Built and launched a local guide for Long Eaton, bringing events, businesses, local places, and contact pathways into one calm, easy-to-browse website.",
+    "problem": "The project needed a friendly civic-style website that could make local events, businesses, and useful town information easier to discover without feeling cluttered.",
+    "approach": "Structured the site around clear discovery routes for events, businesses, local places, and contact updates, with reusable listing patterns and a responsive interface for quick browsing on mobile.",
+    "outcome": "Love Long Eaton is now live at www.lovelongeaton.com with dedicated sections for events, business listings, town discovery, and update enquiries.",
+    "metrics": [
+      "6 primary navigation routes published: /, /discover-long-eaton, /events, /businesses, /about, and /contact.",
+      "Homepage highlights featured events, regular activities, a business spotlight, local places, and business categories.",
+      "Contact journey supports new listing requests and suggested updates from the local community."
+    ],
+    "links": [
+      {
+        "label": "Live site",
+        "url": "https://www.lovelongeaton.com/"
+      },
+      {
+        "label": "Events",
+        "url": "https://www.lovelongeaton.com/events"
+      },
+      {
+        "label": "Business directory",
+        "url": "https://www.lovelongeaton.com/businesses"
+      }
+    ]
+  },
+  {
     "slug": "long-eaton-bjj-website",
     "title": "Long Eaton BJJ Website",
     "client": "Long Eaton BJJ",
