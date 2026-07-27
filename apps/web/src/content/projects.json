@@ -6,9 +6,12 @@
     "year": 2026,
     "services": ["Website Development", "Content Architecture", "Directory UX", "Responsive UI", "Deployment"],
     "tools": ["SvelteKit", "Tailwind CSS", "Vercel"],
-    "heroImage": "/case-studies/love-long-eaton/carnival.webp",
+    "heroImage": "/case-studies/love-long-eaton/trent-lock.webp",
     "siteScreenshots": [
-      "/case-studies/love-long-eaton/logo.png"
+      "/case-studies/love-long-eaton/west-park.jpg",
+      "/case-studies/love-long-eaton/erewash-canal.jpg",
+      "/case-studies/love-long-eaton/carboot.jpg",
+      "/case-studies/love-long-eaton/music-festival.jpg"
     ],
     "summary": "Built and launched a local guide for Long Eaton, bringing events, businesses, local places, and contact pathways into one calm, easy-to-browse website.",
     "problem": "The project needed a friendly civic-style website that could make local events, businesses, and useful town information easier to discover without feeling cluttered.",
