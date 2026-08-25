@@ -51,23 +51,17 @@
         <img src="/case-studies/long-eaton-bjj/home.jpg" alt="Long Eaton BJJ website homepage" />
         <span class="preview-label">Long Eaton BJJ <b>↗</b></span>
       </a>
-      <div class="made-local">
-        <span>Built for</span>
-        <strong>GO</strong>
-        <span>Real growth</span>
-      </div>
+
     </div>
   </div>
-  <div class="ticker" aria-hidden="true">
-    <div>STRATEGY ✦ DESIGN ✦ DEVELOPMENT ✦ LOCAL KNOWLEDGE ✦ STRATEGY ✦ DESIGN ✦ DEVELOPMENT ✦ LOCAL KNOWLEDGE ✦</div>
-  </div>
+
 </section>
 
 <section class="intro">
   <div class="wrap intro-grid">
     <p class="section-kicker">What we believe</p>
     <div>
-      <h2>Your website should feel like <span>you</span> — only clearer, faster and impossible to ignore.</h2>
+      <h2>Your website should feel like <span>you</span> - only clearer, faster and impossible to ignore.</h2>
       <p>
         We partner with people who care about what they do. No anonymous hand-offs and no
         off-the-shelf themes. Just close collaboration and a site built around the job it needs to do.
