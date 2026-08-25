@@ -2,6 +2,7 @@
   import Button from "$lib/ui/Button.svelte";
   import Input from "$lib/ui/Input.svelte";
   import { setMeta } from "$lib/seo";
+  import SeoHead from "$lib/seo/SeoHead.svelte";
   import Textarea from "$lib/ui/Textarea.svelte";
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -21,8 +22,11 @@
   let submitting = false;
 
   const meta = setMeta({
-    title: "Get a Website Quote | Midas Web",
-    description: "Tell Midas Web about your business and get a website quote for a modern, professional site built in the UK.",
+    title: "Website Quote for Your UK Business",
+    description: "Tell Midas Web what your small business or local organisation needs from its website, and start a practical conversation about scope, timing and next steps.",
+    openGraphTitle: "Start your website project with Midas Web",
+    openGraphDescription: "Share what needs to change online and get a straightforward conversation about the right website scope, timing and next steps for your organisation.",
+    image: "/brand/logo-full.png",
     url: "/contact"
   });
 
@@ -121,20 +125,7 @@
   }
 </script>
 
-<svelte:head>
-  <title>{meta.title}</title>
-  <meta name="description" content={meta.description} />
-  <meta property="og:type" content="website" key="og:type" />
-  <meta property="og:site_name" content={meta.siteName} key="og:site_name" />
-  <meta property="og:title" content={meta.title} key="og:title" />
-  <meta property="og:description" content={meta.description} key="og:description" />
-  <meta property="og:url" content={meta.url} key="og:url" />
-  <meta property="og:image" content={meta.image} key="og:image" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={meta.title} />
-  <meta name="twitter:description" content={meta.description} />
-  <meta name="twitter:image" content={meta.image} />
-</svelte:head>
+<SeoHead {meta} />
 
 <section class="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
   <div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { getProjectBySlug, getProjects } from "$lib/content";
   import { setMeta } from "$lib/seo";
+  import SeoHead from "$lib/seo/SeoHead.svelte";
   import type { PageData } from "./$types";
 
   export let data: PageData;
@@ -25,25 +26,16 @@
     ? setMeta({
         title: project.metaTitle,
         description: project.metaDescription,
+        openGraphTitle: project.openGraphTitle,
+        openGraphDescription: project.openGraphDescription,
         image: project.openGraphImage,
         url: `/work/${project.slug}`
       })
     : fallbackMeta;
 </script>
 
+<SeoHead {meta} type="article" />
 <svelte:head>
-  <title>{meta.title}</title>
-  <meta name="description" content={meta.description} />
-  <meta property="og:type" content="article" />
-  <meta property="og:site_name" content={meta.siteName} />
-  <meta property="og:title" content={project?.openGraphTitle ?? meta.title} />
-  <meta property="og:description" content={project?.openGraphDescription ?? meta.description} />
-  <meta property="og:url" content={meta.url} />
-  <meta property="og:image" content={meta.image} />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={project?.openGraphTitle ?? meta.title} />
-  <meta name="twitter:description" content={project?.openGraphDescription ?? meta.description} />
-  <meta name="twitter:image" content={meta.image} />
   {#if !project}
     <meta name="robots" content="noindex,follow" />
   {/if}

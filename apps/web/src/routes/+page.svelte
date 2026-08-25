@@ -1,12 +1,15 @@
 <script>
   import { setMeta } from "$lib/seo";
+  import SeoHead from "$lib/seo/SeoHead.svelte";
 
   const meta = setMeta({
-    title: "Midas — Websites built to move local businesses forward",
+    title: "Web Design for UK Small Businesses",
     description:
-      "Independent web design and development for ambitious local businesses. Explore our work for Love Long Eaton and Long Eaton BJJ.",
-    url: "/",
-    includeSiteName: false
+      "Midas Web designs and builds clear, professional websites for UK small businesses and local organisations, helping visitors find and contact them online.",
+    openGraphTitle: "Websites that help local businesses move forward",
+    openGraphDescription: "Independent web design and development for UK small businesses and local organisations that need a clearer, more credible online presence.",
+    image: "/case-studies/love-long-eaton/trent-lock.webp",
+    url: "/"
   });
 
   const services = [
@@ -17,13 +20,7 @@
   ];
 </script>
 
-<svelte:head>
-  <title>{meta.title}</title>
-  <meta name="description" content={meta.description} />
-  <meta property="og:title" content={meta.title} />
-  <meta property="og:description" content={meta.description} />
-  <meta property="og:image" content={meta.image} />
-</svelte:head>
+<SeoHead {meta} />
 
 <section class="hero">
   <div class="hero-orbit orbit-one"></div>

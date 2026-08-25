@@ -1,6 +1,7 @@
 <script lang="ts">
   import { getProjects } from "$lib/content";
   import { setMeta } from "$lib/seo";
+  import SeoHead from "$lib/seo/SeoHead.svelte";
   import type { ProjectSort } from "$lib/types";
 
   let selectedService = "";
@@ -8,8 +9,11 @@
   let selectedSort: ProjectSort = "newest";
 
   const meta = setMeta({
-    title: "Website Design Case Studies in Derbyshire and the UK",
-    description: "Browse website design and development case studies delivered for organisations in Derbyshire and across the UK.",
+    title: "Website Design Case Studies",
+    description: "See website design case studies for UK small businesses and local organisations, showing the problems solved, work delivered and outcomes for each client.",
+    openGraphTitle: "Website design work for businesses and communities",
+    openGraphDescription: "Explore Midas Web case studies showing how clearer content, purposeful design and simpler customer journeys support local organisations.",
+    image: "/case-studies/love-long-eaton/trent-lock.webp",
     url: "/work"
   });
 
@@ -26,20 +30,7 @@
   }
 </script>
 
-<svelte:head>
-  <title>{meta.title}</title>
-  <meta name="description" content={meta.description} />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content={meta.siteName} />
-  <meta property="og:title" content={meta.title} />
-  <meta property="og:description" content={meta.description} />
-  <meta property="og:url" content={meta.url} />
-  <meta property="og:image" content={meta.image} />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={meta.title} />
-  <meta name="twitter:description" content={meta.description} />
-  <meta name="twitter:image" content={meta.image} />
-</svelte:head>
+<SeoHead {meta} />
 
 <section class="border-b border-brand-border/70 bg-white/72">
   <div class="mx-auto grid w-full max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:py-20">

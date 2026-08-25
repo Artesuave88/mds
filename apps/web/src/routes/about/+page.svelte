@@ -1,12 +1,17 @@
 <script>
   import Badge from "$lib/ui/Badge.svelte";
   import { setMeta } from "$lib/seo";
+  import SeoHead from "$lib/seo/SeoHead.svelte";
 
   const meta = setMeta({
-    title: "About Midas Web",
+    title: "About Midas Web | Independent UK Web Studio",
     description:
-      "Midas Web builds straightforward, professional websites for UK businesses that need more trust and more enquiries online.",
-    url: "/about"
+      "Meet Midas Web, an independent UK studio creating clear, credible websites for small businesses and local organisations through close, practical collaboration.",
+    openGraphTitle: "Meet the independent studio behind Midas Web",
+    openGraphDescription: "Learn how Midas works closely with small businesses and local organisations to create useful websites that feel credible, clear and distinctly theirs.",
+    image: "/brand/logo-full.png",
+    url: "/about",
+    includeSiteName: false
   });
 
   const principles = [
@@ -27,20 +32,7 @@
   const outcomes = ["Better first impression", "Clearer enquiry path", "Mobile pages that feel deliberate", "A website you own"];
 </script>
 
-<svelte:head>
-  <title>{meta.title}</title>
-  <meta name="description" content={meta.description} />
-  <meta property="og:type" content="website" key="og:type" />
-  <meta property="og:site_name" content={meta.siteName} key="og:site_name" />
-  <meta property="og:title" content={meta.title} key="og:title" />
-  <meta property="og:description" content={meta.description} key="og:description" />
-  <meta property="og:url" content={meta.url} key="og:url" />
-  <meta property="og:image" content={meta.image} key="og:image" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={meta.title} />
-  <meta name="twitter:description" content={meta.description} />
-  <meta name="twitter:image" content={meta.image} />
-</svelte:head>
+<SeoHead {meta} />
 
 <section class="border-b border-brand-border/70 bg-brand-text text-white">
   <div class="mx-auto grid w-full max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-8 lg:py-24">

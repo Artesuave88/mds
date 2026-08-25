@@ -3,12 +3,16 @@
   import { reveal } from "$lib/actions/reveal";
   import { services } from "$lib/data/services";
   import { setMeta } from "$lib/seo";
+  import SeoHead from "$lib/seo/SeoHead.svelte";
   import Badge from "$lib/ui/Badge.svelte";
 
   const meta = setMeta({
-    title: "Website Design and Development Services in Derbyshire",
+    title: "Website Design Services for UK Businesses",
     description:
-      "Explore custom website services for UK businesses that want a more professional online presence and more enquiries.",
+      "Explore website strategy, design and development for UK small businesses and local organisations, from content planning through build, launch and support.",
+    openGraphTitle: "Website strategy, design and development from Midas",
+    openGraphDescription: "A practical website service for UK small businesses and local organisations, covering planning, design, development, launch and ongoing improvements.",
+    image: "/case-studies/long-eaton-bjj/home.jpg",
     url: "/services"
   });
 
@@ -20,20 +24,7 @@
   ];
 </script>
 
-<svelte:head>
-  <title>{meta.title}</title>
-  <meta name="description" content={meta.description} />
-  <meta property="og:type" content="website" key="og:type" />
-  <meta property="og:site_name" content={meta.siteName} key="og:site_name" />
-  <meta property="og:title" content={meta.title} key="og:title" />
-  <meta property="og:description" content={meta.description} key="og:description" />
-  <meta property="og:url" content={meta.url} key="og:url" />
-  <meta property="og:image" content={meta.image} key="og:image" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={meta.title} />
-  <meta name="twitter:description" content={meta.description} />
-  <meta name="twitter:image" content={meta.image} />
-</svelte:head>
+<SeoHead {meta} />
 
 <section class="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8" use:reveal={{ distance: 22, duration: 540, threshold: 0.1 }}>
   <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
