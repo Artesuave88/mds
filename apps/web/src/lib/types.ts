@@ -1,9 +1,7 @@
-export type ProjectMetric = string;
-
-export type ProjectTestimonial = {
-  quote: string;
-  author: string;
-  role: string;
+export type ProjectMetric = {
+  metricLabel: string;
+  baselineMetrics?: string;
+  resultMetrics?: string;
 };
 
 export type ProjectLink = {
@@ -20,13 +18,24 @@ export type Project = {
   tools: string[];
   heroImage: string;
   siteScreenshots?: string[];
+  beforeImage?: string;
+  afterImage?: string;
   summary: string;
+  clientContext: string;
   problem: string;
-  approach: string;
-  outcome: string;
-  metrics: ProjectMetric[];
-  testimonial?: ProjectTestimonial;
+  goals: string[];
+  changes: string;
+  metrics?: ProjectMetric[];
+  buildNotes?: string[];
+  testimonial?: string;
+  testimonialAuthor?: string;
+  testimonialRole?: string;
   links?: ProjectLink[];
+  metaTitle: string;
+  metaDescription: string;
+  openGraphTitle: string;
+  openGraphDescription: string;
+  openGraphImage: string;
 };
 
 export type ProjectSort = 'newest' | 'oldest' | 'title';

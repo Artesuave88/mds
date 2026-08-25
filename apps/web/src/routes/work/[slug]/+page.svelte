@@ -18,11 +18,14 @@
   $: nextProject = currentIndex >= 0 ? orderedProjects[(currentIndex + 1) % orderedProjects.length] : undefined;
   $: siteScreenshots = (project?.siteScreenshots ?? []).slice(0, 2);
   $: previewImages = project ? [project.heroImage, ...siteScreenshots].slice(0, 3) : [];
+  $: completeMetrics = (project?.metrics ?? []).filter((metric) =>
+    metric.metricLabel?.trim() && metric.baselineMetrics?.trim() && metric.resultMetrics?.trim()
+  );
   $: meta = project
     ? setMeta({
-        title: `${project.client} Website Case Study`,
-        description: project.summary,
-        image: project.heroImage,
+        title: project.metaTitle,
+        description: project.metaDescription,
+        image: project.openGraphImage,
         url: `/work/${project.slug}`
       })
     : fallbackMeta;
@@ -33,13 +36,13 @@
   <meta name="description" content={meta.description} />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content={meta.siteName} />
-  <meta property="og:title" content={meta.title} />
-  <meta property="og:description" content={meta.description} />
+  <meta property="og:title" content={project?.openGraphTitle ?? meta.title} />
+  <meta property="og:description" content={project?.openGraphDescription ?? meta.description} />
   <meta property="og:url" content={meta.url} />
   <meta property="og:image" content={meta.image} />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={meta.title} />
-  <meta name="twitter:description" content={meta.description} />
+  <meta name="twitter:title" content={project?.openGraphTitle ?? meta.title} />
+  <meta name="twitter:description" content={project?.openGraphDescription ?? meta.description} />
   <meta name="twitter:image" content={meta.image} />
   {#if !project}
     <meta name="robots" content="noindex,follow" />
@@ -105,33 +108,80 @@
           </div>
         </div>
 
+        {#if project.buildNotes && project.buildNotes.length > 0}
         <div class="mt-8">
-          <p class="font-semibold text-white">Impact</p>
+          <p class="font-semibold text-white">Secondary build details</p>
           <ul class="mt-3 space-y-4 text-sm leading-relaxed text-white/74">
-            {#each project.metrics as metric}
-              <li class="border-l-2 border-brand-primary pl-4">{metric}</li>
+            {#each project.buildNotes as note}
+              <li class="border-l-2 border-white/25 pl-4">{note}</li>
             {/each}
           </ul>
         </div>
+        {/if}
       </aside>
     </div>
 
-    <div class="mt-14 grid gap-5 lg:grid-cols-3">
+    <div class="mt-14 grid gap-5 lg:grid-cols-2">
       <article class="border border-brand-border/75 bg-white/88 p-7 shadow-[0_18px_50px_rgba(16,17,20,0.08)]">
-        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-highlight">Problem</p>
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-highlight">Client and business context</p>
+        <p class="mt-4 leading-relaxed text-brand-text/82">{project.clientContext}</p>
+      </article>
+
+      <article class="border border-brand-border/75 bg-white/88 p-7 shadow-[0_18px_50px_rgba(16,17,20,0.08)]">
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-highlight">The problem before the work</p>
         <p class="mt-4 leading-relaxed text-brand-text/82">{project.problem}</p>
       </article>
 
       <article class="border border-brand-border/75 bg-white/88 p-7 shadow-[0_18px_50px_rgba(16,17,20,0.08)]">
-        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-highlight">Approach</p>
-        <p class="mt-4 leading-relaxed text-brand-text/82">{project.approach}</p>
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-highlight">Project goals</p>
+        <ul class="mt-4 space-y-3 text-brand-text/82">
+          {#each project.goals as goal}
+            <li class="border-l-2 border-brand-primary pl-4">{goal}</li>
+          {/each}
+        </ul>
       </article>
 
       <article class="border border-brand-border/75 bg-white/88 p-7 shadow-[0_18px_50px_rgba(16,17,20,0.08)]">
-        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-highlight">Outcome</p>
-        <p class="mt-4 leading-relaxed text-brand-text/82">{project.outcome}</p>
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-highlight">What Midas changed</p>
+        <p class="mt-4 leading-relaxed text-brand-text/82">{project.changes}</p>
       </article>
     </div>
+
+    {#if completeMetrics.length > 0}
+      <section class="mt-10 border border-brand-text bg-brand-text p-7 text-white shadow-[0_18px_50px_rgba(16,17,20,0.12)]">
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-primary">Measurable results</p>
+        <div class="mt-5 grid gap-4 md:grid-cols-2">
+          {#each completeMetrics as metric}
+            <article class="border border-white/15 bg-white/5 p-5">
+              <h2 class="font-semibold">{metric.metricLabel}</h2>
+              <dl class="mt-4 grid grid-cols-2 gap-4 text-sm">
+                <div><dt class="text-white/60">Before</dt><dd class="mt-1 text-lg font-bold">{metric.baselineMetrics}</dd></div>
+                <div><dt class="text-white/60">After</dt><dd class="mt-1 text-lg font-bold text-brand-primary">{metric.resultMetrics}</dd></div>
+              </dl>
+            </article>
+          {/each}
+        </div>
+      </section>
+    {/if}
+
+    {#if project.testimonial?.trim() && project.testimonialAuthor?.trim()}
+      <figure class="mt-10 border border-brand-border/75 bg-white/88 p-7 shadow-[0_18px_50px_rgba(16,17,20,0.08)]">
+        <blockquote class="max-w-4xl text-2xl font-bold leading-relaxed text-brand-text">“{project.testimonial}”</blockquote>
+        <figcaption class="mt-5 text-sm text-brand-text/70">
+          <span class="font-semibold text-brand-text">{project.testimonialAuthor}</span>{#if project.testimonialRole?.trim()}, {project.testimonialRole}{/if}
+        </figcaption>
+      </figure>
+    {/if}
+
+    {#if project.beforeImage?.trim() || project.afterImage?.trim()}
+      <section class="mt-10">
+        <p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em] text-brand-highlight">Before and after</p>
+        <div class="mt-4 grid gap-5 md:grid-cols-2">
+          {#if project.beforeImage?.trim()}<figure><img class="w-full border border-brand-border object-cover object-top" src={project.beforeImage} alt={`${project.client} website before the project`} /><figcaption class="mt-2 text-sm text-brand-text/65">Before</figcaption></figure>{/if}
+          {#if project.afterImage?.trim()}<figure><img class="w-full border border-brand-border object-cover object-top" src={project.afterImage} alt={`${project.client} website after the project`} /><figcaption class="mt-2 text-sm text-brand-text/65">After</figcaption></figure>{/if}
+        </div>
+      </section>
+    {/if}
 
     {#if project.links && project.links.length > 0}
       <div class="mt-10 border border-brand-border/75 bg-white/88 p-6 shadow-[0_18px_50px_rgba(16,17,20,0.08)]">
@@ -150,6 +200,11 @@
         </div>
       </div>
     {/if}
+
+    <section class="mt-12 border border-brand-text bg-brand-primary p-7 text-brand-text shadow-[0_18px_50px_rgba(16,17,20,0.08)] sm:flex sm:items-center sm:justify-between sm:gap-8">
+      <div><p class="font-['Space_Mono'] text-[11px] uppercase tracking-[0.14em]">Facing a similar problem?</p><h2 class="mt-2 text-2xl font-bold">Let’s make your website work harder for your business.</h2></div>
+      <a class="mt-5 inline-flex shrink-0 rounded-lg bg-brand-text px-5 py-3 text-sm font-semibold text-white hover:bg-brand-highlight sm:mt-0" href="/contact">Tell us about your project →</a>
+    </section>
 
     {#if nextProject && nextProject.slug !== project.slug}
       <nav class="mt-12 border border-brand-text bg-brand-primary p-6 text-brand-text shadow-[0_18px_50px_rgba(16,17,20,0.08)]">

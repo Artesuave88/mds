@@ -14,14 +14,25 @@
       "/case-studies/love-long-eaton/music-festival.jpg"
     ],
     "summary": "Built and launched a local guide for Long Eaton, bringing events, businesses, local places, and contact pathways into one calm, easy-to-browse website.",
+    "clientContext": "Love Long Eaton is a local guide connecting residents and visitors with events, independent businesses, places to explore, and community updates across the town.",
     "problem": "The project needed a friendly civic-style website that could make local events, businesses, and useful town information easier to discover without feeling cluttered.",
-    "approach": "Structured the site around clear discovery routes for events, businesses, local places, and contact updates, with reusable listing patterns and a responsive interface for quick browsing on mobile.",
-    "outcome": "Love Long Eaton is now live at www.lovelongeaton.com with dedicated sections for events, business listings, town discovery, and update enquiries.",
-    "metrics": [
+    "goals": [
+      "Make local events, businesses, and places easier to discover.",
+      "Give residents and organisations a clear way to request listings and updates.",
+      "Create a calm, mobile-friendly experience that can grow with the guide."
+    ],
+    "changes": "Midas brought events, business listings, town discovery, and community update enquiries into one coherent website. Clearer content groupings, reusable listings, and responsive browsing help visitors find the right local information and take the next step.",
+    "metrics": [],
+    "buildNotes": [
       "6 primary navigation routes published: /, /discover-long-eaton, /events, /businesses, /about, and /contact.",
       "Homepage highlights featured events, regular activities, a business spotlight, local places, and business categories.",
       "Contact journey supports new listing requests and suggested updates from the local community."
     ],
+    "metaTitle": "Love Long Eaton Website Case Study | Midas Web",
+    "metaDescription": "How Midas created a clearer local discovery website for Love Long Eaton, bringing events, businesses, places and community updates together.",
+    "openGraphTitle": "A clearer local discovery experience for Love Long Eaton",
+    "openGraphDescription": "See how Midas brought local events, businesses, places and community update pathways into one easy-to-browse website.",
+    "openGraphImage": "/case-studies/love-long-eaton/trent-lock.webp",
     "links": [
       {
         "label": "Live site",
@@ -49,19 +60,28 @@
       "/case-studies/long-eaton-bjj/trial.jpg"
     ],
     "summary": "Built and launched the live public website for Long Eaton BJJ with clear navigation for timetable, pricing, instructors, kids classes, gallery, and contact.",
+    "clientContext": "Long Eaton BJJ is a martial arts club serving prospective students, existing members, and parents looking for adult or children’s Brazilian Jiu-Jitsu classes.",
     "problem": "The gym needed a clearer digital presence so new students and parents could quickly understand the offer and book a free trial.",
-    "approach": "Built a mobile-first site structure with direct CTAs, concise page sections, and route-level navigation for each core info area.",
-    "outcome": "The club now has a live production site at www.longeatonbjj.co.uk with clear trial and contact pathways, social links, and a dedicated gallery experience.",
-    "metrics": [
+    "goals": [
+      "Help prospective students quickly understand classes, pricing, and timetables.",
+      "Make booking a free trial obvious on mobile and desktop.",
+      "Give parents a clear path to information about children’s classes."
+    ],
+    "changes": "Midas reorganised the club’s information around the questions prospective students and parents ask before joining. The new mobile-first experience makes class details, pricing, coaches, and free-trial booking easier to find, with direct contact options throughout.",
+    "metrics": [],
+    "buildNotes": [
       "8 core routes published: /, /timetable, /pricing, /coaches, /kids, /gallery, /contact, /trial.",
       "Sticky mobile action bar includes direct Book Trial and Call buttons.",
       "Contact surfaces include click-to-call plus WhatsApp, Instagram, and Facebook links."
     ],
-    "testimonial": {
-      "quote": "The new website has been fantastic for us. It's easy to navigate, looks great on mobile, and has definitely helped us attract new customers.",
-      "author": "Long Eaton BJJ",
-      "role": "Client"
-    },
+    "testimonial": "The new website has been fantastic for us. It's easy to navigate, looks great on mobile, and has definitely helped us attract new customers.",
+    "testimonialAuthor": "Long Eaton BJJ",
+    "testimonialRole": "Client",
+    "metaTitle": "Long Eaton BJJ Website Case Study | Midas Web",
+    "metaDescription": "How Midas helped Long Eaton BJJ make class information clearer and free-trial booking easier with a focused, mobile-first website.",
+    "openGraphTitle": "A clearer path from interest to free trial for Long Eaton BJJ",
+    "openGraphDescription": "See how Midas reorganised Long Eaton BJJ’s website around prospective students, parents, and an easier free-trial journey.",
+    "openGraphImage": "/case-studies/long-eaton-bjj/home.jpg",
     "links": [
       {
         "label": "Live site",
